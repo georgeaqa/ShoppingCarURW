@@ -8,10 +8,11 @@ import styles from "./styles";
 
 const FactionScreen = ({ navigation }) => {
 
+
   const renderFactionItems = ({ item }) => {
     return (
       <View>
-        <CustomeFactionsItems item={item}/>
+        <CustomeFactionsItems item={item} navigation={navigation}/>
       </View>
     );
   };

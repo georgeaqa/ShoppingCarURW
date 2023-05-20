@@ -4,4 +4,4 @@ export { default as Register } from "./AuthScreens/Register";
 
 export { default as FactionScreen } from "./BottonScreens/ShopScreens/FactionScreen";
 export { default as ShoppingCar } from "./BottonScreens/ShoppingCar";
-export {default as ClanScreen} from "./BottonScreens/ShopScreens/ClanScreen";
+export {default as CharacterScreen} from "./BottonScreens/ShopScreens/CharacterScreen";

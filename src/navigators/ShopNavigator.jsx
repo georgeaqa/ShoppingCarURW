@@ -1,5 +1,5 @@
 import { COLORS, ROUTES } from "../constants";
-import { ClanScreen, FactionScreen } from "../screens";
+import { CharacterScreen, FactionScreen } from "../screens";
 
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -8,19 +8,7 @@ const Stack = createNativeStackNavigator();
 
 const ShopNavigator = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: COLORS.gold,
-      
-        },
-        headerTitleStyle:{
-          fontFamily: "DancingScript-VariableFont_wght",
-          color:COLORS.white,
-          fontSize:25,
-        }
-      }}
-    >
+    <Stack.Navigator>
       <Stack.Screen
         name={ROUTES.FACTION}
         component={FactionScreen}
@@ -29,10 +17,14 @@ const ShopNavigator = () => {
         }}
       />
       <Stack.Screen
-        name={ROUTES.CLAN}
-        component={ClanScreen}
+        name={ROUTES.CHARACTER}
+        component={CharacterScreen}
         options={({ route }) => ({
-          title: route.params.nameFaction,
+          title: route.params.nameClan,
+          headerStyle: {
+            backgroundColor: route.params.color,
+          },
+          headerTintColor: COLORS.white,
           headerTitleAlign: "center",
         })}
       />

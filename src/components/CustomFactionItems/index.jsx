@@ -2,14 +2,19 @@ import { FlatList, Image, View } from "react-native";
 
 import Clans from "../../data/Clans";
 import CustomClanItem from "./../CustomClanItems";
+import { ROUTES } from "../../constants";
 import React from "react";
 import styles from "./styles";
 
-const CustomeFactionsItems = ({ item }) => {
+const CustomeFactionsItems = ({ item,navigation}) => {
   const Clan = Clans.filter((Clan) => Clan.idFactions === item.idFactions);
 
-  const handleSelectedClan = () => {
-    console.log("HOLA");
+  const handleSelectedClan = (clan) => {
+    navigation.navigate(ROUTES.CHARACTER, {
+      idClan: clan.idClan,
+      nameClan: clan.nameClan,
+      color:item.colorfaction,
+    });
   };
 
   const renderClanItem = ({ item }) => (

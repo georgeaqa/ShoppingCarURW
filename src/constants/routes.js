@@ -10,7 +10,7 @@ export default {
   SHOPPINGCAR: "ShoppingCar",
 
   //ShopScreens
-  CLAN: "Clan"
+  CHARACTER: "Character"
 
 
   
