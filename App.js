@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
+
+import AuthNavigator from "./src/navigators/AuthNavigator";
+import React from "react";
+import { useFonts } from "expo-font";
 
 export default function App() {
+  const [loaded] = useFonts({
+    "DancingScript-VariableFont_wght": require("./src/assets/fonts/DancingScript-VariableFont_wght.ttf"),
+  });
+  if (!loaded) {
+    return null;
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView style={styles.root}>
+      <AuthNavigator />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

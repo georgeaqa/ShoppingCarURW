@@ -1,0 +1,216 @@
+const Clans = [
+  {
+    idClan: 1,
+    nameClan: "All Stars",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/allstars.png" },
+    idFactions: 3,
+  },
+  {
+    idClan: 2,
+    nameClan: "Fang Pi Clang",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/img/v3/clans/fangpiclang.png",
+    },
+    idFactions: 3,
+  },
+  {
+    idClan: 3,
+    nameClan: "Huracan",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/huracan.png" },
+    idFactions: 3,
+  },
+  {
+    idClan: 4,
+    nameClan: "La Junta",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/lajunta.png" },
+    idFactions: 3,
+  },
+  {
+    idClan: 5,
+    nameClan: "Rescue",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/rescue.png" },
+    idFactions: 3,
+  },
+  {
+    idClan: 6,
+    nameClan: "Sentinel",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/sentinel.png" },
+    idFactions: 3,
+  },
+  {
+    idClan: 7,
+    nameClan: "Uppers",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/uppers.png" },
+    idFactions: 4,
+  },
+  {
+    idClan: 8,
+    nameClan: "Bangers",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/bangers.png" },
+    idFactions: 4,
+  },
+  {
+    idClan: 9,
+    nameClan: "Junks",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/junkz.png" },
+    idFactions: 4,
+  },
+  {
+    idClan: 10,
+    nameClan: "Montana",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/montana.png" },
+    idFactions: 4,
+  },
+  {
+    idClan: 11,
+    nameClan: "Pussycats",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/img/v3/clans/pussycats.png",
+    },
+    idFactions: 4,
+  },
+  {
+    idClan: 12,
+    nameClan: "Ulu Watu",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/uluwatu.png" },
+    idFactions: 5,
+  },
+  {
+    idClan: 13,
+    nameClan: "Komboka",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/komboka.png" },
+    idFactions: 5,
+  },
+  {
+    idClan: 14,
+    nameClan: "Roots",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/roots.png" },
+    idFactions: 5,
+  },
+  {
+    idClan: 15,
+    nameClan: "Frozn",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/frozn.png" },
+    idFactions: 5,
+  },
+  {
+    idClan: 16,
+    nameClan: "Jungo",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/jungo.png" },
+    idFactions: 5,
+  },
+  {
+    idClan: 17,
+    nameClan: "Berzerk",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/berzerk.png" },
+    idFactions: 6,
+  },
+  {
+    idClan: 18,
+    nameClan: "Paradox",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/paradox.png" },
+    idFactions: 6,
+  },
+  {
+    idClan: 19,
+    nameClan: "Piranas",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/piranas.png" },
+    idFactions: 6,
+  },
+  {
+    idClan: 20,
+    nameClan: "Raptors",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/raptors.png" },
+    idFactions: 6,
+  },
+  {
+    idClan: 21,
+    nameClan: "Freaks",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/freaks.png" },
+    idFactions: 6,
+  },
+  {
+    idClan: 22,
+    nameClan: "Cosmohnuts",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/img/v3/clans/cosmohnuts.png",
+    },
+    idFactions: 6,
+  },
+  {
+    idClan: 23,
+    nameClan: "Ghostown",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/ghostown.png" },
+    idFactions: 7,
+  },
+  {
+    idClan: 24,
+    nameClan: "Dominion",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/dominion.png" },
+    idFactions: 7,
+  },
+  {
+    idClan: 25,
+    nameClan: "Nightmare",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/img/v3/clans/nightmare.png",
+    },
+    idFactions: 7,
+  },
+  {
+    idClan: 26,
+    nameClan: "Skeelz",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/skeelz.png" },
+    idFactions: 7,
+  },
+  {
+    idClan: 27,
+    nameClan: "Oblivion",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/oblivion.png" },
+    idFactions: 7,
+  },
+  {
+    idClan: 28,
+    nameClan: "Hive",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/hive.png" },
+    idFactions: 8,
+  },
+  {
+    idClan: 29,
+    nameClan: "Sakrohm",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/sakrohm.png" },
+    idFactions: 8,
+  },
+  {
+    idClan: 30,
+    nameClan: "Riots",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/riots.png" },
+    idFactions: 8,
+  },
+  {
+    idClan: 31,
+    nameClan: "Gheist",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/gheist.png" },
+    idFactions: 8,
+  },
+  {
+    idClan: 32,
+    nameClan: "Vortex",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/vortex.png" },
+    idFactions: 8,
+  },
+  {
+    idClan: 33,
+    nameClan: "Leader",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/leader.png" },
+    idFactions: 1,
+  },
+  {
+    idClan: 34,
+    nameClan: "Oculus",
+    imageSource: { uri: "https://s.acdn.ur-img.com/img/v3/clans/oculus.png" },
+    idFactions: 2,
+  },
+];
+
+export default Clans;
