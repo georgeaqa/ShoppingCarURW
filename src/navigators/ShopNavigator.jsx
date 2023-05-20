@@ -8,12 +8,20 @@ const Stack = createNativeStackNavigator();
 
 const ShopNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: COLORS.white,
+        headerTitleAlign: "center",
+      }}
+    >
       <Stack.Screen
         name={ROUTES.FACTION}
         component={FactionScreen}
         options={{
-          headerShown: false,
+          headerStyle: {
+            backgroundColor: COLORS.gold,
+          },
+          title: "FACCIONES",
         }}
       />
       <Stack.Screen
@@ -24,8 +32,6 @@ const ShopNavigator = () => {
           headerStyle: {
             backgroundColor: route.params.color,
           },
-          headerTintColor: COLORS.white,
-          headerTitleAlign: "center",
         })}
       />
     </Stack.Navigator>

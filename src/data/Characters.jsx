@@ -543,6 +543,22 @@ const CHARACTERS = [
     },
     idClan: 32,
   },
+  {
+    idCharacter: 69,
+    nameCharacter: "ASHIGARU",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_ASHIGARU_N5_HD_673.png",
+    },
+    idClan: 33,
+  },
+  {
+    idCharacter: 70,
+    nameCharacter: "VANSAAR",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_VANSAAR_N5_HD_673.png",
+    },
+    idClan: 33,
+  },
 ];
 
 export default CHARACTERS;

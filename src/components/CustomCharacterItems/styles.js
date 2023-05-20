@@ -1,21 +1,27 @@
 import { Dimensions, StyleSheet } from "react-native";
 
-import { COLORS } from "../../constants";
+import { COLORS } from "../../constants/index";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
-  FactionsItems: {
+  characterItem: {
     flex: 1,
-    margin:5,
+    justifyContent: "center",
+    borderWidth: 1,
+    margin: 5,
+  },
+  characterName: {
+    fontSize: 25,
+    fontFamily: "DancingScript-VariableFont_wght",
+    textAlign: "center",
   },
   imageContainer: {
-    width: "100%",
-    height: windowHeight / 8,
-    borderBottomColor: COLORS.gold,
-    borderBottomWidth: 1,
+    width: windowWidth / 2,
+    height: windowHeight / 4,
   },
+
   image: {
     width: "100%",
     height: "100%",

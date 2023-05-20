@@ -1,21 +1,21 @@
 import { FlatList, Image, Text, View } from "react-native";
 
 import CHARACTERS from "../../../../data/Characters";
+import CustomCharacterItems from "../../../../components/CustomCharacterItems";
 import React from "react";
 import styles from "./styles";
 
 const CharacterScreen = ({ route }) => {
   const characters = CHARACTERS.filter(
-    (characters) => characters.idClan === route.params.idClan,
+    (characters) => characters.idClan === route.params.idClan
   );
 
+  const handleSelectedCharacter = (Character) => {
+  console.log(Character.idCharacter)
+  };
   const renderCharacterItem = ({ item }) => (
     <View style={styles.characterItem}>
-      <Text style={styles.characterName}>{item.nameCharacter} </Text>
-      <View style={styles.imageContainer}>
-        <Image style={styles.image}source={item.imageSource} resizeMode="contain"/>
-      </View>
-      
+     <CustomCharacterItems item={item} onSelected={handleSelectedCharacter}/>
     </View>
   );
 
@@ -25,6 +25,7 @@ const CharacterScreen = ({ route }) => {
         data={characters}
         renderItem={renderCharacterItem}
         keyExtractor={(item) => item.idCharacter}
+        numColumns={2}
       />
     </View>
   );
