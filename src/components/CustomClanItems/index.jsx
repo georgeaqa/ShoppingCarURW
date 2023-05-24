@@ -5,13 +5,11 @@ import styles from "./styles";
 
 const CustomeFactionsItems = ({ item, onSelected }) => {
   return (
-    <View style={styles.ClanItem}>
-      <TouchableOpacity
-        onPress={() => onSelected(item)}
-      >
+    <View className="flex-1">
+      <TouchableOpacity onPress={() => onSelected(item)}>
         <View style={styles.imageContainer}>
           <Image
-            style={styles.image}
+            className="w-full h-full"
             source={item.imageSource}
             resizeMode="contain"
           />

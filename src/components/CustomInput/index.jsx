@@ -1,9 +1,14 @@
 import React from "react";
 import { TextInput } from "react-native";
-import styles from "./styles";
 
 const CustomInput = ({ newStyle, icon, ...restProps }) => {
-  return <TextInput style={{ ...styles.input, ...newStyle }} {...restProps} />;
+  return (
+    <TextInput
+      className="w-full m-2 p-2 text-base"
+      style={newStyle}
+      {...restProps}
+    />
+  );
 };
 
 export default CustomInput;

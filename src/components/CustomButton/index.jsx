@@ -1,12 +1,16 @@
 import { Pressable, Text } from "react-native";
 
 import React from "react";
-import styles from "./styles";
 
-const CustomButton = ({ newStyle, newStyleText, text, ...restProps }) => {
+const CustomButton = ({ newStyleText, text, ...restProps }) => {
   return (
-    <Pressable style={{ ...styles.container, ...newStyle }} {...restProps}>
-      <Text style={{ ...styles.text, ...newStyleText }}>{text}</Text>
+    <Pressable
+      className="w-full items-center m-2 p-2 rounded-2xl "
+      {...restProps}
+    >
+      <Text className="text-base" style={newStyleText}>
+        {text}
+      </Text>
     </Pressable>
   );
 };

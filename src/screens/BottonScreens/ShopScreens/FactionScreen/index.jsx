@@ -2,23 +2,19 @@ import { FlatList, View } from "react-native";
 
 import CustomeFactionsItems from "../../../../components/CustomFactionItems";
 import Factions from "../../../../data/Factions";
-import { ROUTES } from "../../../../constants";
 import { React } from "react";
-import styles from "./styles";
 
 const FactionScreen = ({ navigation }) => {
-
-
   const renderFactionItems = ({ item }) => {
     return (
       <View>
-        <CustomeFactionsItems item={item} navigation={navigation}/>
+        <CustomeFactionsItems item={item} navigation={navigation} />
       </View>
     );
   };
 
   return (
-    <View style={styles.container}>
+    <View className="flex-1">
       <FlatList
         data={Factions}
         renderItem={renderFactionItems}

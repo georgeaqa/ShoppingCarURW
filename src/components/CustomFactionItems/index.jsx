@@ -1,4 +1,4 @@
-import { FlatList, Image, Text, View } from "react-native";
+import { FlatList, Image, View } from "react-native";
 
 import Clans from "../../data/Clans";
 import CustomClanItem from "./../CustomClanItems";
@@ -24,24 +24,25 @@ const CustomeFactionsItems = ({ item, navigation }) => {
   );
 
   return (
-    <View style={styles.FactionsItems}>
-      <View style={{ backgroundColor: item.colorfaction}}>
-        <View style={styles.imageContainer}>
+    <View className="flex-1 m-[1%]">
+      <View style={{ backgroundColor: item.colorfaction }}>
+        <View
+          className="w-full border rounded border-[#FFD700]"
+          style={styles.heightContainer}
+        >
           <Image
-            style={styles.image}
+            className="w-full h-full"
             source={item.imageSource}
             resizeMode="contain"
           />
         </View>
-        <View>
-          <FlatList
-            data={Clan}
-            renderItem={renderClanItem}
-            keyExtractor={(clan) => clan.idClan}
-            showsVerticalScrollIndicator={false}
-            numColumns={2}
-          />
-        </View>
+        <FlatList
+          data={Clan}
+          renderItem={renderClanItem}
+          keyExtractor={(clan) => clan.idClan}
+          showsVerticalScrollIndicator={false}
+          numColumns={2}
+        />
       </View>
     </View>
   );

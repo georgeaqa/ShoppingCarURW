@@ -1,7 +1,7 @@
 import { COLORS, ROUTES } from "../constants";
 import { FactionScreen, ShoppingCar } from "../screens";
 
-import Entypo from "react-native-vector-icons/Entypo";
+import Entypo from "@expo/vector-icons/Entypo";
 import React from "react";
 import ShopNavigator from "./ShopNavigator";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
