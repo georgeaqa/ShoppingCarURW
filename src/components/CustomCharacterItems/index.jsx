@@ -1,7 +1,7 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
+import { DIMENSIONS } from "../../constants";
 import React from "react";
-import styles from "./styles";
 
 const CustomCharacterItems = ({ item, onSelected }) => {
   return (
@@ -10,7 +10,7 @@ const CustomCharacterItems = ({ item, onSelected }) => {
       onPress={() => onSelected(item)}
     >
       <Text className="text-2xl text-center">{item.nameCharacter}</Text>
-      <View style={styles.imageContainer}>
+      <View style={{width:DIMENSIONS.width/2,height:DIMENSIONS.height/4}}>
         <Image
           className="w-full h-full"
           source={item.imageSource}
