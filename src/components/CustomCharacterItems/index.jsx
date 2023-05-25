@@ -5,18 +5,19 @@ import styles from "./styles";
 
 const CustomCharacterItems = ({ item, onSelected }) => {
   return (
-    <View style={styles.characterItem}>
-      <TouchableOpacity onPress={() => onSelected(item)}>
-        <Text style={styles.characterName}>{item.nameCharacter}</Text>
-        <View style={styles.imageContainer}>
-          <Image
-            style={styles.image}
-            source={item.imageSource}
-            resizeMode="contain"
-          />
-        </View>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity
+      className="flex-1 justify-center m-2 border border-[#FFD700]"
+      onPress={() => onSelected(item)}
+    >
+      <Text className="text-2xl text-center">{item.nameCharacter}</Text>
+      <View style={styles.imageContainer}>
+        <Image
+          className="w-full h-full"
+          source={item.imageSource}
+          resizeMode="contain"
+        />
+      </View>
+    </TouchableOpacity>
   );
 };
 
