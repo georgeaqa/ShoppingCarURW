@@ -1,12 +1,13 @@
-import { FlatList, Image, Text, View } from "react-native";
+import { FlatList, View } from "react-native";
 
 import CHARACTERS from "../../../../data/Characters";
 import CustomCharacterItems from "../../../../components/CustomCharacterItems";
 import React from "react";
 
 const CharacterScreen = ({ route }) => {
+
   const characters = CHARACTERS.filter(
-    (characters) => characters.idClan === route.params.idClan
+    (characters) => characters.idFactions === route.params.idFactions
   );
 
   const handleSelectedCharacter = (Character) => {

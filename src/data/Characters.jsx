@@ -5,7 +5,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_KATE_N5_HD_673.png",
     },
-    idClan: 33,
+    idFactions: 1,
   },
   {
     idCharacter: 2,
@@ -13,7 +13,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_MEMENTO_N5_HD_673.png",
     },
-    idClan: 33,
+    idFactions: 1,
   },
   {
     idCharacter: 3,
@@ -21,7 +21,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/OCULUS/OCULUS_GENESIS_N5_HD_673.png",
     },
-    idClan: 34,
+    idFactions: 2,
   },
   {
     idCharacter: 4,
@@ -29,7 +29,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/OCULUS/OCULUS_PHALLOIDELD_N4_HD_673.png",
     },
-    idClan: 34,
+    idFactions: 2,
   },
   {
     idCharacter: 5,
@@ -37,7 +37,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/ALLSTARS/ALLSTARS_STRIKERCR_N4_HD_673.png",
     },
-    idClan: 1,
+    idFactions: 3,
   },
   {
     idCharacter: 6,
@@ -45,7 +45,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/ALLSTARS/ALLSTARS_MARINA_N4_HD_673.png",
     },
-    idClan: 1,
+    idFactions: 3,
   },
   {
     idCharacter: 7,
@@ -53,7 +53,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/FANGPICLANG/FANGPICLANG_LOSTHOGCR_N5_HD_673.png",
     },
-    idClan: 2,
+    idFactions: 3,
   },
   {
     idCharacter: 8,
@@ -61,7 +61,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/FANGPICLANG/FANGPICLANG_TOKAMAK_N5_HD_673.png",
     },
-    idClan: 2,
+    idFactions: 3,
   },
   {
     idCharacter: 9,
@@ -69,7 +69,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/HURACAN/HURACAN_NOCTEZUMACR_N5_HD_673.png",
     },
-    idClan: 3,
+    idFactions: 3,
   },
   {
     idCharacter: 10,
@@ -77,7 +77,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/HURACAN/HURACAN_QUETZALMT_N4_HD_673.png",
     },
-    idClan: 3,
+    idFactions: 3,
   },
   {
     idCharacter: 11,
@@ -85,7 +85,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/LAJUNTA/LAJUNTA_GENERALMT_N5_HD_673.png",
     },
-    idClan: 4,
+    idFactions: 3,
   },
   {
     idCharacter: 12,
@@ -93,7 +93,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/LAJUNTA/LAJUNTA_AMIRALPYCR_N3_HD_673.png",
     },
-    idClan: 4,
+    idFactions: 3,
   },
   {
     idCharacter: 13,
@@ -101,7 +101,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/RESCUE/RESCUE_ALECMT_N4_HD_673.png",
     },
-    idClan: 5,
+    idFactions: 3,
   },
   {
     idCharacter: 14,
@@ -109,7 +109,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/RESCUE/RESCUE_MARCOCR_N5_HD_673.png",
     },
-    idClan: 5,
+    idFactions: 3,
   },
   {
     idCharacter: 15,
@@ -117,7 +117,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/SENTINEL/SENTINEL_HAVOK_N5_HD_673.png",
     },
-    idClan: 6,
+    idFactions: 3,
   },
   {
     idCharacter: 16,
@@ -125,7 +125,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/SENTINEL/SENTINEL_HAWK_N5_HD_673.png",
     },
-    idClan: 6,
+    idFactions: 3,
   },
   {
     idCharacter: 17,
@@ -133,7 +133,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/UPPERS/UPPERS_JACKIEMT_N4_HD_673.png",
     },
-    idClan: 7,
+    idFactions: 4,
   },
   {
     idCharacter: 18,
@@ -141,7 +141,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/UPPERS/UPPERS_ARMANDAMT_N3_HD_673.png",
     },
-    idClan: 7,
+    idFactions: 4,
   },
   {
     idCharacter: 19,
@@ -149,7 +149,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/BANGERS/BANGERS_SUMSAMCR_N5_HD_673.png",
     },
-    idClan: 8,
+    idFactions: 4,
   },
   {
     idCharacter: 20,
@@ -157,7 +157,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/BANGERS/BANGERS_BODENPOWERCR_N5_HD_673.png",
     },
-    idClan: 8,
+    idFactions: 4,
   },
   {
     idCharacter: 21,
@@ -165,7 +165,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/JUNKZ/JUNKZ_DJKORRMT_N5_HD_673.png",
     },
-    idClan: 9,
+    idFactions: 4,
   },
   {
     idCharacter: 22,
@@ -173,7 +173,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/JUNKZ/JUNKZ_GIBSONCR_N4_HD_673.png",
     },
-    idClan: 9,
+    idFactions: 4,
   },
   {
     idCharacter: 23,
@@ -181,7 +181,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/MONTANA/MONTANA_DONCR_N5_HD_673.png",
     },
-    idClan: 10,
+    idFactions: 4,
   },
   {
     idCharacter: 24,
@@ -189,7 +189,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/MONTANA/MONTANA_LYSETERIAMT_N3_HD_673.png",
     },
-    idClan: 10,
+    idFactions: 4,
   },
   {
     idCharacter: 25,
@@ -197,7 +197,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/PUSSYCATS/PUSSYCATS_CHARLIECR_N5_HD_673.png",
     },
-    idClan: 11,
+    idFactions: 4,
   },
   {
     idCharacter: 26,
@@ -205,7 +205,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/PUSSYCATS/PUSSYCATS_YAYOICR_N4_HD_673.png",
     },
-    idClan: 11,
+    idFactions: 4,
   },
   {
     idCharacter: 27,
@@ -213,7 +213,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/ULUWATU/ULUWATU_QUEENNALIAH_N5_HD_673.png",
     },
-    idClan: 12,
+    idFactions: 5,
   },
   {
     idCharacter: 28,
@@ -221,7 +221,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/ULUWATU/ULUWATU_TANAEREVAMT_N5_HD_673.png",
     },
-    idClan: 12,
+    idFactions: 5,
   },
   {
     idCharacter: 29,
@@ -229,7 +229,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/KOMBOKA/KOMBOKA_KUWAKACR_N5_HD_673.png",
     },
-    idClan: 13,
+    idFactions: 5,
   },
   {
     idCharacter: 30,
@@ -237,7 +237,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/KOMBOKA/KOMBOKA_VOLKANMT_N5_HD_673.png",
     },
-    idClan: 13,
+    idFactions: 5,
   },
   {
     idCharacter: 31,
@@ -245,7 +245,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/ROOTS/ROOTS_KIKIMT_N5_HD_673.png",
     },
-    idClan: 14,
+    idFactions: 5,
   },
   {
     idCharacter: 32,
@@ -253,7 +253,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/ROOTS/ROOTS_ATAOUALPET_N3_HD_673.png",
     },
-    idClan: 14,
+    idFactions: 5,
   },
   {
     idCharacter: 33,
@@ -261,7 +261,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/FROZN/FROZN_KALINDRACR_N5_HD_673.png",
     },
-    idClan: 15,
+    idFactions: 5,
   },
   {
     idCharacter: 34,
@@ -269,7 +269,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/FROZN/FROZN_YMIRAHMT_N5_HD_673.png",
     },
-    idClan: 15,
+    idFactions: 5,
   },
   {
     idCharacter: 35,
@@ -277,7 +277,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/JUNGO/JUNGO_ONGHMT_N5_HD_673.png",
     },
-    idClan: 16,
+    idFactions: 5,
   },
   {
     idCharacter: 36,
@@ -285,7 +285,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/JUNGO/JUNGO_SOBEK_N5_HD_673.png",
     },
-    idClan: 16,
+    idFactions: 5,
   },
   {
     idCharacter: 37,
@@ -293,7 +293,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/BERZERK/BERZERK_CORTEZMT_N5_HD_673.png",
     },
-    idClan: 17,
+    idFactions: 6,
   },
   {
     idCharacter: 38,
@@ -301,7 +301,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/BERZERK/BERZERK_NADIA_N5_HD_673.png",
     },
-    idClan: 17,
+    idFactions: 6,
   },
   {
     idCharacter: 39,
@@ -309,7 +309,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/PARADOX/PARADOX_ENIGMACR_N5_HD_673.png",
     },
-    idClan: 18,
+    idFactions: 6,
   },
   {
     idCharacter: 40,
@@ -317,7 +317,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/PARADOX/PARADOX_NARKE_N5_HD_673.png",
     },
-    idClan: 18,
+    idFactions: 6,
   },
   {
     idCharacter: 41,
@@ -325,7 +325,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/PIRANAS/PIRANAS_BLOODHMT_N5_HD_673.png",
     },
-    idClan: 19,
+    idFactions: 6,
   },
   {
     idCharacter: 42,
@@ -333,7 +333,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/PIRANAS/PIRANAS_YACCANEMBA_N1_HD_673.png",
     },
-    idClan: 19,
+    idFactions: 6,
   },
   {
     idCharacter: 43,
@@ -341,7 +341,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/RAPTORS/RAPTORS_IMPERASLOANECR_N5_HD_673.png",
     },
-    idClan: 20,
+    idFactions: 6,
   },
   {
     idCharacter: 44,
@@ -349,7 +349,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/RAPTORS/RAPTORS_REXSWEIG_N5_HD_673.png",
     },
-    idClan: 20,
+    idFactions: 6,
   },
   {
     idCharacter: 45,
@@ -357,7 +357,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/FREAKS/FREAKS_OLGACR_N3_HD_673.png",
     },
-    idClan: 21,
+    idFactions: 6,
   },
   {
     idCharacter: 46,
@@ -365,7 +365,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/FREAKS/FREAKS_GRUDJMT_N4_HD_673.png",
     },
-    idClan: 21,
+    idFactions: 6,
   },
   {
     idCharacter: 47,
@@ -373,7 +373,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/COSMOHNUTS/COSMOHNUTS_BECKY_N5_HD_673.png",
     },
-    idClan: 22,
+    idFactions: 6,
   },
   {
     idCharacter: 48,
@@ -381,7 +381,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/COSMOHNUTS/COSMOHNUTS_DOGGONUTS_N2_HD_673.png",
     },
-    idClan: 22,
+    idFactions: 6,
   },
   {
     idCharacter: 49,
@@ -389,7 +389,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/GHOSTOWN/GHOSTOWN_JUDGELYNCH_N3_HD_673.png",
     },
-    idClan: 23,
+    idFactions: 7,
   },
   {
     idCharacter: 50,
@@ -397,7 +397,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/GHOSTOWN/GHOSTOWN_SENTENZACR_N5_HD_673.png",
     },
-    idClan: 23,
+    idFactions: 7,
   },
   {
     idCharacter: 51,
@@ -405,7 +405,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/DOMINION/DOMINION_DEATHADDERMT_N5_HD_673.png",
     },
-    idClan: 24,
+    idFactions: 7,
   },
   {
     idCharacter: 52,
@@ -413,7 +413,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/DOMINION/DOMINION_DOOKOR_N4_HD_673.png",
     },
-    idClan: 24,
+    idFactions: 7,
   },
   {
     idCharacter: 53,
@@ -421,7 +421,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/NIGHTMARE/NIGHTMARE_KENNYMT_N4_HD_673.png",
     },
-    idClan: 25,
+    idFactions: 7,
   },
   {
     idCharacter: 54,
@@ -429,7 +429,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/NIGHTMARE/NIGHTMARE_KOLOSMT_N5_HD_673.png",
     },
-    idClan: 25,
+    idFactions: 7,
   },
   {
     idCharacter: 55,
@@ -437,7 +437,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/SKEELZ/SKEELZ_CAELUSMT_N5_HD_673.png",
     },
-    idClan: 26,
+    idFactions: 7,
   },
   {
     idCharacter: 56,
@@ -445,7 +445,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/SKEELZ/SKEELZ_DOUNIAMT_N3_HD_673.png",
     },
-    idClan: 26,
+    idFactions: 7,
   },
   {
     idCharacter: 57,
@@ -453,7 +453,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/OBLIVION/OBLIVION_TYRESMT_N5_HD_673.png",
     },
-    idClan: 27,
+    idFactions: 7,
   },
   {
     idCharacter: 58,
@@ -461,7 +461,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/OBLIVION/OBLIVION_ALTERLD_N3_HD_673.png",
     },
-    idClan: 27,
+    idFactions: 7,
   },
   {
     idCharacter: 59,
@@ -469,7 +469,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/HIVE/HIVE_MAANACERCEICR_N5_HD_673.png",
     },
-    idClan: 28,
+    idFactions: 8,
   },
   {
     idCharacter: 60,
@@ -477,7 +477,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/HIVE/HIVE_MAANA2097_N5_HD_673.png",
     },
-    idClan: 28,
+    idFactions: 8,
   },
   {
     idCharacter: 61,
@@ -485,7 +485,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/SAKROHM/SAKROHM_GURUMT_N5_HD_673.png",
     },
-    idClan: 29,
+    idFactions: 8,
   },
   {
     idCharacter: 62,
@@ -493,7 +493,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/SAKROHM/SAKROHM_URANUSCR_N3_HD_673.png",
     },
-    idClan: 29,
+    idFactions: 8,
   },
   {
     idCharacter: 63,
@@ -501,7 +501,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/RIOTS/RIOTS_PERICLESMT_N5_HD_673.png",
     },
-    idClan: 30,
+    idFactions: 8,
   },
   {
     idCharacter: 64,
@@ -509,7 +509,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/RIOTS/RIOTS_OCTANA_N5_HD_673.png",
     },
-    idClan: 30,
+    idFactions: 8,
   },
   {
     idCharacter: 65,
@@ -517,7 +517,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/GHEIST/GHEIST_TOROMT_N4_HD_673.png",
     },
-    idClan: 31,
+    idFactions: 8,
   },
   {
     idCharacter: 66,
@@ -525,7 +525,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/GHEIST/GHEIST_ROLPH_N5_HD_673.png",
     },
-    idClan: 31,
+    idFactions: 8,
   },
   {
     idCharacter: 67,
@@ -533,7 +533,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/VORTEX/VORTEX_DREGNMT_N5_HD_673.png",
     },
-    idClan: 32,
+    idFactions: 8,
   },
   {
     idCharacter: 68,
@@ -541,7 +541,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/VORTEX/VORTEX_DREGN2097_N5_HD_673.png",
     },
-    idClan: 32,
+    idFactions: 8,
   },
   {
     idCharacter: 69,
@@ -549,7 +549,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_ASHIGARU_N5_HD_673.png",
     },
-    idClan: 33,
+    idFactions: 1,
   },
   {
     idCharacter: 70,
@@ -557,7 +557,7 @@ const CHARACTERS = [
     imageSource: {
       uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_VANSAAR_N5_HD_673.png",
     },
-    idClan: 33,
+    idFactions: 1,
   },
 ];
 

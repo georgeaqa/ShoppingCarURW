@@ -1,12 +1,11 @@
 import { CustomButton, CustomInput } from "../../../components";
-import { Image, Text, View, useWindowDimensions } from "react-native";
+import { Image, Text, View } from "react-native";
 
 import { ROUTES } from "../../../constants";
 import React from "react";
 import styles from "./styles";
 
 const ForgotPassword = ({ navigation }) => {
-  const { height } = useWindowDimensions();
   const onSendNewPasswordPressed = () => {
     console.warn("Nueva Contraseña Enviada");
     navigation.navigate(ROUTES.LOGIN);

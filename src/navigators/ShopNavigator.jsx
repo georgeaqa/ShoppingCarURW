@@ -28,7 +28,7 @@ const ShopNavigator = () => {
         name={ROUTES.CHARACTER}
         component={CharacterScreen}
         options={({ route }) => ({
-          title: route.params.nameClan,
+          title: route.params.nameFactions,
           headerStyle: {
             backgroundColor: route.params.color,
           },

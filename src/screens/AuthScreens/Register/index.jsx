@@ -1,12 +1,11 @@
 import { CustomButton, CustomInput } from "../../../components";
-import { Image, View, useWindowDimensions } from "react-native";
+import { Image, View } from "react-native";
 
 import { ROUTES } from "../../../constants";
 import React from "react";
 import styles from "./styles";
 
 const Register = ({ navigation }) => {
-  const { height } = useWindowDimensions();
   const onRegisterPressed = () => {
     console.warn("Cuenta ha sido creada");
     navigation.navigate(ROUTES.LOGIN);
