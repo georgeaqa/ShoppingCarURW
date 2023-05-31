@@ -1,7 +1,9 @@
 import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
 
 import AuthNavigator from "./src/navigators/AuthNavigator";
+import { Provider } from "react-redux";
 import React from "react";
+import store from "./src/store";
 import { useFonts } from "expo-font";
 
 export default function App() {
@@ -12,15 +14,9 @@ export default function App() {
     return null;
   }
   return (
-    <SafeAreaView style={styles.root}>
+    <Provider store={store}>
       <AuthNavigator />
       <StatusBar style="auto" />
-    </SafeAreaView>
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
-});

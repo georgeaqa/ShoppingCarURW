@@ -1,14 +1,18 @@
 import { FlatList, View } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 
-import CustomeFactionsItems from "../../../../components/CustomFactionItems";
-import Factions from "../../../../data/Factions";
+import { CustomFactionItems } from "../../../../components";
 import { ROUTES } from "../../../../constants";
 import { React } from "react";
+import { selectedFaction } from "../../../../store/actions/faction.action";
 
 const FactionScreen = ({ navigation }) => {
-  const handleSelectedFaction = item => {
+  const factions = useSelector((state) => state.factions.factions);
+  const dispatch = useDispatch();
+
+  const handleSelectedFaction = (item) => {
+    dispatch(selectedFaction(item.idFactions));
     navigation.navigate(ROUTES.CHARACTER, {
-      idFactions: item.idFactions,
       nameFactions: item.nameFactions,
       color: item.colorfaction,
     });
@@ -16,7 +20,7 @@ const FactionScreen = ({ navigation }) => {
   const renderFactionItems = ({ item }) => {
     return (
       <View>
-        <CustomeFactionsItems item={item} onSelected={handleSelectedFaction} />
+        <CustomFactionItems item={item} onSelected={handleSelectedFaction} />
       </View>
     );
   };
@@ -24,7 +28,7 @@ const FactionScreen = ({ navigation }) => {
   return (
     <View className="flex-1">
       <FlatList
-        data={Factions}
+        data={factions}
         renderItem={renderFactionItems}
         keyExtractor={(item) => item.idFactions}
         showsVerticalScrollIndicator={false}

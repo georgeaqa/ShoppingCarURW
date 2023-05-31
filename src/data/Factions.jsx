@@ -1,4 +1,4 @@
-const Factions = [
+const FACTIONS = [
   {
     idFactions: 1,
     nameFactions: "LEADER",
@@ -65,4 +65,4 @@ const Factions = [
   },
 ];
 
-export default Factions;
+export default FACTIONS;
