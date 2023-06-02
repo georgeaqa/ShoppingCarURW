@@ -1,9 +1,9 @@
 import { CustomButton, CustomInput } from "../../../components";
 import { Image, View } from "react-native";
 
+import { COLORS } from "../../../constants";
 import { ROUTES } from "../../../constants";
 import React from "react";
-import styles from "./styles";
 
 const Register = ({ navigation }) => {
   const onRegisterPressed = () => {
@@ -38,7 +38,7 @@ const Register = ({ navigation }) => {
       <CustomButton
         text="Registrar"
         className="bg-[#5cb85c]"
-        newStyleText={styles.buttonText}
+        newStyleText={{ color: COLORS.white }}
         onPress={onRegisterPressed}
       />
     </View>

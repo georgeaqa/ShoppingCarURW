@@ -1,5 +1,5 @@
 import { COLORS, ROUTES } from "../constants";
-import { CharacterScreen, FactionScreen } from "../screens";
+import { CharacterDetailScreen, CharacterScreen, FactionScreen } from "../screens";
 
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -29,6 +29,16 @@ const ShopNavigator = () => {
         component={CharacterScreen}
         options={({ route }) => ({
           title: route.params.nameFactions,
+          headerStyle: {
+            backgroundColor: route.params.color,
+          },
+        })}
+      />
+      <Stack.Screen
+        name={ROUTES.CHARACTER_DETAIL}
+        component={CharacterDetailScreen}
+        options={({ route }) => ({
+          title: route.params.nameCharacter,
           headerStyle: {
             backgroundColor: route.params.color,
           },

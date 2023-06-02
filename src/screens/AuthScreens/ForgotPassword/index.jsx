@@ -1,9 +1,9 @@
 import { CustomButton, CustomInput } from "../../../components";
 import { Image, Text, View } from "react-native";
 
+import { COLORS } from "../../../constants";
 import { ROUTES } from "../../../constants";
 import React from "react";
-import styles from "./styles";
 
 const ForgotPassword = ({ navigation }) => {
   const onSendNewPasswordPressed = () => {
@@ -27,7 +27,7 @@ const ForgotPassword = ({ navigation }) => {
       <CustomButton
         text="Recuperar Contraseña"
         className="bg-[#5cb85c]"
-        newStyleText={styles.buttonText}
+        newStyleText={{ color: COLORS.white }}
         onPress={onSendNewPasswordPressed}
       />
     </View>

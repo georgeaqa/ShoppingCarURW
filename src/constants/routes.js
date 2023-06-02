@@ -10,7 +10,8 @@ export default {
   SHOPPINGCAR: "ShoppingCar",
 
   //ShopScreens
-  CHARACTER: "Character"
+  CHARACTER: "Character",
+  CHARACTER_DETAIL: "Character Detail",
 
 
   

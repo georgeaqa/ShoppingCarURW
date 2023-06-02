@@ -2,8 +2,8 @@ import { CustomButton, CustomInput } from "../../../components";
 import { Image, View } from "react-native";
 import React, { useState } from "react";
 
+import { COLORS } from "../../../constants";
 import { ROUTES } from "../../../constants";
-import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
@@ -48,17 +48,17 @@ const Login = () => {
         text="Conectarse"
         onPress={onLoginPressed}
         className="bg-[#0000FF]"
-        newStyleText={styles.buttonTextPrimary}
+        newStyleText={{ color: COLORS.white }}
       />
       <CustomButton
         text="Olvido contraseña?"
         onPress={onForgotPasswordPressed}
-        newStyleText={styles.buttonTextTertiary}
+        newStyleText={{ color: COLORS.tertiaryColor }}
       />
       <CustomButton
         text="Registrarse"
         onPress={onRegisterPressed}
-        newStyleText={styles.buttonTextTertiary}
+        newStyleText={{ color: COLORS.tertiaryColor }}
       />
     </View>
   );

@@ -32,6 +32,7 @@ const FactionScreen = ({ navigation }) => {
         renderItem={renderFactionItems}
         keyExtractor={(item) => item.idFactions}
         showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );
