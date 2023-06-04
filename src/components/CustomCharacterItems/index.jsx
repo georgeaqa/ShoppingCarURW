@@ -9,7 +9,7 @@ const CustomCharacterItems = ({ item, onSelected }) => {
       className="flex-1 justify-center m-2 border border-[#FFD700]"
       onPress={() => onSelected(item)}
     >
-      <Text className="text-2xl text-center">{item.nameCharacter}</Text>
+      <Text className="text-base text-center">{item.nameCharacter}</Text>
       <View style={{width:DIMENSIONS.width/2,height:DIMENSIONS.height/4}}>
         <Image
           className="w-full h-full"
