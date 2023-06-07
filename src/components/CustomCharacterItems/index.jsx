@@ -6,7 +6,7 @@ import React from "react";
 const CustomCharacterItems = ({ item, onSelected }) => {
   return (
     <TouchableOpacity
-      className="flex-1 justify-center m-2 border border-[#FFD700]"
+      className="flex-1 items-center justify-center m-2 border border-[#FFD700]"
       onPress={() => onSelected(item)}
     >
       <Text className="text-base text-center">{item.nameCharacter}</Text>

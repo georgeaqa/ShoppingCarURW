@@ -1,11 +1,43 @@
-import { Text, View } from "react-native";
+import { CustomButton, CustomCartItems } from "../../../components";
+import { FlatList, View } from "react-native";
+import {
+  confirm_CART,
+  remove_character,
+} from "../../../store/actions/cart.action";
+import { useDispatch, useSelector } from "react-redux";
 
+import { COLORS } from "../../../constants";
 import React from "react";
 
 const ShoppingCar = () => {
+  const dispatch = useDispatch();
+  const characters = useSelector((state) => state.cart.characters);
+  const total = useSelector((state) => state.cart.total);
+  const renderCartcharacter = ({ item }) => (
+    <CustomCartItems item={item} onDelete={handleDeleteItem} />
+  );
+  const handleDeleteItem = (idCharacter) => {
+    dispatch(remove_character(idCharacter));
+  };
+  const handleConfirmCart = () => {};
   return (
-    <View>
-      <Text>ShoppingCar</Text>
+    <View className="flex-1 px-[1%] bg-white justify-between">
+      <View className="flex-1">
+        <FlatList
+          data={characters}
+          keyExtractor={(item) => item.idCharacter}
+          renderItem={renderCartcharacter}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
+        />
+      </View>
+      <View className="items-center">
+        <CustomButton
+          text={`Confirmar Total: ${total}`}
+          className="bg-[#5cb85c] "
+          newStyleText={{ color: COLORS.white }}
+        />
+      </View>
     </View>
   );
 };

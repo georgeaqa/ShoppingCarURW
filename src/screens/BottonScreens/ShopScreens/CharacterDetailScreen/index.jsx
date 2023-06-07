@@ -1,19 +1,29 @@
 import { Image, ScrollView, Text, View } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 
 import { COLORS } from "../../../../constants";
 import { CustomButton } from "../../../../components";
+import { DIMENSIONS } from "../../../../constants";
 import React from "react";
-import { useSelector } from "react-redux";
+import { add_character } from "../../../../store/actions/cart.action";
 
 const CharacterDetailScreen = () => {
+  const dispatch = useDispatch();
   const character = useSelector((state) => state.characters.selectedCharacter);
+
+  const handleAddCharacter = () => {
+    dispatch(add_character(character));
+  };
 
   return (
     <View className="flex-1 px-[5%] bg-white justify-between">
       <View className="flex-row">
-        <View className="border border-[#FFFF00] my-2">
+        <View
+          className="border border-[#FFFF00] my-2"
+          style={{ width: DIMENSIONS.width / 3, height: DIMENSIONS.height / 5 }}
+        >
           <Image
-            style={{ width: 150, height: 200 }}
+            className="w-full h-full"
             source={character.imageSource}
             resizeMode="contain"
           />
@@ -39,6 +49,7 @@ const CharacterDetailScreen = () => {
           text="Agregar al carrito"
           className="bg-[#5cb85c] "
           newStyleText={{ color: COLORS.white }}
+          onPress={handleAddCharacter}
         />
       </View>
     </View>

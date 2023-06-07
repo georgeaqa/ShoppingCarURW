@@ -12,7 +12,4 @@ export default {
   //ShopScreens
   CHARACTER: "Character",
   CHARACTER_DETAIL: "Character Detail",
-
-
-  
 };
