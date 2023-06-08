@@ -1,9 +1,9 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, Pressable, Text, TouchableOpacity, View } from "react-native";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 import React from "react";
 
-const CustomCartItems = ({ item, onDelete }) => {
+const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
   return (
     <View className="my-1 flex-row justify-between bg-gray-400">
       <View className="flex-row">
@@ -16,7 +16,24 @@ const CustomCartItems = ({ item, onDelete }) => {
           <Text className="text-white">ID: {item.idCharacter}</Text>
           <Text className="text-white">nombre: {item.nameCharacter}</Text>
           <Text className="text-white">$ {item.price}</Text>
-          <Text className="text-white">Cantidad: {item.quantity}</Text>
+          <View className="flex-row ">
+            <Text className="text-white">Cantidad: </Text>
+            <TouchableOpacity onPress={() => onReduce(item.idCharacter)}>
+              <Ionicons
+                name="md-remove-circle-outline"
+                size={20}
+                color={"red"}
+              />
+            </TouchableOpacity>
+            <Text className="text-white"> {item.quantity} </Text>
+            <TouchableOpacity onPress={() => onIncrease(item.idCharacter)}>
+              <Ionicons
+                name="md-add-circle-outline"
+                size={20}
+                color={"green"}
+              />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
       <View className="justify-center">

@@ -1,12 +1,16 @@
 import {
   ADD_CHARACTER,
   CONFIRM_CART,
+  DECREASE_CHARACTER,
+  INCREASE_CHARACTER,
+  IN_CART,
   REMOVE_CHARACTER,
 } from "../actions/cart.action";
 
 const initialState = {
   characters: [],
   total: 0,
+  inCart: false,
 };
 
 const sumTotal = (list) => {
@@ -41,13 +45,38 @@ const CartReducer = (state = initialState, action) => {
         };
       }
 
-      const charactersQuantity = [...state.characters].map((character) => {
-        if (character.idCharacter === action.character.idCharacter)
-          character.quantity++;
+    ///
+    case IN_CART:
+      const indexCartCharacter = state.characters.findIndex(
+        (character) => character.idCharacter === action.idCharacter
+      );
+      if (indexCartCharacter !== -1) {
+        return { ...state, inCart: true };
+      }
+      return { ...state, inCart: false };
+
+    case INCREASE_CHARACTER:
+      const increaseQuantity = [...state.characters].map((character) => {
+        if (character.idCharacter === action.idCharacter) character.quantity++;
         return character;
       });
-      return { ...state, characters:charactersQuantity, total: sumTotal(charactersQuantity) };
-    ///
+      return {
+        ...state,
+        characters: increaseQuantity,
+        total: sumTotal(increaseQuantity),
+      };
+
+    case DECREASE_CHARACTER:
+      const decreaseQuantity = [...state.characters].map((character) => {
+        if (character.idCharacter === action.idCharacter) character.quantity--;
+        return character;
+      });
+      return {
+        ...state,
+        characters: decreaseQuantity,
+        total: sumTotal(decreaseQuantity),
+      };
+
     case CONFIRM_CART:
       return state;
     ///

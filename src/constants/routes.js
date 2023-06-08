@@ -8,6 +8,7 @@ export default {
   //BottonScreens
   FACTION_BTAB: "Faction Btab",
   SHOPPINGCAR: "ShoppingCar",
+  ORDERCAR: "OrderCar",
 
   //ShopScreens
   CHARACTER: "Character",

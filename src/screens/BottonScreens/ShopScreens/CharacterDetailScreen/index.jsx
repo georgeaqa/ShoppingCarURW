@@ -1,19 +1,48 @@
+import { COLORS, ROUTES } from "../../../../constants";
 import { Image, ScrollView, Text, View } from "react-native";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { COLORS } from "../../../../constants";
 import { CustomButton } from "../../../../components";
 import { DIMENSIONS } from "../../../../constants";
-import React from "react";
 import { add_character } from "../../../../store/actions/cart.action";
+import { in_cart } from "../../../../store/actions/cart.action";
 
-const CharacterDetailScreen = () => {
+const CharacterDetailScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const character = useSelector((state) => state.characters.selectedCharacter);
-
+  const inCart = useSelector((state) => state.cart.inCart);
   const handleAddCharacter = () => {
     dispatch(add_character(character));
+    dispatch(in_cart(character.idCharacter));
+    navigation.goBack();
   };
+  useEffect(() => {
+    dispatch(in_cart(character.idCharacter));
+  }, []);
+
+  let buttonAdd = (
+    <View className="items-center">
+      <CustomButton
+        text="Agregar al carrito"
+        className="bg-[#5cb85c] "
+        newStyleText={{ color: COLORS.white }}
+        onPress={handleAddCharacter}
+      />
+    </View>
+  );
+
+  if (inCart) {
+    buttonAdd = (
+      <View className="items-center">
+        <CustomButton
+          text="Ya esta agregado en el carrito"
+          className="bg-[#ccc] "
+          newStyleText={{ color: COLORS.white }}
+        />
+      </View>
+    );
+  }
 
   return (
     <View className="flex-1 px-[5%] bg-white justify-between">
@@ -44,14 +73,7 @@ const CharacterDetailScreen = () => {
         </Text>
       </ScrollView>
 
-      <View className="items-center">
-        <CustomButton
-          text="Agregar al carrito"
-          className="bg-[#5cb85c] "
-          newStyleText={{ color: COLORS.white }}
-          onPress={handleAddCharacter}
-        />
-      </View>
+      {buttonAdd}
     </View>
   );
 };
