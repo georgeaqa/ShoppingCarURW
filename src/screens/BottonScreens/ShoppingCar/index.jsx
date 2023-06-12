@@ -1,6 +1,5 @@
 import { CustomButton, CustomCartItems } from "../../../components";
 import { FlatList, View } from "react-native";
-import React, { useEffect } from "react";
 import {
   confirm_CART,
   decrease_character,
@@ -10,6 +9,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 
 import { COLORS } from "../../../constants";
+import React from "react";
 
 const ShoppingCar = () => {
   const dispatch = useDispatch();

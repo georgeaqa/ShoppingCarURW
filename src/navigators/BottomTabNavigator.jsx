@@ -11,6 +11,7 @@ const BottomTab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
     <BottomTab.Navigator
+    initialRouteName={ROUTES.FACTION_BTAB}
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,

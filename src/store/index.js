@@ -1,5 +1,6 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 
+import AuthReducer from "./reducers/auth.reducer";
 import CartReducer from "./reducers/cart.reducer";
 import CharacterReducer from "./reducers/character.reducer";
 import FactionReducer from "./reducers/faction.reducer";
@@ -11,6 +12,7 @@ const RootReducer = combineReducers({
   characters: CharacterReducer,
   cart: CartReducer,
   orders: ordersReducer,
+  auth: AuthReducer,
 });
 
 export default createStore(RootReducer, applyMiddleware(thunk));

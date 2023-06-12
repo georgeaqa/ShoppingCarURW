@@ -59,16 +59,28 @@ const CharacterDetailScreen = ({ navigation }) => {
         </View>
 
         <View className="justify-center mx-2">
-          <Text className="text-base">ID: {character.idCharacter}</Text>
-          <Text className="text-base">Nombre: {character.nameCharacter}</Text>
-          <Text className="text-base">Precio:{character.price}</Text>
+          <Text
+            className="text-base"
+            style={{ fontFamily: "DancingScript-VariableFont_wght" }}
+          >
+            ID: {character.idCharacter}
+          </Text>
+          <Text
+            className="text-base"
+            style={{ fontFamily: "DancingScript-VariableFont_wght" }}
+          >
+            Precio:{character.price}
+          </Text>
         </View>
       </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
       >
-        <Text className="text-justify text-base">
+        <Text
+          className="text-justify text-base"
+          style={{ fontFamily: "DancingScript-VariableFont_wght" }}
+        >
           {character.descriptionCharacter}
         </Text>
       </ScrollView>

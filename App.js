@@ -1,8 +1,6 @@
-import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
-
-import AuthNavigator from "./src/navigators/AuthNavigator";
+import MainNavigator from "./src/navigators";
 import { Provider } from "react-redux";
-import React from "react";
+import { StatusBar } from "react-native";
 import store from "./src/store";
 import { useFonts } from "expo-font";
 
@@ -15,8 +13,8 @@ export default function App() {
   }
   return (
     <Provider store={store}>
-      <AuthNavigator />
-      <StatusBar style="auto" />
+      <MainNavigator />
+      <StatusBar/>
     </Provider>
   );
 }

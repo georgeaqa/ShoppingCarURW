@@ -7,8 +7,8 @@ import { ROUTES } from "../../../constants";
 import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigation = useNavigation();
 
   const onLoginPressed = () => {

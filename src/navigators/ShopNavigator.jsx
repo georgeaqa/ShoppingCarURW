@@ -1,5 +1,9 @@
 import { COLORS, ROUTES } from "../constants";
-import { CharacterDetailScreen, CharacterScreen, FactionScreen } from "../screens";
+import {
+  CharacterDetailScreen,
+  CharacterScreen,
+  FactionScreen,
+} from "../screens";
 
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -9,6 +13,7 @@ const Stack = createNativeStackNavigator();
 const ShopNavigator = () => {
   return (
     <Stack.Navigator
+      initialRouteName={ROUTES.FACTION}
       screenOptions={{
         headerTintColor: COLORS.white,
         headerTitleAlign: "center",

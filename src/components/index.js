@@ -1,8 +1,8 @@
-export { default as CustomInput } from "../components/CustomInput";
+export { default as CustomInput } from "./CustomInput";
 
-export { default as CustomButton } from "../components/CustomButton";
+export { default as CustomButton } from "./CustomButton";
 
-export { default as CustomFactionItems } from "../components/CustomFactionItems";
-export { default as CustomCharacterItems } from "../components/CustomCharacterItems";
-export { default as CustomCartItems } from "../components/CustomCartItems";
-export { default as CustomOrderItems } from "../components/CustomOrderItems";
+export { default as CustomFactionItems } from "./CustomFactionItems";
+export { default as CustomCharacterItems } from "./CustomCharacterItems";
+export { default as CustomCartItems } from "./CustomCartItems";
+export { default as CustomOrderItems } from "./CustomOrderItems";
