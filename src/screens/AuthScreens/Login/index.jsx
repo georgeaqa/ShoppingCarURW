@@ -1,18 +1,17 @@
+import { COLORS, EMAIL_REGEX, ROUTES } from "../../../constants";
 import { CustomButton, CustomInput } from "../../../components";
 import { Image, View } from "react-native";
 import React, { useState } from "react";
 
-import { COLORS } from "../../../constants";
-import { ROUTES } from "../../../constants";
+import { useForm } from "react-hook-form";
 import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { control, handleSubmit } = useForm();
   const navigation = useNavigation();
 
-  const onLoginPressed = () => {
-    navigation.navigate(ROUTES.FACTION);
+  const onLoginPressed = (data) => {
+    console.log(data);
   };
   const onRegisterPressed = () => {
     navigation.navigate(ROUTES.REGISTER);
@@ -30,23 +29,31 @@ const Login = () => {
       />
 
       <CustomInput
+        name="email"
         className="border rounded border-[#FFFF00]"
+        control={control}
         placeholder="Correo electronico"
-        value={email}
-        setValue={setEmail}
+        rules={{
+          required: "Email es obligatorio.",
+          pattern: {
+            value: EMAIL_REGEX.email_regex,
+            message: "Email es invalido.",
+          },
+        }}
       />
 
       <CustomInput
+        name="password"
         className="border rounded border-[#FFFF00]"
+        control={control}
         placeholder="Contraseña"
-        value={password}
-        setValue={setPassword}
         secureTextEntry={true}
+        rules={{ required: "Contraseña es obligatorio." }}
       />
 
       <CustomButton
         text="Conectarse"
-        onPress={onLoginPressed}
+        onPress={handleSubmit(onLoginPressed)}
         className="bg-[#0000FF]"
         newStyleText={{ color: COLORS.white }}
       />

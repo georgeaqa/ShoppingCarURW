@@ -1,17 +1,19 @@
+import { COLORS, EMAIL_REGEX } from "../../../constants";
 import { CustomButton, CustomInput } from "../../../components";
 import { Image, View } from "react-native";
-import React, { useState } from "react";
 
-import { COLORS } from "../../../constants";
+import React from "react";
 import { signUp } from "../../../store/actions/auth.action";
 import { useDispatch } from "react-redux";
+import { useForm } from "react-hook-form";
 
-const Register = ({ navigation }) => {
+const Register = ({navigation}) => {
+  const { control, handleSubmit ,watch} = useForm();
+  const pwd= watch("password");
   const dispatch = useDispatch();
-  const [email, setEmail] = useState("test@test.comp");
-  const [password, setPassword] = useState("123456");
-  const onRegisterPressed = () => {
-    dispatch(signUp(email, password));
+
+  const onRegisterPressed = (data) => {
+    dispatch(signUp(data.email, data.password));
     navigation.goBack();
   };
   return (
@@ -21,29 +23,49 @@ const Register = ({ navigation }) => {
         className="w-full max-w-xs h-1/3 max-h-80 "
         resizeMode="contain"
       />
-      {/* <CustomInput
-        className="border rounded border-[#FFFF00]"
-        placeholder="Nombres y Apellidos"
-      /> */}
+
       <CustomInput
+        name="email"
         className="border rounded border-[#FFFF00]"
+        control={control}
         placeholder="Correo electronico"
+        rules={{
+          required: "Email es obligatorio.",
+          pattern: {
+            value: EMAIL_REGEX.email_regex,
+            message: "Email es invalido.",
+          },
+        }}
       />
       <CustomInput
+        name="password"
         className="border rounded border-[#FFFF00]"
+        control={control}
         placeholder="Contraseña"
         secureTextEntry={true}
+        rules={{
+          required: "Contraseña es obligatorio.",
+          minLength: {
+            value: 6,
+            message: "La contraseña debe tener minimo 6 caracteres.",
+          },
+        }}
       />
-      {/* <CustomInput
+      <CustomInput
+        name="password"
         className="border rounded border-[#FFFF00]"
-        placeholder="Repetir contraseña "
+        control={control}
+        placeholder="Contraseña"
         secureTextEntry={true}
-      /> */}
+        rules={{
+          validate: (value) => value === pwd || "Las contraseñas no coinciden.",
+        }}
+      />
       <CustomButton
         text="Registrar"
         className="bg-[#5cb85c]"
         newStyleText={{ color: COLORS.white }}
-        onPress={() => onRegisterPressed()}
+        onPress={handleSubmit(onRegisterPressed)}
       />
     </View>
   );

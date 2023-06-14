@@ -1,6 +1,7 @@
 import { URL_AUTH_SIGNUP } from "../../constants/database";
 
 export const SIGNUP = "SIGNUP";
+export const SIGNIN = "SIGNIN";
 
 export const signUp = (email, password) => {
   return async (dispatch) => {
@@ -28,3 +29,4 @@ export const signUp = (email, password) => {
     }
   };
 };
+
