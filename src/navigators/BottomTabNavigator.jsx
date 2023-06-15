@@ -1,5 +1,5 @@
 import { COLORS, ROUTES } from "../constants";
-import { OrderCar, ShoppingCar } from "../screens";
+import { OrderCar, Profile, ShoppingCar } from "../screens";
 
 import Entypo from "@expo/vector-icons/Entypo";
 import React from "react";
@@ -11,13 +11,21 @@ const BottomTab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
     <BottomTab.Navigator
-    initialRouteName={ROUTES.FACTION_BTAB}
+      initialRouteName={ROUTES.PROFILE}
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: { backgroundColor: COLORS.gold },
       }}
     >
+      <BottomTab.Screen
+        name={ROUTES.PROFILE}
+        component={Profile}
+        options={{
+          tabBarIcon: () => <Entypo name="user" size={25} />,
+        }}
+      />
+
       <BottomTab.Screen
         name={ROUTES.FACTION_BTAB}
         component={ShopNavigator}

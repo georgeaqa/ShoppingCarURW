@@ -2,7 +2,6 @@ import { Text, TextInput } from "react-native";
 
 import { Controller } from "react-hook-form";
 import React from "react";
-import { View } from "react-native";
 
 const CustomInput = ({ control, name, rules = {}, ...restProps }) => {
   return (

@@ -6,6 +6,7 @@ export default {
   FACTION: "Faction",
 
   //BottonScreens
+  PROFILE: "Profile",
   FACTION_BTAB: "Faction Btab",
   SHOPPINGCAR: "ShoppingCar",
   ORDERCAR: "OrderCar",

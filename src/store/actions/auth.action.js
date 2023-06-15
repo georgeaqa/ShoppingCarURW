@@ -3,7 +3,7 @@ import { URL_AUTH_SIGNUP } from "../../constants/database";
 export const SIGNUP = "SIGNUP";
 export const SIGNIN = "SIGNIN";
 
-export const signUp = (email, password) => {
+export const signUp = (email, password,imageUri) => {
   return async (dispatch) => {
     try {
       const response = await fetch(URL_AUTH_SIGNUP, {
@@ -18,11 +18,12 @@ export const signUp = (email, password) => {
         }),
       });
       const data = await response.json();
-      console.log(data);
       dispatch({
         type: SIGNUP,
         token: data.idtoken,
         userId: data.localId,
+        email,
+        imageUri,
       });
     } catch (error) {
       console.log(error);
