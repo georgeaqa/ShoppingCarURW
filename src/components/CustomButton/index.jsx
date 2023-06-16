@@ -8,7 +8,10 @@ const CustomButton = ({ newStyleText, text, ...restProps }) => {
       className="w-full items-center m-2 p-2 rounded-2xl "
       {...restProps}
     >
-      <Text className="text-base" style={newStyleText}>
+      <Text
+        className="text-base"
+        style={[newStyleText, { fontFamily: "UrbanRivals" }]}
+      >
         {text}
       </Text>
     </Pressable>

@@ -6,7 +6,7 @@ import { useFonts } from "expo-font";
 
 export default function App() {
   const [loaded] = useFonts({
-    "DancingScript-VariableFont_wght": require("./src/assets/fonts/DancingScript-VariableFont_wght.ttf"),
+    "UrbanRivals": require("./src/assets/fonts/UrbanRivals.ttf"),
   });
   if (!loaded) {
     return null;

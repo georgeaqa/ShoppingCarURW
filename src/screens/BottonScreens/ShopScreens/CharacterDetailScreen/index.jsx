@@ -61,15 +61,15 @@ const CharacterDetailScreen = ({ navigation }) => {
         <View className="justify-center mx-2">
           <Text
             className="text-base"
-            style={{ fontFamily: "DancingScript-VariableFont_wght" }}
+            style={{ fontFamily: "UrbanRivals" }}
           >
             ID: {character.idCharacter}
           </Text>
           <Text
             className="text-base"
-            style={{ fontFamily: "DancingScript-VariableFont_wght" }}
+            style={{ fontFamily: "UrbanRivals" }}
           >
-            Precio:{character.price}
+            Precio: {character.price}
           </Text>
         </View>
       </View>
@@ -79,7 +79,7 @@ const CharacterDetailScreen = ({ navigation }) => {
       >
         <Text
           className="text-justify text-base"
-          style={{ fontFamily: "DancingScript-VariableFont_wght" }}
+          style={{ fontFamily: "UrbanRivals" }}
         >
           {character.descriptionCharacter}
         </Text>

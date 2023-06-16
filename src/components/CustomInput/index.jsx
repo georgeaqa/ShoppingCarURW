@@ -15,10 +15,11 @@ const CustomInput = ({ control, name, rules = {}, ...restProps }) => {
       }) => (
         <>
           <TextInput
-            className="w-full m-2 p-2 text-base"
+            className="w-full m-2 p-2 text-xs border rounded border-[#FFFF00]"
             value={value}
             onChangeText={onChange}
             onBlur={onBlur}
+            style={{fontFamily: "UrbanRivals"}}
             {...restProps}
           />
           {error && (

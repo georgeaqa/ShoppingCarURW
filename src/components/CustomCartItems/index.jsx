@@ -13,11 +13,19 @@ const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
           resizeMode="contain"
         />
         <View>
-          <Text className="text-white">ID: {item.idCharacter}</Text>
-          <Text className="text-white">nombre: {item.nameCharacter}</Text>
-          <Text className="text-white">$ {item.price}</Text>
+          <Text className="text-white" style={{ fontFamily: "UrbanRivals" }}>
+            ID: {item.idCharacter}
+          </Text>
+          <Text className="text-white" style={{ fontFamily: "UrbanRivals" }}>
+            nombre: {item.nameCharacter}
+          </Text>
+          <Text className="text-white" style={{ fontFamily: "UrbanRivals" }}>
+            $ {item.price}
+          </Text>
           <View className="flex-row ">
-            <Text className="text-white">Cantidad: </Text>
+            <Text className="text-white" style={{ fontFamily: "UrbanRivals" }}>
+              Cantidad:{" "}
+            </Text>
             <TouchableOpacity onPress={() => onReduce(item.idCharacter)}>
               <Ionicons
                 name="md-remove-circle-outline"
@@ -25,7 +33,7 @@ const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
                 color={"red"}
               />
             </TouchableOpacity>
-            <Text className="text-white"> {item.quantity} </Text>
+            <Text className="text-white" style={{fontFamily: "UrbanRivals"}}> {item.quantity} </Text>
             <TouchableOpacity onPress={() => onIncrease(item.idCharacter)}>
               <Ionicons
                 name="md-add-circle-outline"

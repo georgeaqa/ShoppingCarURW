@@ -17,6 +17,9 @@ const ShopNavigator = () => {
       screenOptions={{
         headerTintColor: COLORS.white,
         headerTitleAlign: "center",
+        headerTitleStyle: {
+          fontFamily: "UrbanRivals",
+        },
       }}
     >
       <Stack.Screen

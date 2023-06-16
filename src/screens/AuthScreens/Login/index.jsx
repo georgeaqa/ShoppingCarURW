@@ -1,17 +1,20 @@
 import { COLORS, EMAIL_REGEX, ROUTES } from "../../../constants";
 import { CustomButton, CustomInput } from "../../../components";
 import { Image, View } from "react-native";
-import React, { useState } from "react";
 
+import React from "react";
+import { signIn } from "../../../store/actions/auth.action";
+import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
   const { control, handleSubmit } = useForm();
   const navigation = useNavigation();
+  const dispatch = useDispatch();
 
   const onLoginPressed = (data) => {
-    console.log(data);
+    dispatch(signIn(data.email, data.password));
   };
   const onRegisterPressed = () => {
     navigation.navigate(ROUTES.REGISTER);
@@ -30,7 +33,6 @@ const Login = () => {
 
       <CustomInput
         name="email"
-        className="border rounded border-[#FFFF00]"
         control={control}
         placeholder="Correo electronico"
         rules={{
@@ -44,7 +46,6 @@ const Login = () => {
 
       <CustomInput
         name="password"
-        className="border rounded border-[#FFFF00]"
         control={control}
         placeholder="Contraseña"
         secureTextEntry={true}
