@@ -1,5 +1,4 @@
-import { SIGNIN } from "../actions/auth.action";
-import { SIGNUP } from "../actions/auth.action";
+import { SEND_RESET_PASSWORD, SIGNIN, SIGNUP } from "../actions/auth.action";
 
 const inialState = {
   token: null,
@@ -16,6 +15,8 @@ const AuthReducer = (state = inialState, action) => {
         token: action.token,
         userId: action.userId,
       };
+    case SEND_RESET_PASSWORD:
+      return state;
     default:
       return state;
   }
