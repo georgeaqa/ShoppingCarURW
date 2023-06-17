@@ -2,7 +2,7 @@ import { URL_API } from "../../constants/database";
 
 export const GET_ORDERS = "GET_ORDERS";
 
-export const getOrders = () => {
+export const getOrders = (localId) => {
   return async (dispatch) => {
     try {
       const response = await fetch(`${URL_API}/ordenes.json`, {
@@ -16,7 +16,7 @@ export const getOrders = () => {
         ...result[key],
         id: key,
       }));
-      dispatch({ type: GET_ORDERS, payload: orders });
+      dispatch({ type: GET_ORDERS, payload: orders, localId });
     } catch (error) {
       console.error(error);
     }

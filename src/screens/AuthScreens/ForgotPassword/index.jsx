@@ -38,7 +38,7 @@ const ForgotPassword = ({ navigation }) => {
       />
       <CustomButton
         text="Reestablecer Contraseña"
-        className="bg-[#5cb85c]"
+        className="bg-[#2cec2c] shadow-md shadow-[#2cec2c]"
         newStyleText={{ color: COLORS.white }}
         onPress={handleSubmit(onSendNewPasswordPressed)}
       />

@@ -8,9 +8,10 @@ import { getOrders } from "../../../store/actions/order.action";
 const OrderCar = () => {
   const dispatch = useDispatch();
   const orders = useSelector((state) => state.orders.list);
+  const localId= useSelector((state) => state.auth.localId);
   useEffect(() => {
-    dispatch(getOrders());
-  }, []);
+    dispatch(getOrders(localId));
+  }, [orders]);
 
   const handleDeleteOrder = () => {
     console.log("Eliminar orden");

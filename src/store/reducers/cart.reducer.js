@@ -78,7 +78,7 @@ const CartReducer = (state = initialState, action) => {
       };
 
     case CONFIRM_CART:
-      return state;
+      return { ...state, characters: [] };
     ///
     default:
       return state;

@@ -53,19 +53,19 @@ const Login = () => {
       <CustomButton
         text="Conectarse"
         onPress={handleSubmit(onLoginPressed)}
-        className="bg-[#0000FF]"
+        className="bg-[#0000FF] shadow-md shadow-[#000]"
         newStyleText={{ color: COLORS.white }}
       />
       <CustomButton
         text="Olvido contraseña?"
         onPress={onForgotPasswordPressed}
-        newStyleText={{ color: COLORS.tertiaryColor }}
+        newStyleText={{ color: COLORS.red }}
       />
 
       <CustomButton
         text="Registrarse"
         onPress={onRegisterPressed}
-        newStyleText={{ color: COLORS.tertiaryColor }}
+        newStyleText={{ color: COLORS.red }}
       />
     </View>
   );

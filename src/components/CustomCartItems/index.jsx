@@ -1,5 +1,6 @@
 import { Image, Pressable, Text, TouchableOpacity, View } from "react-native";
 
+import {COLORS} from '../../constants';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import React from "react";
 
@@ -46,7 +47,7 @@ const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
       </View>
       <View className="justify-center">
         <TouchableOpacity onPress={() => onDelete(item.idCharacter)}>
-          <Ionicons name="trash" size={24} color={"red"} />
+          <Ionicons name="trash" size={24} color={COLORS.tertiaryColor} />
         </TouchableOpacity>
       </View>
     </View>

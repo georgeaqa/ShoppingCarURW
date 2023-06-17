@@ -22,6 +22,7 @@ const CustomInput = ({ control, name, rules = {}, ...restProps }) => {
             style={{ fontFamily: "UrbanRivals" }}
             {...restProps}
           />
+
           {error && (
             <Text
               className="text-[#FF0000] text-[10px] w-full"

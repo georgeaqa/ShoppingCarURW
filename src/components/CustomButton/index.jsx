@@ -5,7 +5,7 @@ import React from "react";
 const CustomButton = ({ newStyleText, text, ...restProps }) => {
   return (
     <Pressable
-      className="w-full items-center m-2 p-2 rounded-2xl "
+      className="w-full items-center m-2 p-2 rounded-2xl"
       {...restProps}
     >
       <Text

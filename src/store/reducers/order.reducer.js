@@ -7,7 +7,9 @@ const initial_state = {
 const ordersReducer = (state = initial_state, action) => {
   switch (action.type) {
     case GET_ORDERS:
-      return { ...state, list: action.payload };
+      return { ...state, list: action.payload.filter(
+        (orders) => orders.localId === action.localId
+      ) };
     default:
       return state;
   }
