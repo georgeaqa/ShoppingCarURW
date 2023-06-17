@@ -24,8 +24,9 @@ const AuthReducer = (state = inialState, action) => {
       return state;
     case LOG_OUT:
       return{
+        ...state,
         idToken: null,
-        localId: null
+        localId: null,
       }
     default:
       return state;

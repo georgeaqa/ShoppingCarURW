@@ -16,7 +16,6 @@ const CharacterScreen = ({ navigation, route }) => {
   const selectedFaction = useSelector(
     (state) => state.factions.selectedFaction
   );
-
   const dispatch = useDispatch();
 
   useEffect(() => {

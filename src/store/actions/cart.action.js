@@ -32,7 +32,7 @@ export const remove_character = (idCharacter) => ({
   idCharacter,
 });
 
-export const confirm_CART = (cartCharacters, total) => {
+export const confirm_CART = (localId,cartCharacters, total) => {
   return async (dispatch) => {
     try {
       const response = await fetch(`${URL_API}/ordenes.json`, {
@@ -41,6 +41,7 @@ export const confirm_CART = (cartCharacters, total) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          localId,
           date: Date.now(),
           items: { ...cartCharacters },
           total,

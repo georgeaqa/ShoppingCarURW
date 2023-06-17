@@ -15,7 +15,7 @@ const ShoppingCar = () => {
   const dispatch = useDispatch();
   const characters = useSelector((state) => state.cart.characters);
   const total = useSelector((state) => state.cart.total);
-
+  const localId = useSelector((state) => state.auth.localId);
   const handleDeleteItem = (idCharacter) => {
     dispatch(remove_character(idCharacter));
   };
@@ -35,7 +35,7 @@ const ShoppingCar = () => {
     />
   );
   const handleConfirmCart = () => {
-    dispatch(confirm_CART(characters, total));
+    dispatch(confirm_CART(localId,characters, total));
   };
   return (
     <View className="flex-1 px-[1%] bg-white justify-between">

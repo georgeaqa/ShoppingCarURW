@@ -1,7 +1,7 @@
 import { GET_USER_DATA } from "../actions/profile.action";
 
 const initialState = {
-  userData:[],
+  userData: [],
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -9,7 +9,9 @@ const profileReducer = (state = initialState, action) => {
     case GET_USER_DATA:
       return {
         ...state,
-        userData: action.userData[0],
+        userData: action.userData.find(
+          (user) => user.localId === action.localId
+        ),
       };
     default:
       return state;

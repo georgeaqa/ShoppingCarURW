@@ -1,6 +1,6 @@
+import { COLORS, ROUTES } from "../constants";
 import { ForgotPassword, Login, Register } from "../screens";
 
-import { ROUTES } from "../constants";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -8,7 +8,16 @@ const Stack = createNativeStackNavigator();
 
 const AuthNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName={ROUTES.LOGIN}>
+    <Stack.Navigator
+      initialRouteName={ROUTES.LOGIN}
+      screenOptions={{
+        headerTintColor: COLORS.black,
+        headerTitleAlign: "center",
+        headerTitleStyle: {
+          fontFamily: "UrbanRivals",
+        },
+      }}
+    >
       <Stack.Screen
         name={ROUTES.LOGIN}
         component={Login}

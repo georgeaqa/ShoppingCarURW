@@ -21,8 +21,8 @@ const ForgotPassword = ({ navigation }) => {
         className="w-full max-w-xs h-1/3 max-h-80"
         resizeMode="contain"
       />
-      <Text className="text-xl w-full" style={{fontFamily:"UrbanRivals"}}>
-        Ingrese correo electronico, se le enviara una nueva contraseña
+      <Text className="text-xl w-full text-justify" style={{fontFamily:"UrbanRivals"}}>
+        Ingrese correo electronico, se le enviara un email para reestablecer su contraseña.
       </Text>
       <CustomInput
         name="email"
@@ -37,7 +37,7 @@ const ForgotPassword = ({ navigation }) => {
         }}
       />
       <CustomButton
-        text="Recuperar Contraseña"
+        text="Reestablecer Contraseña"
         className="bg-[#5cb85c]"
         newStyleText={{ color: COLORS.white }}
         onPress={handleSubmit(onSendNewPasswordPressed)}

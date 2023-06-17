@@ -19,11 +19,14 @@ const CustomInput = ({ control, name, rules = {}, ...restProps }) => {
             value={value}
             onChangeText={onChange}
             onBlur={onBlur}
-            style={{fontFamily: "UrbanRivals"}}
+            style={{ fontFamily: "UrbanRivals" }}
             {...restProps}
           />
           {error && (
-            <Text className="text-[#FF0000] text-[10px] w-full">
+            <Text
+              className="text-[#FF0000] text-[10px] w-full"
+              style={{ fontFamily: "UrbanRivals" }}
+            >
               {error.message}
             </Text>
           )}

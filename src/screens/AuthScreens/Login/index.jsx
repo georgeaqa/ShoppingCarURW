@@ -1,6 +1,6 @@
 import { COLORS, EMAIL_REGEX, ROUTES } from "../../../constants";
 import { CustomButton, CustomInput } from "../../../components";
-import { Image, View } from "react-native";
+import { Image, ScrollView, View } from "react-native";
 
 import React from "react";
 import { signIn } from "../../../store/actions/auth.action";
@@ -24,13 +24,12 @@ const Login = () => {
   };
 
   return (
-    <View className="flex-1 justify-center items-center px-[5%] bg-white">
+    <View className="flex-1 justify-center items-center px-[2%] bg-white">
       <Image
         source={require("../../../assets/images/Logo.png")}
         className="w-full max-w-xs h-1/3 max-h-80 "
         resizeMode="contain"
       />
-
       <CustomInput
         name="email"
         control={control}
@@ -51,7 +50,6 @@ const Login = () => {
         secureTextEntry={true}
         rules={{ required: "Contraseña es obligatorio." }}
       />
-
       <CustomButton
         text="Conectarse"
         onPress={handleSubmit(onLoginPressed)}
@@ -63,6 +61,7 @@ const Login = () => {
         onPress={onForgotPasswordPressed}
         newStyleText={{ color: COLORS.tertiaryColor }}
       />
+
       <CustomButton
         text="Registrarse"
         onPress={onRegisterPressed}

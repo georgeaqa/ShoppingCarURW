@@ -1,27 +1,24 @@
-import { URL_GET_USER_DATA } from "../../constants/database";
+import { URL_API } from "../../constants/database";
 
 export const GET_USER_DATA = "GET_USER_DATA";
 
-export const getUserData = (idToken) => {
+export const getUserData = (localId) => {
   return async (dispatch) => {
     try {
-      const response = await fetch(URL_GET_USER_DATA, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        idToken,
-      }),
-    });
-    const data = await response.json();
-    dispatch({
-      type: GET_USER_DATA,
-      userData: data.users,
-    });
+      const response = await fetch(`${URL_API}/users.json`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await response.json();
+      const Data = Object.keys(result).map((key) => ({
+        ...result[key],
+        id: key,
+      }));
+      dispatch({ type: GET_USER_DATA, userData: Data, localId:localId });
     } catch (error) {
       console.log(error);
     }
-    
   };
 };
