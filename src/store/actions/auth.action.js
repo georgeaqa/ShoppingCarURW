@@ -1,10 +1,15 @@
-import { URL_AUTH_SEND_RESET_PASSWORD, URL_AUTH_SIGNIN, URL_AUTH_SIGNUP } from "../../constants/database";
+import {
+  URL_AUTH_SEND_RESET_PASSWORD,
+  URL_AUTH_SIGNIN,
+  URL_AUTH_SIGNUP,
+} from "../../constants/database";
 
 import { Alert } from "react-native";
 
 export const SIGNUP = "SIGNUP";
-export const SIGNIN = "SIGNIN"
-export const SEND_RESET_PASSWORD="SEND_RESET_PASSWORD";
+export const SIGNIN = "SIGNIN";
+export const SEND_RESET_PASSWORD = "SEND_RESET_PASSWORD";
+export const LOG_OUT = "LOG_OUT";
 
 export const signUp = (email, password) => {
   return async (dispatch) => {
@@ -20,15 +25,16 @@ export const signUp = (email, password) => {
           returnSecureToken: true,
         }),
       });
-      const data = await response.json();
+      if (!response.ok) {
+        const errorResponse = await response.json();
+        const errorId = errorResponse.error.message;
+        if (errorId === "EMAIL_EXISTS") {
+          Alert.alert("El correo electrónico ya está en uso por otra cuenta");
+        }
+      }
       dispatch({
         type: SIGNUP,
       });
-      if (data.error.message === "EMAIL_EXISTS") {
-        Alert.alert(
-          "La dirección de correo electrónico ya está en uso por otra cuenta."
-        );
-      }
     } catch (error) {
       console.log(error);
     }
@@ -49,26 +55,30 @@ export const signIn = (email, password) => {
           returnSecureToken: true,
         }),
       });
+      if (!response.ok) {
+        const errorResponse = await response.json();
+        const errorId = errorResponse.error.message;
+        switch (errorId) {
+          case "EMAIL_NOT_FOUND":
+            Alert.alert("Email no existe");
+            break;
+          case "INVALID_PASSWORD":
+            Alert.alert("Contraseña incorrecta");
+            break;
+          case "USER_DISABLED":
+            Alert.alert("Usuario desactivado");
+            break;
+          default:
+            Alert.alert("Excedio el limite de intento, intente más tarde");
+            break;
+        }
+      }
       const data = await response.json();
       dispatch({
         type: SIGNIN,
-        token: data.idtoken,
-        userId: data.localId,
+        idToken: data.idToken,
+        localId: data.localId,
       });
-      switch (data.error.message) {
-        case "EMAIL_NOT_FOUND":
-          Alert.alert("Email no existe");
-          break;
-        case "INVALID_PASSWORD":
-          Alert.alert("Contraseña incorrecta");
-          break;
-        case "USER_DISABLED":
-          Alert.alert("Usuario desactivado");
-          break;
-        default:
-          Alert.alert("Excedio el limite de intento, intente más tarde");
-          break;
-      }
     } catch (error) {
       console.log(error);
     }
@@ -84,26 +94,28 @@ export const sendResetPassword = (email) => {
           "Content-type": "application/json",
         },
         body: JSON.stringify({
-          requestType:"PASSWORD_RESET",
+          requestType: "PASSWORD_RESET",
           email,
         }),
       });
+      if (!response.ok) {
+        const errorResponse = await response.json();
+        const errorId = errorResponse.error.message;
+        if (errorId === "EMAIL_NOT_FOUND") Alert.alert("No existe email.");
+      }
       const data = await response.json();
+      if (data.email) {
+        Alert.alert("Email de recuperación enviado correctamente.");
+      }
       dispatch({
         type: SEND_RESET_PASSWORD,
       });
-      if (data.email){
-        Alert.alert(
-          "Email de recuperación enviado correctamente."
-        );
-      }
-      if (data.error.message === "EMAIL_NOT_FOUND") {
-        Alert.alert(
-          "No existe email."
-        );
-      }
     } catch (error) {
       console.log(error);
     }
   };
-}
+};
+
+export const logOut = () => ({
+  type: LOG_OUT,
+});

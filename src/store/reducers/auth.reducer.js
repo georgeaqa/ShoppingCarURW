@@ -1,8 +1,13 @@
-import { SEND_RESET_PASSWORD, SIGNIN, SIGNUP } from "../actions/auth.action";
+import {
+  LOG_OUT,
+  SEND_RESET_PASSWORD,
+  SIGNIN,
+  SIGNUP,
+} from "../actions/auth.action";
 
 const inialState = {
-  token: null,
-  userId: null,
+  idToken: null,
+  localId: null,
 };
 
 const AuthReducer = (state = inialState, action) => {
@@ -12,11 +17,16 @@ const AuthReducer = (state = inialState, action) => {
     case SIGNIN:
       return {
         ...state,
-        token: action.token,
-        userId: action.userId,
+        idToken: action.idToken,
+        localId: action.localId,
       };
     case SEND_RESET_PASSWORD:
       return state;
+    case LOG_OUT:
+      return{
+        idToken: null,
+        localId: null
+      }
     default:
       return state;
   }

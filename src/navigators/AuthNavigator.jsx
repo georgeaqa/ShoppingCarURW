@@ -1,6 +1,5 @@
 import { ForgotPassword, Login, Register } from "../screens";
 
-import BottomTabNavigator from "./BottomTabNavigator";
 import { ROUTES } from "../constants";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -15,11 +14,6 @@ const AuthNavigator = () => {
         component={Login}
         options={{ headerShown: false }}
       />
-      {/* <Stack.Screen
-        name={ROUTES.FACTION}
-        component={BottomTabNavigator}
-        options={{ headerShown: false }}
-      /> */}
       <Stack.Screen
         name={ROUTES.FORGOT_PASSWORD}
         component={ForgotPassword}

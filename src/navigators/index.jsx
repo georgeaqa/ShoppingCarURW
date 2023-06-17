@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import AuthNavigator from "./AuthNavigator";
 import BottonTabNavigator from "./BottomTabNavigator";
 import { NavigationContainer } from "@react-navigation/native";
-import { useSelector } from "react-redux";
+import { getUserData } from "../store/actions/profile.action";
 
 const index = () => {
-  const userId = useSelector((state) => state.auth.userId);
+  const dispatch = useDispatch();
+  const idToken = useSelector((state) => state.auth.idToken);
+
+  idToken ? dispatch(getUserData(idToken)) : null;
+
+  const localId = useSelector((state) => state.auth.localId);
 
   return (
     <NavigationContainer>
-      {userId ? <BottonTabNavigator /> : <AuthNavigator />}
+      {localId ? <BottonTabNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );
 };
