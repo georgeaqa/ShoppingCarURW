@@ -2,9 +2,9 @@ import { Text, View } from "react-native";
 
 import React from "react";
 
-const CustomText = ({ text }) => {
+const CustomText = ({ text, newStyle }) => {
   return (
-    <Text className="text-lg" style={{ fontFamily: "UrbanRivals" }}>
+    <Text className="text-lg" style={[{ fontFamily: "UrbanRivals" }, newStyle]}>
       {text}
     </Text>
   );

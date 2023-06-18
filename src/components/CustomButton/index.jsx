@@ -1,5 +1,5 @@
-import { Pressable, Text } from "react-native";
-
+import CustomText from "../CustomText";
+import { Pressable } from "react-native";
 import React from "react";
 
 const CustomButton = ({ newStyleText, text, ...restProps }) => {
@@ -8,12 +8,7 @@ const CustomButton = ({ newStyleText, text, ...restProps }) => {
       className="w-full items-center m-2 p-2 rounded-2xl"
       {...restProps}
     >
-      <Text
-        className="text-base"
-        style={[newStyleText, { fontFamily: "UrbanRivals" }]}
-      >
-        {text}
-      </Text>
+      <CustomText newStyle={newStyleText} text={text} />
     </Pressable>
   );
 };

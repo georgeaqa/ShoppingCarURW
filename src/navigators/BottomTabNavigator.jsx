@@ -1,6 +1,7 @@
 import { COLORS, ROUTES } from "../constants";
 import { OrderCar, Profile, ShoppingCar } from "../screens";
 
+import { CustomText } from "../components";
 import Entypo from "@expo/vector-icons/Entypo";
 import React from "react";
 import ShopNavigator from "./ShopNavigator";
@@ -25,8 +26,8 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <>
-              <Entypo name="user" size={25} />
-              <Text style={{ fontFamily: "UrbanRivals" }}>Perfil</Text>
+              <Entypo name="user" size={20} />
+              <CustomText text={"Perfil"} />
             </>
           ),
         }}
@@ -38,8 +39,8 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <>
-              <Entypo name="shop" size={25} />
-              <Text style={{ fontFamily: "UrbanRivals" }}>Productos</Text>
+              <Entypo name="shop" size={20} />
+              <CustomText text={"Productos"} />
             </>
           ),
         }}
@@ -51,8 +52,8 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <>
-              <Entypo name="shopping-cart" size={25} />
-              <Text style={{ fontFamily: "UrbanRivals" }}>Carrito</Text>
+              <Entypo name="shopping-cart" size={20} />
+              <CustomText text={"Carrito"} />
             </>
           ),
         }}
@@ -63,8 +64,8 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <>
-              <Entypo name="list" size={25} />
-              <Text style={{ fontFamily: "UrbanRivals" }}>Ordenes</Text>
+              <Entypo name="list" size={20} />
+              <CustomText text={"Ordenes"} />
             </>
           ),
         }}

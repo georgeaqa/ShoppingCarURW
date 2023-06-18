@@ -1,9 +1,9 @@
-import { COLORS, ROUTES } from "../../../../constants";
-import { Image, ScrollView, Text, View } from "react-native";
+import { CustomButton, CustomText } from "../../../../components";
+import { Image, ScrollView, View } from "react-native";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { CustomButton } from "../../../../components";
+import { COLORS } from "../../../../constants";
 import { DIMENSIONS } from "../../../../constants";
 import { add_character } from "../../../../store/actions/cart.action";
 import { in_cart } from "../../../../store/actions/cart.action";
@@ -45,7 +45,7 @@ const CharacterDetailScreen = ({ navigation }) => {
   }
 
   return (
-    <View className="flex-1 px-[5%] bg-white justify-between">
+    <View className="flex-1 px-[2%] bg-white justify-between">
       <View className="flex-row">
         <View
           className="border border-[#FFFF00] my-2"
@@ -59,24 +59,15 @@ const CharacterDetailScreen = ({ navigation }) => {
         </View>
 
         <View className="justify-center mx-2">
-          <Text className="text-base" style={{ fontFamily: "UrbanRivals" }}>
-            ID: {character.idCharacter}
-          </Text>
-          <Text className="text-base" style={{ fontFamily: "UrbanRivals" }}>
-            Precio: {character.price}
-          </Text>
+          <CustomText text={"ID: " + character.idCharacter} />
+          <CustomText text={"Precio: $" + character.price} />
         </View>
       </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
       >
-        <Text
-          className="text-justify text-base"
-          style={{ fontFamily: "UrbanRivals" }}
-        >
-          {character.descriptionCharacter}
-        </Text>
+        <CustomText newStyle={{textAlign:"justify"}} text={character.descriptionCharacter} />
       </ScrollView>
 
       {buttonAdd}

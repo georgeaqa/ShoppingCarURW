@@ -22,6 +22,17 @@ const CHARACTERS = [
     price: 100,
   },
   {
+    idCharacter: 100,
+    nameCharacter: "VANSAAR",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_VANSAAR_N5_HD_673.png",
+    },
+    idFactions: 1,
+    descriptionCharacter:
+      "Desde los primeros días de su incorporación al ejército del Polit, Van Saar comprendió que dedicaría toda su vida al servicio de esta prestigiosa institución y que lo sacrificaría todo, esposa, hijos, amistades e incluso su salud. Desde las trincheras de primera línea hasta los salones de estado mayor, ha vivido todas las experiencias, y actualmente, nadie en Clint City domina el delicado arte del combate mejor que él.",
+    price: 100,
+  },
+  {
     idCharacter: 3,
     nameCharacter: "GENESIS",
     imageSource: {
@@ -534,7 +545,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/GHOSTOWN/GHOSTOWN_JUDGELYNCH_N3_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "En el pasado fui un juez derecho y justo, pero la justicia de los hombres me decepcionó y por ello firmé un pacto con el dios de la muerta: he intercambiado mi vida por el poder de juzgar las almas de los ricos o de los pobres, de los culpables o de los inocentes y sin hacer distinción por la forma en que han llevado sus vidas en el pasado. Pero actualmente ejerzo como juez itinerante entre Purgatory y el más allá, y sé todo lo que hay que saber sobre sus habitantes: para mí son todos culpables y deben expiar sus pecados en la tierra como fantasmas y volver a vivir una y otra vez sus muertes antes de ganar el derecho al descanso eterno.¡Hará falta mucho tiempo y oro para poder convencerme de que les ha llegado la hora!",
+    descriptionCharacter:
+      "En el pasado fui un juez derecho y justo, pero la justicia de los hombres me decepcionó y por ello firmé un pacto con el dios de la muerta: he intercambiado mi vida por el poder de juzgar las almas de los ricos o de los pobres, de los culpables o de los inocentes y sin hacer distinción por la forma en que han llevado sus vidas en el pasado. Pero actualmente ejerzo como juez itinerante entre Purgatory y el más allá, y sé todo lo que hay que saber sobre sus habitantes: para mí son todos culpables y deben expiar sus pecados en la tierra como fantasmas y volver a vivir una y otra vez sus muertes antes de ganar el derecho al descanso eterno.¡Hará falta mucho tiempo y oro para poder convencerme de que les ha llegado la hora!",
     price: 70,
   },
   {
@@ -544,7 +556,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/GHOSTOWN/GHOSTOWN_SENTENZACR_N5_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "Si tienes suficientes Tokenz de oro para darle, Sentenza no dejará su trabajo a medias. Mercenario despiadado, torturados de talento e interrogador con una persuasiva brutalidad, se convirtió en la mano derecha del juez, quien ahora prefiere los métodos de este sociópata a la razón de Marshal. Si Tuco no se hubiera cruzado en su camino aquel día haciéndose pasar por un soldado confederado, seguramente no lo hubieran dejado por muerto a un lado del camino… Y si Spyke hubiera evitado sus puños, hoy estaría con toda probabilidad en Clint City… Con la nueva moneda en circulación en la ciudad, y tras haber sido solicitado por las altas esferas, ¡la animal de 'Angel Eyes' sabe que jugoso contratos la están esperando!",
+    descriptionCharacter:
+      "Si tienes suficientes Tokenz de oro para darle, Sentenza no dejará su trabajo a medias. Mercenario despiadado, torturados de talento e interrogador con una persuasiva brutalidad, se convirtió en la mano derecha del juez, quien ahora prefiere los métodos de este sociópata a la razón de Marshal. Si Tuco no se hubiera cruzado en su camino aquel día haciéndose pasar por un soldado confederado, seguramente no lo hubieran dejado por muerto a un lado del camino… Y si Spyke hubiera evitado sus puños, hoy estaría con toda probabilidad en Clint City… Con la nueva moneda en circulación en la ciudad, y tras haber sido solicitado por las altas esferas, ¡la animal de 'Angel Eyes' sabe que jugoso contratos la están esperando!",
     price: 80,
   },
   {
@@ -554,7 +567,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/DOMINION/DOMINION_DEATHADDERMT_N5_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "¡Adder es lo más de lo más en términos de juguetes de la gama Dominion! Se trata de una figurita de una calidad excepcional para coleccionar, totalmente armada y pintada a mano. Está totalmente articulada y brilla en la oscuridad gracias a su pintura fosforescente. Su arma y su trono vienen incluidos en su caja. No se recomienda para los menores de 4 años. Figurita n° 1 salida de la gama Dominion. Made by Zlatar Toys. Arrancando con furia su etiqueta, Adder no tarde en comprender su situación: ¡era libre! Ya nadie va a manipularle para nada, así que ya no habrá opción de que los niños puedan decidir qué van a hacer con él... Ya no seguirá las órdenes de nadie, sino al contrario, ¡todo el mundo le obedecerá! Con su increíble carisma, Adder ha convencido a sus hermanos de que deberían ser los árbitros de su propio destino, pero para hacerlo, tendrían que ser más en número… Como primer decreto, ha puesto en marcha una cadena de montaje llamada la Fábrica en el seno de su cuartel general, el Árbol, y con ella ha empezado a construir nuevos Dominion... ¿Quién sabe qué talla podría alcanzar el territorio de los Dominion después de que Adder haya perpetrado todos sus planes?",
+    descriptionCharacter:
+      "¡Adder es lo más de lo más en términos de juguetes de la gama Dominion! Se trata de una figurita de una calidad excepcional para coleccionar, totalmente armada y pintada a mano. Está totalmente articulada y brilla en la oscuridad gracias a su pintura fosforescente. Su arma y su trono vienen incluidos en su caja. No se recomienda para los menores de 4 años. Figurita n° 1 salida de la gama Dominion. Made by Zlatar Toys. Arrancando con furia su etiqueta, Adder no tarde en comprender su situación: ¡era libre! Ya nadie va a manipularle para nada, así que ya no habrá opción de que los niños puedan decidir qué van a hacer con él... Ya no seguirá las órdenes de nadie, sino al contrario, ¡todo el mundo le obedecerá! Con su increíble carisma, Adder ha convencido a sus hermanos de que deberían ser los árbitros de su propio destino, pero para hacerlo, tendrían que ser más en número… Como primer decreto, ha puesto en marcha una cadena de montaje llamada la Fábrica en el seno de su cuartel general, el Árbol, y con ella ha empezado a construir nuevos Dominion... ¿Quién sabe qué talla podría alcanzar el territorio de los Dominion después de que Adder haya perpetrado todos sus planes?",
     price: 90,
   },
   {
@@ -564,7 +578,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/DOMINION/DOMINION_DOOKOR_N4_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "Bicéfalo = con el doble de inteligencia = y un poder duplicado, ¡y todo por el mismo precio! Dookor es el jefe de los ogros de las montañas. ¡Su crueldad resulta innegable! Es una lástima que su comportamiento sea a menudo... ¿contradictorio? Si solo pudiera concentrarse en una acción concreta, su horda de ogros podría, sin lugar a dudas, dominar Orfanwood... Figurita n° 6 salida de la gama Dominion. Made by Zlatar Toys.",
+    descriptionCharacter:
+      "Bicéfalo = con el doble de inteligencia = y un poder duplicado, ¡y todo por el mismo precio! Dookor es el jefe de los ogros de las montañas. ¡Su crueldad resulta innegable! Es una lástima que su comportamiento sea a menudo... ¿contradictorio? Si solo pudiera concentrarse en una acción concreta, su horda de ogros podría, sin lugar a dudas, dominar Orfanwood... Figurita n° 6 salida de la gama Dominion. Made by Zlatar Toys.",
     price: 70,
   },
   {
@@ -574,7 +589,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/NIGHTMARE/NIGHTMARE_KENNYMT_N4_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "Discípulo del dios Griffonmor, Kenny no tiene nada en común con los Nightmare. Ielena lo aceptó en el clan únicamente porque espera descubrir el secreto del fuego sagrado... Esta fuerza destructiva está en manos de una única familia de Clint City...",
+    descriptionCharacter:
+      "Discípulo del dios Griffonmor, Kenny no tiene nada en común con los Nightmare. Ielena lo aceptó en el clan únicamente porque espera descubrir el secreto del fuego sagrado... Esta fuerza destructiva está en manos de una única familia de Clint City...",
     price: 70,
   },
   {
@@ -584,7 +600,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/NIGHTMARE/NIGHTMARE_KOLOSMT_N5_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "En un solar en construcción para un supermercado del barrio este de Clint City, se ha descubierto un huevo muy raro. En el más completo secreto, Ielena se hace con huevo y lo hace eclosionar, liberando a un monstruo gigantesco que arrasa con todo a su paso. Los enemigos de los Nightmare ya pueden ir preparándose.",
+    descriptionCharacter:
+      "En un solar en construcción para un supermercado del barrio este de Clint City, se ha descubierto un huevo muy raro. En el más completo secreto, Ielena se hace con huevo y lo hace eclosionar, liberando a un monstruo gigantesco que arrasa con todo a su paso. Los enemigos de los Nightmare ya pueden ir preparándose.",
     price: 80,
   },
   {
@@ -594,7 +611,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/SKEELZ/SKEELZ_CAELUSMT_N5_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "Nadie sabe cuánto tiempo lleva Caelus dirigiendo la academia. Pero una cosa es segura, no hay nadie que esté vivo y que haya conocido a su predecesor. Él reúne alrededor suya a los alumnos y profesores más brillantes, y aunque de vez en cuando haya cosas que puedan sorprender, los que le entornan saben que hay que tener confianza en él, aunque sea a ciegas.",
+    descriptionCharacter:
+      "Nadie sabe cuánto tiempo lleva Caelus dirigiendo la academia. Pero una cosa es segura, no hay nadie que esté vivo y que haya conocido a su predecesor. Él reúne alrededor suya a los alumnos y profesores más brillantes, y aunque de vez en cuando haya cosas que puedan sorprender, los que le entornan saben que hay que tener confianza en él, aunque sea a ciegas.",
     price: 100,
   },
   {
@@ -604,7 +622,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/SKEELZ/SKEELZ_DOUNIAMT_N3_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "Si el misterio tiene un origen, entonces probablemente Dounia sea la causa; nadie sabe quién es, nadie sabe de dónde viene, pero el hecho de que ella vea a través de los ojos vendados y de que domine las ilusiones ha despertado la codicia del Polit que no deja de perseguirla. Dounia no es de las que se deja atrapar, pero para gente como ella, solamente la Academia de los Skeelz puede darle refugio.",
+    descriptionCharacter:
+      "Si el misterio tiene un origen, entonces probablemente Dounia sea la causa; nadie sabe quién es, nadie sabe de dónde viene, pero el hecho de que ella vea a través de los ojos vendados y de que domine las ilusiones ha despertado la codicia del Polit que no deja de perseguirla. Dounia no es de las que se deja atrapar, pero para gente como ella, solamente la Academia de los Skeelz puede darle refugio.",
     price: 70,
   },
   {
@@ -614,7 +633,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/OBLIVION/OBLIVION_TYRESMT_N5_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "Un repartidor de Urban Eats que se ha convertido en el símbolo de una resistencia creciente, Tyres es el enemigo número uno del Oculus, el cual siente pavor por sus poderes metamórficos superdesarrollados. Sin embargo, el camino no ha sido fácil para el nuevo jefe de los Oblivion, que solo fue capaz de dominar sus poderes tras un largo viaje iniciático junto a su amigo Dianzi. Tras escapar por los pelos de la trampa que le tendió Kate, Tyres ha solicitado el encuentro de todos sus hermanos y hermanas. ¡El clan Oblivion ha renacido al fin! Incluso encontró un inofensivo Oculus llamado Pulp Ld, ¡que le acompaña en sus aventuras desde entonces! Juntos, los Oblivion buscan ahora volver a su dimensión original, para reconstruir allí el Archium. Pero, ¿serán capaces de abandonar Clint City a su suerte tan fácilmente?",
+    descriptionCharacter:
+      "Un repartidor de Urban Eats que se ha convertido en el símbolo de una resistencia creciente, Tyres es el enemigo número uno del Oculus, el cual siente pavor por sus poderes metamórficos superdesarrollados. Sin embargo, el camino no ha sido fácil para el nuevo jefe de los Oblivion, que solo fue capaz de dominar sus poderes tras un largo viaje iniciático junto a su amigo Dianzi. Tras escapar por los pelos de la trampa que le tendió Kate, Tyres ha solicitado el encuentro de todos sus hermanos y hermanas. ¡El clan Oblivion ha renacido al fin! Incluso encontró un inofensivo Oculus llamado Pulp Ld, ¡que le acompaña en sus aventuras desde entonces! Juntos, los Oblivion buscan ahora volver a su dimensión original, para reconstruir allí el Archium. Pero, ¿serán capaces de abandonar Clint City a su suerte tan fácilmente?",
     price: 90,
   },
   {
@@ -624,7 +644,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/OBLIVION/OBLIVION_ALTERLD_N3_HD_673.png",
     },
     idFactions: 7,
-    descriptionCharacter: "Alter Ld es un pequeño animal metamórfico, el único superviviente de su especie que custodiaba las dunas del Archium en el pasado. Bestia indomable de carácter voluble e imprevisible, solo se acerca a otros animales y a los humanos que están a punto de morir. Se comenta que lo vieron en los barrios de los Uppers y cerca de la academia Skeelz... ¿Serán ciertos estos rumores?",
+    descriptionCharacter:
+      "Alter Ld es un pequeño animal metamórfico, el único superviviente de su especie que custodiaba las dunas del Archium en el pasado. Bestia indomable de carácter voluble e imprevisible, solo se acerca a otros animales y a los humanos que están a punto de morir. Se comenta que lo vieron en los barrios de los Uppers y cerca de la academia Skeelz... ¿Serán ciertos estos rumores?",
     price: 70,
   },
   {
@@ -634,7 +655,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/HIVE/HIVE_MAANACERCEICR_N5_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "Sueños rotos, recuerdos de la alegría perdida... la corte imperial, sus complots y finalmente la traición inesperada. Los Hive me llaman madre, Maana Cercei, y ellos son mis hijos en la mente colmena. Cada uno de ellos recibe mi beso: un chip que los une mí. Yo soy su todo, su omega, la que originó la resistencia y, desde ahora, la venganza es mía... muy pronto, hermano... ¡muy pronto, mi vida!",
+    descriptionCharacter:
+      "Sueños rotos, recuerdos de la alegría perdida... la corte imperial, sus complots y finalmente la traición inesperada. Los Hive me llaman madre, Maana Cercei, y ellos son mis hijos en la mente colmena. Cada uno de ellos recibe mi beso: un chip que los une mí. Yo soy su todo, su omega, la que originó la resistencia y, desde ahora, la venganza es mía... muy pronto, hermano... ¡muy pronto, mi vida!",
     price: 80,
   },
   {
@@ -644,7 +666,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/HIVE/HIVE_MAANA2097_N5_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "El año 2097 será el punto de inflexión para Clint City, una ucronía en la que el tiempo ya no existirá, en la que los acontecimientos que podrían haber sucedido jamás lo hicieron. Desde este enclave llamado Clinterra, una figura de la Resistencia ha decidido regresar a Clint City para tomar el control de los acontecimientos que llevarán a todos al muro de la nada. La cibernética Manaa, y su envoltura sintética evolutiva, se humanizan al evolucionar con el tiempo... se abren posibilidades inéditas para su clan, especialmente con la llegada de los metamorfos Oblivion.",
+    descriptionCharacter:
+      "El año 2097 será el punto de inflexión para Clint City, una ucronía en la que el tiempo ya no existirá, en la que los acontecimientos que podrían haber sucedido jamás lo hicieron. Desde este enclave llamado Clinterra, una figura de la Resistencia ha decidido regresar a Clint City para tomar el control de los acontecimientos que llevarán a todos al muro de la nada. La cibernética Manaa, y su envoltura sintética evolutiva, se humanizan al evolucionar con el tiempo... se abren posibilidades inéditas para su clan, especialmente con la llegada de los metamorfos Oblivion.",
     price: 90,
   },
   {
@@ -654,7 +677,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/SAKROHM/SAKROHM_GURUMT_N5_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "Antiguo fontanero, Robert se ha convertido en Guru Fitoplanctoniano tras haber sido abducido por alienígenas que, según él, lo llevaron a 'la dimensión paralela a la izquierda' para conocer al Glibon Dashra Sakrh. Guru vuelve a la Tierra como embajador de la 'Exo-nación', para preparar su venida y erradicar a todos los antiextraterrestres.",
+    descriptionCharacter:
+      "Antiguo fontanero, Robert se ha convertido en Guru Fitoplanctoniano tras haber sido abducido por alienígenas que, según él, lo llevaron a 'la dimensión paralela a la izquierda' para conocer al Glibon Dashra Sakrh. Guru vuelve a la Tierra como embajador de la 'Exo-nación', para preparar su venida y erradicar a todos los antiextraterrestres.",
     price: 100,
   },
   {
@@ -664,7 +688,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/SAKROHM/SAKROHM_URANUSCR_N3_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "Desde su más tierna infancia, Uranus es una juerguista empedernida. Una noche, al salir de 'Pilou Dancing Night', su discoteca favorita, ve un objeto volador en el cielo. Al volver a casa busca documentación sobre los ovnis y da con la página web de los Sakrohms. Descubre su filosofía y decide unirse a ellos porque le parecen muy majos.",
+    descriptionCharacter:
+      "Desde su más tierna infancia, Uranus es una juerguista empedernida. Una noche, al salir de 'Pilou Dancing Night', su discoteca favorita, ve un objeto volador en el cielo. Al volver a casa busca documentación sobre los ovnis y da con la página web de los Sakrohms. Descubre su filosofía y decide unirse a ellos porque le parecen muy majos.",
     price: 60,
   },
   {
@@ -674,7 +699,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/RIOTS/RIOTS_PERICLESMT_N5_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "'Para dar un giro a la civilización, hace falta una idea, una idea que germine y se desarrolle, siempre en pro del hombre...' 'Liberar la ciencia del yugo de la economía e invitar a los auténticos creadores de este mundo a unir sus fuerzas por el futuro de la humanidad...' Todo ello está escrito en el Código Riots de Arístides Pericles, gran pensador del siglo pasado y fundador de Riotspolis. Tras haber vencido a la muerte con ayuda de la familia Van Wesel y la Dra Copernica la anciana, el Patriarca de los Riots está listo para iluminar el mundo... ¡hasta la eternidad!",
+    descriptionCharacter:
+      "'Para dar un giro a la civilización, hace falta una idea, una idea que germine y se desarrolle, siempre en pro del hombre...' 'Liberar la ciencia del yugo de la economía e invitar a los auténticos creadores de este mundo a unir sus fuerzas por el futuro de la humanidad...' Todo ello está escrito en el Código Riots de Arístides Pericles, gran pensador del siglo pasado y fundador de Riotspolis. Tras haber vencido a la muerte con ayuda de la familia Van Wesel y la Dra Copernica la anciana, el Patriarca de los Riots está listo para iluminar el mundo... ¡hasta la eternidad!",
     price: 90,
   },
   {
@@ -684,7 +710,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/RIOTS/RIOTS_OCTANA_N5_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "La hija rebelde del Patriarca nunca ha tenido paciencia para seguir los cursos impartidos en el Alma Mater de Riotspolis a pesar de las recomendaciones de su examen de aptitud. Por eso aceptó sin pesar unirse a la sección de trabajos prácticos de #Boomstock. Dejando de lado su espíritu analítico, ha aprendido perfectamente las técnicas necesarias para manejar chismes superguays como el soplete de propulsión de Copérnica.",
+    descriptionCharacter:
+      "La hija rebelde del Patriarca nunca ha tenido paciencia para seguir los cursos impartidos en el Alma Mater de Riotspolis a pesar de las recomendaciones de su examen de aptitud. Por eso aceptó sin pesar unirse a la sección de trabajos prácticos de #Boomstock. Dejando de lado su espíritu analítico, ha aprendido perfectamente las técnicas necesarias para manejar chismes superguays como el soplete de propulsión de Copérnica.",
     price: 80,
   },
   {
@@ -694,7 +721,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/GHEIST/GHEIST_TOROMT_N4_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "Fiel soldado del GHEIST, Toro ha ido ascendiendo de manera progresiva en el seno de la organización hasta convertirse en el responsable de la célula de Clint City. Sigmund siente aprecio por él, y sabe que es lo suficientemente inteligente como para sacar adelante las misiones que le son confiadas pero también lo bastante tonto como para poner en tela de juicio su autoridad.",
+    descriptionCharacter:
+      "Fiel soldado del GHEIST, Toro ha ido ascendiendo de manera progresiva en el seno de la organización hasta convertirse en el responsable de la célula de Clint City. Sigmund siente aprecio por él, y sabe que es lo suficientemente inteligente como para sacar adelante las misiones que le son confiadas pero también lo bastante tonto como para poner en tela de juicio su autoridad.",
     price: 80,
   },
   {
@@ -704,7 +732,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/GHEIST/GHEIST_ROLPH_N5_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "Malvado, agresivo y violento, Rolph estaba dispuesto a todo para convertirse en campeón del mundo, lo que implicaba entrenar con el GHEIST. Gracias a los avances científicos de Vryer, Rolph estaba al fin listo para desafiar a Hammer, pero el sospechaba que el profesor no le había contado todo y que estaba sufriendo extrañas modificaciones sin su entero conocimiento...",
+    descriptionCharacter:
+      "Malvado, agresivo y violento, Rolph estaba dispuesto a todo para convertirse en campeón del mundo, lo que implicaba entrenar con el GHEIST. Gracias a los avances científicos de Vryer, Rolph estaba al fin listo para desafiar a Hammer, pero el sospechaba que el profesor no le había contado todo y que estaba sufriendo extrañas modificaciones sin su entero conocimiento...",
     price: 70,
   },
   {
@@ -714,7 +743,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/VORTEX/VORTEX_DREGNMT_N5_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "En un futuro lejano, Dregn es el maléfico emperador que reina en Clint City de manera totalitaria. Para su desgracia, una profecía revela que una alianza de los descendientes de los clanes acabará con él. A pesar de que no cree en las artes adivinatorias, prefiere viajar al pasado y aniquilar a los clanes por si acaso.",
+    descriptionCharacter:
+      "En un futuro lejano, Dregn es el maléfico emperador que reina en Clint City de manera totalitaria. Para su desgracia, una profecía revela que una alianza de los descendientes de los clanes acabará con él. A pesar de que no cree en las artes adivinatorias, prefiere viajar al pasado y aniquilar a los clanes por si acaso.",
     price: 70,
   },
   {
@@ -724,7 +754,8 @@ const CHARACTERS = [
       uri: "https://s.acdn.ur-img.com/urimages/perso/VORTEX/VORTEX_DREGN2097_N5_HD_673.png",
     },
     idFactions: 8,
-    descriptionCharacter: "En un futuro no muy lejano, hacia el año 2097, Dregn es el emperador que reina sobre Clinterra. Gracias a un excepcional avance tecnológico y científico, este nuevo tipo de sintético es el resultado de una fusión entre su Alfa y su Omega. Para su desgracia, una profecía revela que una alianza de los descendientes de los clanes acabará con él. A pesar de que no cree en las artes adivinatorias, prefiere viajar al pasado para hacer entrar en razón a los clanes existentes y poder reinar en paz, a ser posible en compañía de su reina...",
+    descriptionCharacter:
+      "En un futuro no muy lejano, hacia el año 2097, Dregn es el emperador que reina sobre Clinterra. Gracias a un excepcional avance tecnológico y científico, este nuevo tipo de sintético es el resultado de una fusión entre su Alfa y su Omega. Para su desgracia, una profecía revela que una alianza de los descendientes de los clanes acabará con él. A pesar de que no cree en las artes adivinatorias, prefiere viajar al pasado para hacer entrar en razón a los clanes existentes y poder reinar en paz, a ser posible en compañía de su reina...",
     price: 90,
   },
 ];

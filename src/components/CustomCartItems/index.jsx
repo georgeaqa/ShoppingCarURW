@@ -1,53 +1,35 @@
-import { Image, Pressable, Text, TouchableOpacity, View } from "react-native";
+import { COLORS, DIMENSIONS } from "../../constants";
+import { Image, TouchableOpacity, View } from "react-native";
 
-import {COLORS} from '../../constants';
+import CustomText from "../CustomText";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import React from "react";
 
 const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
   return (
-    <View className="my-1 flex-row justify-between bg-gray-400">
-      <View className="flex-row">
+    <View
+      className="flex-1/2 p-1  w-1/2"
+      style={{ height: DIMENSIONS.height / 3 }}
+    >
+      <View className="border border-[#FFD700] w-full justify-center items-center">
         <Image
-          className="w-20 h-20"
+          className="w-full h-1/2"
           source={item.imageSource}
           resizeMode="contain"
         />
-        <View>
-          <Text className="text-white" style={{ fontFamily: "UrbanRivals" }}>
-            ID: {item.idCharacter}
-          </Text>
-          <Text className="text-white" style={{ fontFamily: "UrbanRivals" }}>
-            nombre: {item.nameCharacter}
-          </Text>
-          <Text className="text-white" style={{ fontFamily: "UrbanRivals" }}>
-            $ {item.price}
-          </Text>
-          <View className="flex-row ">
-            <Text className="text-white" style={{ fontFamily: "UrbanRivals" }}>
-              Cantidad:{" "}
-            </Text>
-            <TouchableOpacity onPress={() => onReduce(item.idCharacter)}>
-              <Ionicons
-                name="md-remove-circle-outline"
-                size={20}
-                color={"red"}
-              />
-            </TouchableOpacity>
-            <Text className="text-white" style={{fontFamily: "UrbanRivals"}}> {item.quantity} </Text>
-            <TouchableOpacity onPress={() => onIncrease(item.idCharacter)}>
-              <Ionicons
-                name="md-add-circle-outline"
-                size={20}
-                color={"green"}
-              />
-            </TouchableOpacity>
-          </View>
+        <CustomText text={item.nameCharacter} />
+        <CustomText text={"$" + item.price} />
+        <View className="flex-row my-2">
+          <CustomText text={"Cantidad: " + item.quantity} />
+          <TouchableOpacity onPress={() => onReduce(item.idCharacter)}>
+            <Ionicons name="md-remove-circle-outline" size={25} color={"red"} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => onIncrease(item.idCharacter)}>
+            <Ionicons name="md-add-circle-outline" size={25} color={"green"} />
+          </TouchableOpacity>
         </View>
-      </View>
-      <View className="justify-center">
         <TouchableOpacity onPress={() => onDelete(item.idCharacter)}>
-          <Ionicons name="trash" size={24} color={COLORS.tertiaryColor} />
+          <Ionicons name="trash" size={25} color={COLORS.red} />
         </TouchableOpacity>
       </View>
     </View>

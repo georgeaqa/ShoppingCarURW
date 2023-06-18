@@ -25,7 +25,6 @@ const ShoppingCar = () => {
   const handleReduceItem = (idCharacter) => {
     dispatch(decrease_character(idCharacter));
   };
-
   const renderCartcharacter = ({ item }) => (
     <CustomCartItems
       item={item}
@@ -35,20 +34,21 @@ const ShoppingCar = () => {
     />
   );
   const handleConfirmCart = () => {
-    dispatch(confirm_CART(localId,characters, total));
+    dispatch(confirm_CART(localId, characters, total));
   };
   return (
-    <View className="flex-1 px-[1%] bg-white justify-between">
+    <View className="flex-1 justify-between">
       <View className="flex-1">
         <FlatList
           data={characters}
-          keyExtractor={(item) => item.idCharacter}
           renderItem={renderCartcharacter}
+          keyExtractor={(item) => item.idCharacter}
+          numColumns={2}
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
         />
       </View>
-      <View className="items-center">
+      <View className="items-center p-[1%]">
         <CustomButton
           text={`Confirmar Total: ${total}`}
           className="bg-[#5cb85c] "

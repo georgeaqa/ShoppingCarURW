@@ -30,9 +30,7 @@ const CharacterScreen = ({ navigation, route }) => {
     });
   };
   const renderCharacterItem = ({ item }) => (
-    <View className="flex-1">
-      <CustomCharacterItems item={item} onSelected={handleSelectedCharacter} />
-    </View>
+    <CustomCharacterItems item={item} onSelected={handleSelectedCharacter} />
   );
 
   return (

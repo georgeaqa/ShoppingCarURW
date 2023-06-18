@@ -1,6 +1,6 @@
 import { COLORS, EMAIL_REGEX } from "../../../constants";
-import { CustomButton, CustomInput } from "../../../components";
-import { Image, Text, View } from "react-native";
+import { CustomButton, CustomInput, CustomText } from "../../../components";
+import { Image, View } from "react-native";
 
 import React from "react";
 import { sendResetPassword } from "../../../store/actions/auth.action";
@@ -21,9 +21,9 @@ const ForgotPassword = ({ navigation }) => {
         className="w-full max-w-xs h-1/3 max-h-80"
         resizeMode="contain"
       />
-      <Text className="text-xl w-full text-justify" style={{fontFamily:"UrbanRivals"}}>
-        Ingrese correo electronico, se le enviara un email para reestablecer su contraseña.
-      </Text>
+    <CustomText newStyle={{textAlign:"justify"}} text={"Ingrese correo electronico, se le enviara un email para reestablecer su contraseña."}/>
+        
+
       <CustomInput
         name="email"
         control={control}
