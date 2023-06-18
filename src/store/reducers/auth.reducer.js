@@ -1,9 +1,12 @@
 import {
+  LOADAPP,
   LOG_OUT,
   SEND_RESET_PASSWORD,
   SIGNIN,
   SIGNUP,
 } from "../actions/auth.action";
+
+{}
 
 const inialState = {
   idToken: null,
@@ -28,6 +31,11 @@ const AuthReducer = (state = inialState, action) => {
         idToken: null,
         localId: null,
       }
+      case LOADAPP:
+        return {
+        ...state,
+          localId: action.localId,
+        };
     default:
       return state;
   }

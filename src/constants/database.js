@@ -31,6 +31,24 @@ export const init = () => {
   return promise;
 };
 
+export const userConnected = () => {
+  const promise = new Promise((resolve, reject) => {
+    db.transaction((tx) => {
+      tx.executeSql(
+        "SELECT * FROM users where status=1",
+        [],
+        (_, result) => {
+          resolve(result.rows._array.find((user) => user.status === 1));  
+        },
+        (_, err) => {
+          reject(err);
+        }
+      );
+    });
+  });
+  return promise;
+};
+
 export const addUser = (localId) => {
   const promise = new Promise((resolve, reject) => {
     db.transaction((tx) => {
@@ -84,4 +102,3 @@ export const updateStatusUserLogOut = (localId) => {
   });
   return promise;
 };
-
