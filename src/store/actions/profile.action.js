@@ -1,4 +1,4 @@
-import { URL_API } from "../../constants/database";
+import { URL_API, getUser } from "../../constants/database";
 
 export const GET_USER_DATA = "GET_USER_DATA";
 
@@ -16,7 +16,9 @@ export const getUserData = (localId) => {
         ...result[key],
         id: key,
       }));
-      dispatch({ type: GET_USER_DATA, userData: Data, localId:localId });
+      const user = await getUser();
+      console.log(user.rows._array);
+      dispatch({ type: GET_USER_DATA, userData: user.rows._array, localId:localId });
     } catch (error) {
       console.log(error);
     }

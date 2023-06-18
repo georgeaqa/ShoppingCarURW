@@ -25,7 +25,7 @@ const CharacterDetailScreen = ({ navigation }) => {
     <View className="items-center">
       <CustomButton
         text="Agregar al carrito"
-        className="bg-[#5cb85c] "
+        className="bg-[#2cec2c] "
         newStyleText={{ color: COLORS.white }}
         onPress={handleAddCharacter}
       />

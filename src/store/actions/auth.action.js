@@ -2,10 +2,11 @@ import {
   URL_API,
   URL_AUTH_SEND_RESET_PASSWORD,
   URL_AUTH_SIGNIN,
-  URL_AUTH_SIGNUP
+  URL_AUTH_SIGNUP,
 } from "../../constants/database";
 
 import { Alert } from "react-native";
+import { addUser } from "../../constants/database";
 
 export const SIGNUP = "SIGNUP";
 export const SIGNIN = "SIGNIN";
@@ -34,9 +35,6 @@ export const signUp = (name, lastName, email, password, imageUri) => {
         }
       }
       const data = await response.json();
-      dispatch({
-        type: SIGNUP,
-      });
       const responseUser = await fetch(`${URL_API}/users.json`, {
         method: "POST",
         headers: {
@@ -50,8 +48,20 @@ export const signUp = (name, lastName, email, password, imageUri) => {
           imageUri,
         }),
       });
-      const result = await responseUser.json();
-      console.log(result);
+      if (responseUser.ok && response.ok) {
+        const responseAddUserDB = await addUser(
+          data.localId,
+          name,
+          lastName,
+          email,
+          imageUri
+        );
+        console.log(responseAddUserDB);
+      }
+
+      dispatch({
+        type: SIGNUP,
+      });
     } catch (error) {
       console.log(error);
     }

@@ -51,7 +51,7 @@ const ShoppingCar = () => {
       <View className="items-center p-[1%]">
         <CustomButton
           text={`Confirmar Total: ${total}`}
-          className="bg-[#5cb85c] "
+          className="bg-[#2cec2c] "
           newStyleText={{ color: COLORS.white }}
           onPress={handleConfirmCart}
         />
