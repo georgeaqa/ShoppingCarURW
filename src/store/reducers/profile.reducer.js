@@ -7,9 +7,6 @@ const initialState = {
 const profileReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_USER_DATA:
-      console.log(
-        action.userData.find((user) => user.localId === action.localId)
-      );
       return {
         ...state,
         userData: action.userData.find(

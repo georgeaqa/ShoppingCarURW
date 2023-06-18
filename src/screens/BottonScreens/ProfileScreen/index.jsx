@@ -16,7 +16,7 @@ const Profile = () => {
   }, []);
 
   const handleLogout = () => {
-    dispatch(logOut());
+    dispatch(logOut(localId));
   };
 
   return (

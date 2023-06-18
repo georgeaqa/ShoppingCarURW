@@ -17,7 +17,7 @@ export const init = () => {
   const promise = new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql(
-        "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY NOT NULL, localId TEXT NOT NULL, name TEXT  NOT NULL, lastName TEXT  NOT NULL, email TEXT  NOT NULL, imageUri TEXT  NOT NULL)",
+        "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY NOT NULL,localId TEXT NOT NULL, status BIT)",
         [],
         () => {
           resolve();
@@ -31,12 +31,12 @@ export const init = () => {
   return promise;
 };
 
-export const addUser = (localId, name, lastName, email, imageUri) => {
+export const addUser = (localId) => {
   const promise = new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql(
-        "INSERT INTO users (localId, name, lastName, email, imageUri) VALUES (?,?,?,?,?)",
-        [localId, name, lastName, email, imageUri],
+        "INSERT INTO users (localId, status) VALUES (?,?)",
+        [localId, 0],
         (_, result) => {
           resolve(result);
         },
@@ -49,14 +49,14 @@ export const addUser = (localId, name, lastName, email, imageUri) => {
   return promise;
 };
 
-export const getUser = () => {
+export const updateStatusUserSignIn = (localId) => {
   const promise = new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql(
-        "SELECT * FROM users",
-        [],
+        "UPDATE users SET status=1 WHERE localId=?",
+        [localId],
         (_, result) => {
-          resolve(result);
+          resolve(result.rowsAffected);
         },
         (_, err) => {
           reject(err);
@@ -66,3 +66,22 @@ export const getUser = () => {
   });
   return promise;
 };
+
+export const updateStatusUserLogOut = (localId) => {
+  const promise = new Promise((resolve, reject) => {
+    db.transaction((tx) => {
+      tx.executeSql(
+        "UPDATE users SET status=0 WHERE localId=?",
+        [localId],
+        (_, result) => {
+          resolve(result.rowsAffected);
+        },
+        (_, err) => {
+          reject(err);
+        }
+      );
+    });
+  });
+  return promise;
+};
+

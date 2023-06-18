@@ -3,6 +3,7 @@ import {
   URL_AUTH_SEND_RESET_PASSWORD,
   URL_AUTH_SIGNIN,
   URL_AUTH_SIGNUP,
+  updateStatusUserLogOut,
 } from "../../constants/database";
 
 import { Alert } from "react-native";
@@ -48,14 +49,8 @@ export const signUp = (name, lastName, email, password, imageUri) => {
           imageUri,
         }),
       });
-      if (responseUser.ok && response.ok) {
-        const responseAddUserDB = await addUser(
-          data.localId,
-          name,
-          lastName,
-          email,
-          imageUri
-        );
+      if (responseUser.ok) {
+        const responseAddUserDB = await addUser(data.localId);
         console.log(responseAddUserDB);
       }
 
@@ -143,6 +138,16 @@ export const sendResetPassword = (email) => {
   };
 };
 
-export const logOut = () => ({
-  type: LOG_OUT,
-});
+export const logOut = (localId) => {
+  return async (dispatch) => {
+    try {
+      const updatestatus = await updateStatusUserLogOut(localId);
+      console.log(updatestatus);
+      dispatch({
+        type: LOG_OUT,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
