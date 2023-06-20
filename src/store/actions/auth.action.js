@@ -5,7 +5,9 @@ import {
   URL_AUTH_SIGNUP,
   addUser,
   updateStatusUserLogOut,
+  updateStatusUserSignIn,
   userConnected,
+  userExist,
 } from "../../constants/database";
 
 import { Alert } from "react-native";
@@ -51,11 +53,6 @@ export const signUp = (name, lastName, email, password, imageUri) => {
           imageUri,
         }),
       });
-      if (responseUser.ok) {
-        const responseAddUserDB = await addUser(data.localId);
-        console.log(responseAddUserDB);
-      }
-
       dispatch({
         type: SIGNUP,
       });
@@ -98,6 +95,15 @@ export const signIn = (email, password) => {
         }
       }
       const data = await response.json();
+
+      const user = await userExist(data.localId);
+      if (!user) {
+        const responseAddUserDB = await addUser(data.localId);
+        console.log(responseAddUserDB);
+      }
+      const updatestatus = await updateStatusUserSignIn(data.localId);
+      console.log(updatestatus);
+
       dispatch({
         type: SIGNIN,
         idToken: data.idToken,

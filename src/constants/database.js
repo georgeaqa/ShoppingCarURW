@@ -17,7 +17,7 @@ export const init = () => {
   const promise = new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql(
-        "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY NOT NULL,localId TEXT NOT NULL, status BIT)",
+        "CREATE TABLE IF NOT EXISTS users (localId TEXT PRIMARY KEY  NOT NULL, status BIT NOT NULL)",
         [],
         () => {
           resolve();
@@ -48,6 +48,24 @@ export const userConnected = () => {
   });
   return promise;
 };
+
+export const userExist = (localId) => {
+  const promise = new Promise((resolve, reject) => {
+    db.transaction((tx) => {
+      tx.executeSql(
+        "SELECT * FROM users where localId=?",
+        [localId],
+        (_, result) => {
+          resolve(result.rows._array.length > 0);    
+        },
+        (_, err) => {
+          reject(err);
+        }
+      );
+    });
+  });
+  return promise;
+}
 
 export const addUser = (localId) => {
   const promise = new Promise((resolve, reject) => {

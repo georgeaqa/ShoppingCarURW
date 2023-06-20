@@ -1,6 +1,6 @@
 import { COLORS, DIMENSIONS } from "../../../constants";
 import { CustomButton, CustomText } from "../../../components";
-import { Image, Text, View } from "react-native";
+import { Image, View } from "react-native";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,9 +11,12 @@ const Profile = () => {
   const dispatch = useDispatch();
   const localId = useSelector((state) => state.auth.localId);
   const userData = useSelector((state) => state.user.userData);
-  useEffect(() => {
-    dispatch(getUserData(localId));
-  }, []);
+
+  if (!localId) {
+    useEffect(() => {
+      dispatch(getUserData(localId));
+    }, []);
+  }
 
   const handleLogout = () => {
     dispatch(logOut(localId));

@@ -1,4 +1,4 @@
-import { URL_API, updateStatusUserSignIn } from "../../constants/database";
+import { URL_API } from "../../constants/database";
 
 export const GET_USER_DATA = "GET_USER_DATA";
 
@@ -16,8 +16,6 @@ export const getUserData = (localId) => {
         ...result[key],
         id: key,
       }));
-      const updatestatus= await updateStatusUserSignIn(localId)
-      console.log(updatestatus);
       dispatch({ type: GET_USER_DATA, userData: Data, localId: localId });
     } catch (error) {
       console.log(error);
