@@ -11,7 +11,7 @@ const CustomCharacterItems = ({ item, onSelected }) => {
       style={{ height: DIMENSIONS.height / 4}}
     >
       <TouchableOpacity
-        className="border-2 border-[#FF0000] w-full justify-center items-center"
+        className="border-2 border-[#FF0000] w-full justify-center items-center rounded-2xl"
         onPress={() => onSelected(item)}
       >
         <CustomText text={item.nameCharacter} />

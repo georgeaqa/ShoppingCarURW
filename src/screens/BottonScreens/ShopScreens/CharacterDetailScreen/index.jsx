@@ -45,7 +45,7 @@ const CharacterDetailScreen = ({ navigation }) => {
     <View className="flex-1 px-[2%] bg-white justify-between">
       <View className="flex-row">
         <View
-          className="border-2 border-[#FF0000] my-2"
+          className="border-2 border-[#FF0000] my-2 rounded-2xl"
           style={{ width: DIMENSIONS.width / 3, height: DIMENSIONS.height / 5 }}
         >
           <Image

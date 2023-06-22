@@ -1,46 +1,42 @@
 import { COLORS, ROUTES } from "../constants";
-import {
- OrderCar,
- OrderDetailScreen
-} from "../screens";
+import { EditProfileScreen, Profile } from "../screens";
 
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
-const OrderNavigator = () => {
+const ProfileNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName={ROUTES.ORDERCAR}
+      initialRouteName={ROUTES.PROFILE}
       screenOptions={{
         headerTintColor: COLORS.white,
         headerTitleAlign: "center",
         headerTitleStyle: {
           fontFamily: "UrbanRivals",
-          
         },
-        headerStyle:{
+        headerStyle: {
           backgroundColor: COLORS.gold,
-        }
+        },
       }}
     >
       <Stack.Screen
-        name={ROUTES.ORDERCAR}
-        component={OrderCar}
+        name={ROUTES.PROFILE}
+        component={Profile}
         options={{
-          title: "PEDIDOS",
+          title: "PERFIL",
         }}
       />
       <Stack.Screen
-        name={ROUTES.ORDERDETAIL}
-        component={OrderDetailScreen}
-        options={({ route }) => ({
-          title: route.params.id,
-        })}
+        name={ROUTES.PROFILE_EDIT}
+        component={EditProfileScreen}
+        options={{
+            title: "EDITAR PERFIL",
+          }}
       />
     </Stack.Navigator>
   );
 };
 
-export default OrderNavigator;
+export default ProfileNavigator;

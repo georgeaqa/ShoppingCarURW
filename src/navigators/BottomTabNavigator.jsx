@@ -1,11 +1,12 @@
 import { COLORS, ROUTES } from "../constants";
-import { Profile, ShoppingCar } from "../screens";
 
 import { CustomText } from "../components";
 import Entypo from "@expo/vector-icons/Entypo";
 import OrderNavigator from "./OrderNavigator";
+import ProfileNavigator from "./ProfileNavigator";
 import React from "react";
 import ShopNavigator from "./ShopNavigator";
+import { ShoppingCar } from "../screens";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const BottomTab = createBottomTabNavigator();
@@ -13,7 +14,7 @@ const BottomTab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
     <BottomTab.Navigator
-      initialRouteName={ROUTES.PROFILE}
+      initialRouteName={ROUTES.PROFILE_BTAB}
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
@@ -21,13 +22,13 @@ const BottomTabNavigator = () => {
       }}
     >
       <BottomTab.Screen
-        name={ROUTES.PROFILE}
-        component={Profile}
+        name={ROUTES.PROFILE_BTAB}
+        component={ProfileNavigator}
         options={{
           tabBarIcon: () => (
             <>
-              <Entypo name="user" size={20} />
-              <CustomText text={"Perfil"} />
+              <Entypo name="user" size={15} />
+              <CustomText text={"Perfil"} newStyle={{fontSize:15}}/>
             </>
           ),
         }}
@@ -39,8 +40,8 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <>
-              <Entypo name="shop" size={20} />
-              <CustomText text={"Productos"} />
+              <Entypo name="shop" size={15} />
+              <CustomText text={"Productos"} newStyle={{fontSize:15}}/>
             </>
           ),
         }}
@@ -52,8 +53,8 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <>
-              <Entypo name="shopping-cart" size={20} />
-              <CustomText text={"Carrito"} />
+              <Entypo name="shopping-cart" size={15} />
+              <CustomText text={"Carrito"} newStyle={{fontSize:15}}/>
             </>
           ),
         }}
@@ -64,8 +65,8 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <>
-              <Entypo name="list" size={20} />
-              <CustomText text={"Ordenes"} />
+              <Entypo name="list" size={15} />
+              <CustomText text={"Pedidos"} newStyle={{fontSize:15}}/>
             </>
           ),
         }}

@@ -7,7 +7,7 @@ import React from "react";
 
 const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
   return (
-    <View className="m-1 p-1 border border-[#FF0000] flex-row justify-between">
+    <View className="m-1 px-2 py-1 border border-[#FF0000] rounded-2xl flex-row justify-between">
       <View className="flex-row">
         <Image
           source={item.imageSource}

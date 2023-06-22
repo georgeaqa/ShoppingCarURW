@@ -1,4 +1,4 @@
-import { GET_USER_DATA } from "../actions/profile.action";
+import { EDIT_USER_DATA, GET_USER_DATA } from "../actions/profile.action";
 
 const initialState = {
   userData: [],
@@ -13,6 +13,11 @@ const profileReducer = (state = initialState, action) => {
           (user) => user.localId === action.localId
         ),
       };
+      case EDIT_USER_DATA:
+        return {
+          ...state,
+          userData: action.userData,
+        };
     default:
       return state;
   }

@@ -34,7 +34,7 @@ const CharacterScreen = ({ navigation, route }) => {
   );
 
   return (
-    <View className="bg-white">
+    <View className="flex-1 bg-white">
       <FlatList
         data={filteredCharacters}
         renderItem={renderCharacterItem}

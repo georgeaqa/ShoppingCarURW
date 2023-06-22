@@ -40,79 +40,76 @@ const Register = ({ navigation }) => {
       <ScrollView className="w-full">
         <View className="w-full justify-between items-center">
           <Pressable
-          className="w-[300px] h-[300px] border"
-          onPress={() => pickImage()}
-          tittle="imagen"
-        >
-          <Image
-            className="w-full h-full"
-            source={{ uri: imageUri }}
-            resizeMode="contain"
+            className="w-[300px] h-[300px] border"
+            onPress={() => pickImage()}
+            tittle="imagen"
+          >
+            <Image
+              className="w-full h-full"
+              source={{ uri: imageUri }}
+              resizeMode="contain"
+            />
+          </Pressable>
+          <CustomInput
+            name="name"
+            control={control}
+            placeholder="Nombre"
+            rules={{
+              required: "Nombre es obligatorio.",
+              minLength: {
+                value: 2,
+                message: "El nombre debe tener minimo 2 caracteres.",
+              },
+            }}
           />
-
-        </Pressable>
-<CustomInput
-          name="name"
-          control={control}
-          placeholder="Nombre"
-          rules={{
-            required: "Nombre es obligatorio.",
-            minLength: {
-              value: 2,
-              message: "El nombre debe tener minimo 2 caracteres.",
-            },
-          }}
-        />
-        <CustomInput
-          name="lastName"
-          control={control}
-          placeholder="Apellido"
-          rules={{
-            required: "Apellido es obligatorio.",
-            minLength: {
-              value: 2,
-              message: "El apellido debe tener minimo 2 caracteres.",
-            },
-          }}
-        />
-        <CustomInput
-          name="email"
-          control={control}
-          placeholder="Correo electronico"
-          rules={{
-            required: "Email es obligatorio.",
-            pattern: {
-              value: EMAIL_REGEX.email_regex,
-              message: "Email es invalido.",
-            },
-          }}
-        />
-        <CustomInput
-          name="password"
-          control={control}
-          placeholder="Contraseña"
-          secureTextEntry={true}
-          rules={{
-            required: "Contraseña es obligatorio.",
-            minLength: {
-              value: 6,
-              message: "La contraseña debe tener minimo 6 caracteres.",
-            },
-          }}
-        />
-        <CustomInput
-          name="passwordRepeat"
-          control={control}
-          placeholder="Repetir Contraseña"
-          secureTextEntry={true}
-          rules={{
-            validate: (value) =>
-              value == pwd || "Las contraseñas no coinciden.",
-          }}
-        />
+          <CustomInput
+            name="lastName"
+            control={control}
+            placeholder="Apellido"
+            rules={{
+              required: "Apellido es obligatorio.",
+              minLength: {
+                value: 2,
+                message: "El apellido debe tener minimo 2 caracteres.",
+              },
+            }}
+          />
+          <CustomInput
+            name="email"
+            control={control}
+            placeholder="Correo electronico"
+            rules={{
+              required: "Email es obligatorio.",
+              pattern: {
+                value: EMAIL_REGEX.email_regex,
+                message: "Email es invalido.",
+              },
+            }}
+          />
+          <CustomInput
+            name="password"
+            control={control}
+            placeholder="Contraseña"
+            secureTextEntry={true}
+            rules={{
+              required: "Contraseña es obligatorio.",
+              minLength: {
+                value: 6,
+                message: "La contraseña debe tener minimo 6 caracteres.",
+              },
+            }}
+          />
+          <CustomInput
+            name="passwordRepeat"
+            control={control}
+            placeholder="Repetir Contraseña"
+            secureTextEntry={true}
+            rules={{
+              validate: (value) =>
+                value == pwd || "Las contraseñas no coinciden.",
+            }}
+          />
         </View>
-        
-        
       </ScrollView>
 
       <CustomButton

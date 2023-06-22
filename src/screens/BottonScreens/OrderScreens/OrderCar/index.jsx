@@ -41,7 +41,7 @@ const OrderCar = ({ navigation }) => {
         showsHorizontalScrollIndicator={false}
       />
 
-      <Pressable className="items-center" onPress={() => refreshOrders()}>
+      <Pressable className="items-center border-t-2 border-[#FFD700]" onPress={() => refreshOrders()}>
         <Ionicons name="ios-refresh-circle-outline" size={30} color="red" />
       </Pressable>
     </View>

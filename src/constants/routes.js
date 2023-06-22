@@ -5,17 +5,19 @@ export default {
   FORGOT_PASSWORD: "ForgotPassword",
 
   //BottonScreens
-  PROFILE: "Profile",
+  PROFILE_BTAB: "ProfileTab",
   FACTION_BTAB: "FactionTab",
   SHOPPINGCAR: "ShoppingCar",
-  ORDERCAR_BTAB: "OrderTAab",
+  ORDERCAR_BTAB: "OrderTab",
  
  //ShopScreens 
   FACTION: "Faction",
   CHARACTER: "Character",
   CHARACTER_DETAIL: "Character Detail",
 
-  
+  //ProfileScreens
+  PROFILE: "Profile",
+  PROFILE_EDIT: "Profile Detail",
 
   //OrderScreens
   ORDERCAR: "OrderCar",
