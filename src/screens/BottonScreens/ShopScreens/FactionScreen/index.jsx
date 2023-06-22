@@ -26,7 +26,7 @@ const FactionScreen = ({ navigation }) => {
   };
 
   return (
-    <View className="flex-1">
+    <View className="bg-white">
       <FlatList
         data={factions}
         renderItem={renderFactionItems}

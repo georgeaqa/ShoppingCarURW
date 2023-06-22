@@ -48,7 +48,6 @@ export const confirm_CART = (localId,cartCharacters, total) => {
         }),
       });
       const result = await response.json();
-      console.log(result);
       dispatch({
         type: CONFIRM_CART,
         confirm: true,

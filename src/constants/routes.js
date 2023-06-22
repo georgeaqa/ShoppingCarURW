@@ -3,15 +3,21 @@ export default {
   LOGIN: "Login",
   REGISTER: "Register",
   FORGOT_PASSWORD: "ForgotPassword",
-  FACTION: "Faction",
 
   //BottonScreens
   PROFILE: "Profile",
-  FACTION_BTAB: "Faction Btab",
+  FACTION_BTAB: "FactionTab",
   SHOPPINGCAR: "ShoppingCar",
-  ORDERCAR: "OrderCar",
-
-  //ShopScreens
+  ORDERCAR_BTAB: "OrderTAab",
+ 
+ //ShopScreens 
+  FACTION: "Faction",
   CHARACTER: "Character",
   CHARACTER_DETAIL: "Character Detail",
+
+  
+
+  //OrderScreens
+  ORDERCAR: "OrderCar",
+  ORDERDETAIL: "OrderDetail", 
 };

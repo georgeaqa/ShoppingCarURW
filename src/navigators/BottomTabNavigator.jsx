@@ -1,11 +1,11 @@
 import { COLORS, ROUTES } from "../constants";
-import { OrderCar, Profile, ShoppingCar } from "../screens";
+import { Profile, ShoppingCar } from "../screens";
 
 import { CustomText } from "../components";
 import Entypo from "@expo/vector-icons/Entypo";
+import OrderNavigator from "./OrderNavigator";
 import React from "react";
 import ShopNavigator from "./ShopNavigator";
-import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const BottomTab = createBottomTabNavigator();
@@ -59,8 +59,8 @@ const BottomTabNavigator = () => {
         }}
       />
       <BottomTab.Screen
-        name={ROUTES.ORDERCAR}
-        component={OrderCar}
+        name={ROUTES.ORDERCAR_BTAB}
+        component={OrderNavigator}
         options={{
           tabBarIcon: () => (
             <>

@@ -12,11 +12,9 @@ const Profile = () => {
   const localId = useSelector((state) => state.auth.localId);
   const userData = useSelector((state) => state.user.userData);
 
-  if (!localId) {
-    useEffect(() => {
-      dispatch(getUserData(localId));
-    }, []);
-  }
+  useEffect(() => {
+    dispatch(getUserData(localId));
+  }, []);
 
   const handleLogout = () => {
     dispatch(logOut(localId));

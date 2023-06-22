@@ -37,20 +37,19 @@ const ShoppingCar = () => {
     dispatch(confirm_CART(localId, characters, total));
   };
   return (
-    <View className="flex-1 justify-between">
+    <View className="flex-1 justify-between bg-white">
       <View className="flex-1">
         <FlatList
           data={characters}
           renderItem={renderCartcharacter}
           keyExtractor={(item) => item.idCharacter}
-          numColumns={2}
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
         />
       </View>
       <View className="items-center p-[1%]">
         <CustomButton
-          text={`Confirmar Total: ${total}`}
+          text={`Confirmar Compra: ${total}`}
           className="bg-[#2cec2c] "
           newStyleText={{ color: COLORS.white }}
           onPress={handleConfirmCart}
