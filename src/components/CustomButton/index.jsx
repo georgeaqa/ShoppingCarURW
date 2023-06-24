@@ -1,13 +1,10 @@
 import { Button } from "react-native-paper";
-import { COLORS } from "../../constants";
-import CustomText from "../CustomText";
 import React from "react";
 
 const CustomButton = ({ text, ...restProps }) => {
   return (
     <Button
-      className="w-full m-2" 
-      mode="elevated"
+      className="w-full m-2"
       labelStyle={{ fontFamily: "UrbanRivals" }}
       {...restProps}
     >

@@ -11,7 +11,7 @@ const formatDay = (date) => {
 
 const CustomOrderItems = ({ item, onSelected }) => {
   return (
-    <Card className="m-1 px-2 py-1 border rounded-2xl border-[#FF0000] bg-white">
+    <Card className="m-2 p-2 rounded-2xl">
       <TouchableOpacity onPress={() => onSelected(item)}>
         <View>
           <CustomText text={"Pedido: " + item.id}></CustomText>

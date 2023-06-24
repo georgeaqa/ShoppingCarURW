@@ -3,6 +3,7 @@ import { CustomButton, CustomInput, CustomText } from "../../../components";
 import { Image, View } from "react-native";
 
 import React from "react";
+import { TextInput } from "react-native-paper";
 import { sendResetPassword } from "../../../store/actions/auth.action";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
@@ -28,6 +29,7 @@ const ForgotPassword = ({ navigation }) => {
         name="email"
         control={control}
         label="Correo electronico"
+        left={<TextInput.Icon icon="email" />}
         rules={{
           required: "Email es obligatorio.",
           pattern: {
@@ -38,6 +40,7 @@ const ForgotPassword = ({ navigation }) => {
       />
       <CustomButton
         text="Reestablecer Contraseña"
+        mode="elevated"
         buttonColor={COLORS.green}
         textColor={COLORS.white}
         onPress={handleSubmit(onSendNewPasswordPressed)}

@@ -71,6 +71,7 @@ const EditProfileScreen = ({ navigation }) => {
         text="ACEPTAR CAMBIOS"
         textColor={COLORS.green}
         buttonColor={COLORS.white}
+        mode="outlined"
         onPress={handleSubmit(onSaveEditPressed)}
       />
     </View>

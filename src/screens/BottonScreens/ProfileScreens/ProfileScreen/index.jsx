@@ -53,17 +53,20 @@ const Profile = ({ navigation }) => {
           onPress={handleEditProfile}
           buttonColor={COLORS.white}
           textColor={COLORS.green}
+          mode="outlined"
         />
         <CustomButton
           text="Desconectar"
           onPress={() => handleLogout()}
           buttonColor={COLORS.white}
           textColor={COLORS.blue}
+          mode="outlined"
         />
         <CustomButton
           text="Eliminar Cuenta"
           buttonColor={COLORS.white}
           textColor={COLORS.red}
+          mode="outlined"
         />
       </View>
     </View>

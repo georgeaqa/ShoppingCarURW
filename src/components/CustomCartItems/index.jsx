@@ -8,7 +8,7 @@ import React from "react";
 
 const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
   return (
-    <Card className="m-1 px-2 py-1 border border-[#FF0000] rounded-2xl bg-white">
+    <Card className="m-2 p-1 rounded-2xl">
       <Card.Content className="flex-row justify-between">
         <View className="flex-row">
           <Image

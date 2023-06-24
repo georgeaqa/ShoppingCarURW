@@ -1,5 +1,6 @@
 import { Image, TouchableOpacity, View } from "react-native";
 
+import { Card } from "react-native-paper";
 import CustomText from "../CustomText";
 import { DIMENSIONS } from "../../constants";
 import React from "react";
@@ -7,21 +8,23 @@ import React from "react";
 const CustomCharacterItems = ({ item, onSelected }) => {
   return (
     <View
-      className="flex-1/2 p-1  w-1/2"
+      className="flex-1/2 p-2 w-1/2"
       style={{ height: DIMENSIONS.height / 3.5 }}
     >
-      <TouchableOpacity
-        className="border-2 border-[#FF0000] w-full justify-center items-center rounded-2xl"
-        onPress={() => onSelected(item)}
-      >
-        <CustomText variant="titleMedium" text={item.nameCharacter} />
+      <Card>
+        <TouchableOpacity
+          className="w-full justify-center items-center rounded-2xl h-full"
+          onPress={() => onSelected(item)}
+        >
+          <CustomText variant="titleMedium" text={item.nameCharacter} />
 
-        <Image
-          className="w-full h-5/6"
-          source={item.imageSource}
-          resizeMode="contain"
-        />
-      </TouchableOpacity>
+          <Image
+            className="w-full h-5/6"
+            source={item.imageSource}
+            resizeMode="contain"
+          />
+        </TouchableOpacity>
+      </Card>
     </View>
   );
 };

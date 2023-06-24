@@ -53,6 +53,7 @@ const ShoppingCar = () => {
           onPress={handleConfirmCart}
           buttonColor={COLORS.green}
           textColor={COLORS.white}
+          mode="elevated"
         />
       </View>
     </View>

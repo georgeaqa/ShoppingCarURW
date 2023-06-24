@@ -5,6 +5,8 @@ import React, { useEffect } from "react";
 import { add_character, in_cart } from "../../../../store/actions/cart.action";
 import { useDispatch, useSelector } from "react-redux";
 
+import { Card } from "react-native-paper";
+
 const CharacterDetailScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const character = useSelector((state) => state.characters.selectedCharacter);
@@ -24,6 +26,7 @@ const CharacterDetailScreen = ({ navigation }) => {
         text="Agregar al carrito"
         buttonColor={COLORS.green}
         textColor={COLORS.white}
+        mode="elevated"
         onPress={handleAddCharacter}
       />
     </View>
@@ -32,7 +35,10 @@ const CharacterDetailScreen = ({ navigation }) => {
   if (inCart) {
     buttonAdd = (
       <View className="items-center">
-        <CustomButton text="Ya esta agregado en el carrito" disabled />
+        <CustomButton
+          text="Ya esta agregado en el carrito"
+          disabled
+        />
       </View>
     );
   }
@@ -40,8 +46,8 @@ const CharacterDetailScreen = ({ navigation }) => {
   return (
     <View className="flex-1 px-[2%] bg-white justify-between">
       <View className="flex-row">
-        <View
-          className="border-2 border-[#FF0000] my-2 rounded-2xl"
+        <Card
+          className="my-2 rounded-2xl"
           style={{ width: DIMENSIONS.width / 3, height: DIMENSIONS.height / 5 }}
         >
           <Image
@@ -49,7 +55,7 @@ const CharacterDetailScreen = ({ navigation }) => {
             source={character.imageSource}
             resizeMode="contain"
           />
-        </View>
+        </Card>
 
         <View className="justify-center mx-2">
           <CustomText

@@ -28,7 +28,7 @@ const OrderDetailScreen = () => {
         >
           {selectedOrder.items.map((item) => (
             <Card
-              className="m-1 border border-[#FF0000] rounded-2xl bg-white"
+              className="m-2 rounded-2xl"
               key={item.idCharacter}
             >
               <Card.Content className="flex-row">

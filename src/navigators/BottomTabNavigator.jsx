@@ -1,4 +1,4 @@
-import { COLORS, DIMENSIONS, ROUTES } from "../constants";
+import { COLORS, ROUTES } from "../constants";
 import CustomIcon, { Icons } from "../components/CustomIcon";
 
 import OrderNavigator from "./OrderNavigator";
@@ -54,14 +54,12 @@ const BottomTabNavigator = () => {
       initialRouteName={ROUTES.PROFILE_BTAB}
       screenOptions={{
         headerShown: false,
-        tabBarStyle: {
-          backgroundColor: COLORS.gold,
-          height: DIMENSIONS.height / 12,
-        },
         tabBarLabelStyle: { fontFamily: "UrbanRivals", fontSize: 15 },
         tabBarActiveTintColor: COLORS.red,
         tabBarInactiveTintColor: COLORS.grey,
         tabBarHideOnKeyboard: true,
+        tabBarActiveBackgroundColor: COLORS.white,
+        tabBarStyle: { backgroundColor: COLORS.gold },
       }}
     >
       {TabArr.map((_, index) => {
