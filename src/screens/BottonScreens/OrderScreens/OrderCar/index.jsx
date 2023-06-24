@@ -1,3 +1,5 @@
+import { COLORS, ROUTES } from "../../../../constants";
+import CustomIcon, { Icons } from "../../../../components/CustomIcon";
 import { FlatList, Pressable, View } from "react-native";
 import React, { useEffect } from "react";
 import {
@@ -7,8 +9,6 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 
 import { CustomOrderItems } from "../../../../components";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { ROUTES } from "../../../../constants";
 
 const OrderCar = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ const OrderCar = ({ navigation }) => {
       />
 
       <Pressable className="items-center border-t-2 border-[#FFD700]" onPress={() => refreshOrders()}>
-        <Ionicons name="ios-refresh-circle-outline" size={30} color="red" />
+        <CustomIcon name="refresh" type={Icons.FontAwesome} size={30} color={COLORS.green} />
       </Pressable>
     </View>
   );
