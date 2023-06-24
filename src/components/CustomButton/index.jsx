@@ -1,15 +1,18 @@
+import { Button } from "react-native-paper";
+import { COLORS } from "../../constants";
 import CustomText from "../CustomText";
-import { Pressable } from "react-native";
 import React from "react";
 
-const CustomButton = ({ newStyleText, text, ...restProps }) => {
+const CustomButton = ({ text, ...restProps }) => {
   return (
-    <Pressable
-      className="w-full items-center m-2 p-2 rounded-2xl"
+    <Button
+      className="w-full m-2" 
+      mode="elevated"
+      labelStyle={{ fontFamily: "UrbanRivals" }}
       {...restProps}
     >
-      <CustomText newStyle={newStyleText} text={text} />
-    </Pressable>
+      {text}
+    </Button>
   );
 };
 

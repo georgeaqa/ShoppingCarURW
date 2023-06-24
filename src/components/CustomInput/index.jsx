@@ -1,5 +1,6 @@
-import { Text, TextInput } from "react-native";
+import { HelperText, TextInput } from "react-native-paper";
 
+import { COLORS } from "../../constants";
 import { Controller } from "react-hook-form";
 import React from "react";
 
@@ -11,25 +12,30 @@ const CustomInput = ({ control, name, rules = {}, ...restProps }) => {
       rules={rules}
       render={({
         field: { onChange, onBlur, value },
-        fieldState: { error },
+        fieldState: { error, invalid },
       }) => (
         <>
           <TextInput
-            className="w-full m-2 p-2 text-xs border rounded border-[#FFFF00]"
+            className="w-full my-1"
+            mode="outlined"
             value={value}
+            outlineColor={COLORS.gold}
+            activeOutlineColor={COLORS.blue}
             onChangeText={onChange}
+            outlineStyle={{ borderRadius: 15 }}
             onBlur={onBlur}
-            style={{ fontFamily: "UrbanRivals" }}
+            error={invalid}
             {...restProps}
           />
 
           {error && (
-            <Text
-              className="text-[#FF0000] text-[10px] w-full"
+            <HelperText
+              className="text-[#FF0000] w-full"
               style={{ fontFamily: "UrbanRivals" }}
+              variant="labelSmall"
             >
               {error.message}
-            </Text>
+            </HelperText>
           )}
         </>
       )}

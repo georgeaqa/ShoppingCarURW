@@ -50,9 +50,9 @@ const ShoppingCar = () => {
       <View className="items-center p-[1%]">
         <CustomButton
           text={`Confirmar Compra: ${total}`}
-          className="bg-[#2cec2c] "
-          newStyleText={{ color: COLORS.white }}
           onPress={handleConfirmCart}
+          buttonColor={COLORS.green}
+          textColor={COLORS.white}
         />
       </View>
     </View>

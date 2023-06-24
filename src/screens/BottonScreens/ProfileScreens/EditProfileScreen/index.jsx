@@ -69,8 +69,8 @@ const EditProfileScreen = ({ navigation }) => {
 
       <CustomButton
         text="ACEPTAR CAMBIOS"
-        className="border border-[#2cec2c]"
-        newStyleText={{ color: COLORS.green, fontSize: 10, height: 25 }}
+        textColor={COLORS.green}
+        buttonColor={COLORS.white}
         onPress={handleSubmit(onSaveEditPressed)}
       />
     </View>

@@ -22,8 +22,8 @@ const CharacterDetailScreen = ({ navigation }) => {
     <View className="items-center">
       <CustomButton
         text="Agregar al carrito"
-        className="bg-[#2cec2c] "
-        newStyleText={{ color: COLORS.white }}
+        buttonColor={COLORS.green}
+        textColor={COLORS.white}
         onPress={handleAddCharacter}
       />
     </View>
@@ -32,11 +32,7 @@ const CharacterDetailScreen = ({ navigation }) => {
   if (inCart) {
     buttonAdd = (
       <View className="items-center">
-        <CustomButton
-          text="Ya esta agregado en el carrito"
-          className="bg-[#ccc] "
-          newStyleText={{ color: COLORS.white }}
-        />
+        <CustomButton text="Ya esta agregado en el carrito" disabled />
       </View>
     );
   }
@@ -56,15 +52,25 @@ const CharacterDetailScreen = ({ navigation }) => {
         </View>
 
         <View className="justify-center mx-2">
-          <CustomText text={"ID: " + character.idCharacter} />
-          <CustomText text={"Precio: $" + character.price} />
+          <CustomText
+            variant="labelLarge"
+            text={"ID: " + character.idCharacter}
+          />
+          <CustomText
+            variant="labelLarge"
+            text={"Precio: $" + character.price}
+          />
         </View>
       </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
       >
-        <CustomText newStyle={{textAlign:"justify"}} text={character.descriptionCharacter} />
+        <CustomText
+          variant="bodyLarge"
+          newStyle={{ textAlign: "justify" }}
+          text={character.descriptionCharacter}
+        />
       </ScrollView>
 
       {buttonAdd}

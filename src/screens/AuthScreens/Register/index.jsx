@@ -5,6 +5,7 @@ import { CustomButton, CustomInput } from "../../../components";
 import { Image, Pressable, ScrollView, View } from "react-native";
 import React, { useState } from "react";
 
+import { Card } from "react-native-paper";
 import { signUp } from "../../../store/actions/auth.action";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
@@ -36,86 +37,92 @@ const Register = ({ navigation }) => {
     navigation.goBack();
   };
   return (
-    <View className="flex-1 justify-between items-center px-[5%] py-[2%] bg-white">
-      <ScrollView className="w-full">
-        <View className="w-full justify-between items-center">
-          <Pressable
-            className="w-[300px] h-[300px] border"
-            onPress={() => pickImage()}
-            tittle="imagen"
-          >
-            <Image
-              className="w-full h-full"
-              source={{ uri: imageUri }}
-              resizeMode="contain"
+    <View className="flex-1 justify-between items-center px-[2%] py-[2%] bg-white">
+      <ScrollView
+        className="w-full"
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
+      >
+        <Card className="w-full border border-[#FFD700] bg-white">
+          <Card.Content className="items-center ">
+            <Pressable
+              className="w-[300px] h-[300px] border"
+              onPress={() => pickImage()}
+              tittle="imagen"
+            >
+              <Image
+                className="w-full h-full"
+                source={{ uri: imageUri }}
+                resizeMode="contain"
+              />
+            </Pressable>
+            <CustomInput
+              name="name"
+              control={control}
+              label="Nombre"
+              rules={{
+                required: "Nombre es obligatorio.",
+                minLength: {
+                  value: 2,
+                  message: "El nombre debe tener minimo 2 caracteres.",
+                },
+              }}
             />
-          </Pressable>
-          <CustomInput
-            name="name"
-            control={control}
-            placeholder="Nombre"
-            rules={{
-              required: "Nombre es obligatorio.",
-              minLength: {
-                value: 2,
-                message: "El nombre debe tener minimo 2 caracteres.",
-              },
-            }}
-          />
-          <CustomInput
-            name="lastName"
-            control={control}
-            placeholder="Apellido"
-            rules={{
-              required: "Apellido es obligatorio.",
-              minLength: {
-                value: 2,
-                message: "El apellido debe tener minimo 2 caracteres.",
-              },
-            }}
-          />
-          <CustomInput
-            name="email"
-            control={control}
-            placeholder="Correo electronico"
-            rules={{
-              required: "Email es obligatorio.",
-              pattern: {
-                value: EMAIL_REGEX.email_regex,
-                message: "Email es invalido.",
-              },
-            }}
-          />
-          <CustomInput
-            name="password"
-            control={control}
-            placeholder="Contraseña"
-            secureTextEntry={true}
-            rules={{
-              required: "Contraseña es obligatorio.",
-              minLength: {
-                value: 6,
-                message: "La contraseña debe tener minimo 6 caracteres.",
-              },
-            }}
-          />
-          <CustomInput
-            name="passwordRepeat"
-            control={control}
-            placeholder="Repetir Contraseña"
-            secureTextEntry={true}
-            rules={{
-              validate: (value) =>
-                value == pwd || "Las contraseñas no coinciden.",
-            }}
-          />
-        </View>
+            <CustomInput
+              name="lastName"
+              control={control}
+              label="Apellido"
+              rules={{
+                required: "Apellido es obligatorio.",
+                minLength: {
+                  value: 2,
+                  message: "El apellido debe tener minimo 2 caracteres.",
+                },
+              }}
+            />
+            <CustomInput
+              name="email"
+              control={control}
+              label="Correo electronico"
+              rules={{
+                required: "Email es obligatorio.",
+                pattern: {
+                  value: EMAIL_REGEX.email_regex,
+                  message: "Email es invalido.",
+                },
+              }}
+            />
+            <CustomInput
+              name="password"
+              control={control}
+              label="Contraseña"
+              secureTextEntry={true}
+              rules={{
+                required: "Contraseña es obligatorio.",
+                minLength: {
+                  value: 6,
+                  message: "La contraseña debe tener minimo 6 caracteres.",
+                },
+              }}
+            />
+            <CustomInput
+              name="passwordRepeat"
+              control={control}
+              label="Repetir Contraseña"
+              secureTextEntry={true}
+              rules={{
+                validate: (value) =>
+                  value == pwd || "Las contraseñas no coinciden.",
+              }}
+            />
+          </Card.Content>
+        </Card>
       </ScrollView>
 
       <CustomButton
         text="Registrar"
-        className="bg-[#2cec2c] shadow-md shadow-[#2cec2c]"
-        newStyleText={{ color: COLORS.white }}
+        buttonColor={COLORS.green}
+        textColor={COLORS.white}
         onPress={handleSubmit(onRegisterPressed)}
       />
     </View>

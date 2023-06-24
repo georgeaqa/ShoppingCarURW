@@ -1,10 +1,9 @@
-import { Text, View } from "react-native";
-
 import React from "react";
+import { Text } from "react-native-paper";
 
-const CustomText = ({ text, newStyle }) => {
+const CustomText = ({ text, newStyle,...restProps }) => {
   return (
-    <Text className="text-lg" style={[{ fontFamily: "UrbanRivals" }, newStyle]}>
+    <Text style={[{ fontFamily: "UrbanRivals" }, newStyle]} {...restProps}>
       {text}
     </Text>
   );

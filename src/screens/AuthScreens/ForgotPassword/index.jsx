@@ -15,7 +15,7 @@ const ForgotPassword = ({ navigation }) => {
     navigation.goBack();
   };
   return (
-    <View className="flex-1 justify-center items-center px-[5%] bg-white">
+    <View className="flex-1 justify-center items-center px-[2%] bg-white">
       <Image
         source={require("../../../assets/images/ForgotPassword.jpg")}
         className="w-full max-w-xs h-1/3 max-h-80"
@@ -27,7 +27,7 @@ const ForgotPassword = ({ navigation }) => {
       <CustomInput
         name="email"
         control={control}
-        placeholder="Correo electronico"
+        label="Correo electronico"
         rules={{
           required: "Email es obligatorio.",
           pattern: {
@@ -38,8 +38,8 @@ const ForgotPassword = ({ navigation }) => {
       />
       <CustomButton
         text="Reestablecer Contraseña"
-        className="bg-[#2cec2c] shadow-md shadow-[#2cec2c]"
-        newStyleText={{ color: COLORS.white }}
+        buttonColor={COLORS.green}
+        textColor={COLORS.white}
         onPress={handleSubmit(onSendNewPasswordPressed)}
       />
     </View>

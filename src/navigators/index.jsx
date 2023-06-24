@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import AuthNavigator from "./AuthNavigator";
 import BottonTabNavigator from "./BottomTabNavigator";
 import { NavigationContainer } from "@react-navigation/native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { loadAPP } from "../store/actions/auth.action";
 
 const index = () => {
@@ -15,9 +16,11 @@ const index = () => {
   }, []);
 
   return (
-    <NavigationContainer>
-      {localId ? <BottonTabNavigator /> : <AuthNavigator />}
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        {localId ? <BottonTabNavigator /> : <AuthNavigator />}
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
 

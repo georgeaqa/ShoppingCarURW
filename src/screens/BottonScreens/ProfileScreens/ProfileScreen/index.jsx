@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserData } from "../../../../store/actions/profile.action";
 import { logOut } from "../../../../store/actions/auth.action";
 
-const Profile = ({navigation}) => {
+const Profile = ({ navigation }) => {
   const dispatch = useDispatch();
   const localId = useSelector((state) => state.auth.localId);
   const userData = useSelector((state) => state.user.userData);
@@ -16,9 +16,8 @@ const Profile = ({navigation}) => {
   }, []);
 
   const handleEditProfile = () => {
-
     navigation.navigate(ROUTES.PROFILE_EDIT);
-  }
+  };
   const handleLogout = () => {
     dispatch(logOut(localId));
   };
@@ -50,19 +49,19 @@ const Profile = ({navigation}) => {
         <CustomButton
           text="Editar perfil"
           onPress={handleEditProfile}
-          className="border border-[#2cec2c]"
-          newStyleText={{ color: COLORS.green, fontSize: 10, height: 25 }}
+          buttonColor={COLORS.white}
+          textColor={COLORS.green}
         />
         <CustomButton
           text="Desconectar"
           onPress={() => handleLogout()}
-          className="border border-[#0000FF]"
-          newStyleText={{ color: COLORS.blue, fontSize: 10,height: 25 }}
+          buttonColor={COLORS.white}
+          textColor={COLORS.blue}
         />
         <CustomButton
           text="Eliminar Cuenta"
-          className="border border-[#FF0000]"
-          newStyleText={{ color: COLORS.red, fontSize: 10,height: 25 }}
+          buttonColor={COLORS.white}
+          textColor={COLORS.red}
         />
       </View>
     </View>
