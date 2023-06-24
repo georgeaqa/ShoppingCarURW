@@ -5,6 +5,7 @@ import {
   INCREASE_CHARACTER,
   IN_CART,
   REMOVE_CHARACTER,
+  RESET_CART
 } from "../actions/cart.action";
 
 const initialState = {
@@ -68,7 +69,12 @@ const CartReducer = (state = initialState, action) => {
 
     case DECREASE_CHARACTER:
       const decreaseQuantity = [...state.characters].map((character) => {
-        if (character.idCharacter === action.idCharacter) character.quantity--;
+        if (character.idCharacter === action.idCharacter) {
+          console.log(character.quantity);
+          if (character.quantity > 1) {
+            character.quantity--;
+          }
+        }
         return character;
       });
       return {
@@ -78,8 +84,14 @@ const CartReducer = (state = initialState, action) => {
       };
 
     case CONFIRM_CART:
-      return { ...state, characters: [],total: 0};
+      return { ...state, characters: [], total: 0 };
     ///
+    case RESET_CART:
+      return {
+        characters: [],
+        total: 0,
+        inCart: false,
+      };
     default:
       return state;
   }

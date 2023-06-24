@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { getUserData } from "../../../../store/actions/profile.action";
 import { logOut } from "../../../../store/actions/auth.action";
+import { reset_cart } from "../../../../store/actions/cart.action";
 
 const Profile = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -18,8 +19,9 @@ const Profile = ({ navigation }) => {
   const handleEditProfile = () => {
     navigation.navigate(ROUTES.PROFILE_EDIT);
   };
-  const handleLogout = () => {
+  const handleLogout = () => {   
     dispatch(logOut(localId));
+    dispatch(reset_cart());
   };
 
   return (

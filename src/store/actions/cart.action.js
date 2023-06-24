@@ -6,6 +6,7 @@ export const INCREASE_CHARACTER = "INCREASE_CHARACTER";
 export const DECREASE_CHARACTER = "DECREASE_CHARACTER";
 export const REMOVE_CHARACTER = "REMOVE_CHARACTER";
 export const CONFIRM_CART = "CONFIRM_CART";
+export const RESET_CART = "RESET_CART";
 
 export const add_character = (character) => ({
   type: ADD_CHARACTER,
@@ -57,3 +58,7 @@ export const confirm_CART = (localId,cartCharacters, total) => {
     }
   };
 };
+
+export const reset_cart= () => ({
+  type: RESET_CART,
+});
