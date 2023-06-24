@@ -1,27 +1,38 @@
-import { COLORS, ROUTES } from "../constants";
+import { COLORS, DIMENSIONS, ROUTES } from "../constants";
+import { Entypo, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
-import { CustomText } from "../components";
-import Entypo from "@expo/vector-icons/Entypo";
 import OrderNavigator from "./OrderNavigator";
 import ProfileNavigator from "./ProfileNavigator";
 import React from "react";
 import ShopNavigator from "./ShopNavigator";
 import { ShoppingCar } from "../screens";
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useSelector } from "react-redux";
 
-const BottomTab = createMaterialBottomTabNavigator();
+const BottomTab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
   const characters = useSelector((state) => state.cart.characters);
   return (
-    <BottomTab.Navigator>
+    <BottomTab.Navigator
+      initialRouteName={ROUTES.PROFILE_BTAB}
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: { backgroundColor: COLORS.gold ,height:DIMENSIONS.height/12},
+        tabBarLabelStyle: { fontFamily: "UrbanRivals", fontSize: 15 },
+        tabBarActiveTintColor: "#2cec2c",
+        tabBarInactiveTintColor: "#000",
+        tabBarHideOnKeyboard: true,
+      }}
+    >
       <BottomTab.Screen
         name={ROUTES.PROFILE_BTAB}
         component={ProfileNavigator}
         options={{
-          tabBarIcon: () => <Entypo name="user" size={25} />,
-          tabBarLabel: <CustomText text={"Perfil"} />,
+          tabBarLabel: "Perfil",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="account" size={30} color={color} />
+          ),
         }}
       />
 
@@ -29,9 +40,10 @@ const BottomTabNavigator = () => {
         name={ROUTES.FACTION_BTAB}
         component={ShopNavigator}
         options={{
-          tabBarColor: COLORS.gold,
-          tabBarIcon: () => <Entypo name="shop" size={25} />,
-          tabBarLabel: <CustomText text="Productos" />,
+          tabBarLabel: "Productos",
+          tabBarIcon: ({ color }) => (
+            <Entypo name="shop" size={30} color={color} />
+          ),
         }}
       />
 
@@ -39,8 +51,10 @@ const BottomTabNavigator = () => {
         name={ROUTES.SHOPPINGCAR}
         component={ShoppingCar}
         options={{
-          tabBarIcon: () => <Entypo name="shopping-cart" size={25} />,
-          tabBarLabel: <CustomText text="Carrito" />,
+          tabBarLabel: "Carrito",
+          tabBarIcon: ({ color }) => (
+            <Entypo name="shopping-cart" size={30} color={color} />
+          ),
           tabBarBadge: characters.length,
         }}
       />
@@ -48,8 +62,10 @@ const BottomTabNavigator = () => {
         name={ROUTES.ORDERCAR_BTAB}
         component={OrderNavigator}
         options={{
-          tabBarIcon: () => <Entypo name="list" size={25} />,
-          tabBarLabel: <CustomText text="Pedidos" />,
+          tabBarLabel: "Pedidos",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="list" size={30} color={color} />
+          ),
         }}
       />
     </BottomTab.Navigator>
