@@ -8,8 +8,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { COLORS } from "../../../../constants";
 import { editUserData } from "../../../../store/actions/profile.action";
 import { useForm } from "react-hook-form";
+import { useTheme } from "react-native-paper";
 
 const EditProfileScreen = ({ navigation }) => {
+  const theme = useTheme();
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.user.userData);
   const { control, handleSubmit } = useForm({
@@ -34,7 +36,7 @@ const EditProfileScreen = ({ navigation }) => {
     dispatch(
       editUserData(
         userData.id,
-        userData.localId,      
+        userData.localId,
         data.name,
         data.lastName,
         userData.email,
@@ -44,7 +46,10 @@ const EditProfileScreen = ({ navigation }) => {
     navigation.goBack();
   };
   return (
-    <View className="flex-1 justify-between items-center p-[2%] bg-white">
+    <View
+      className="flex-1 justify-between items-center p-[2%]"
+      style={{ backgroundColor: theme.colors.background }}
+    >
       <ScrollView className="w-full">
         <View className="w-full justify-between items-center">
           <Pressable
@@ -58,9 +63,15 @@ const EditProfileScreen = ({ navigation }) => {
               resizeMode="contain"
             />
           </Pressable>
-          <CustomInput name="name" control={control} placeholder="Nombre" />
+          <CustomInput
+            name="name"
+            label="Nombres"
+            control={control}
+            placeholder="Nombre"
+          />
           <CustomInput
             name="lastName"
+            label="Apellidos"
             control={control}
             placeholder="Apellido"
           />
@@ -70,7 +81,6 @@ const EditProfileScreen = ({ navigation }) => {
       <CustomButton
         text="ACEPTAR CAMBIOS"
         textColor={COLORS.green}
-        buttonColor={COLORS.white}
         mode="outlined"
         onPress={handleSubmit(onSaveEditPressed)}
       />

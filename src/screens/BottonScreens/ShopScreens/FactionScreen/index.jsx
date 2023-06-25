@@ -5,8 +5,10 @@ import { CustomFactionItems } from "../../../../components";
 import { ROUTES } from "../../../../constants";
 import { React } from "react";
 import { selectedFaction } from "../../../../store/actions/faction.action";
+import { useTheme } from "react-native-paper";
 
 const FactionScreen = ({ navigation }) => {
+  const theme = useTheme();
   const factions = useSelector((state) => state.factions.factions);
   const dispatch = useDispatch();
 
@@ -26,7 +28,7 @@ const FactionScreen = ({ navigation }) => {
   };
 
   return (
-    <View className="flex-1 bg-white">
+    <View className="flex-1" style={{backgroundColor:theme.colors.background}}>
       <FlatList
         data={factions}
         renderItem={renderFactionItems}

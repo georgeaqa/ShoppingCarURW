@@ -70,7 +70,6 @@ const CartReducer = (state = initialState, action) => {
     case DECREASE_CHARACTER:
       const decreaseQuantity = [...state.characters].map((character) => {
         if (character.idCharacter === action.idCharacter) {
-          console.log(character.quantity);
           if (character.quantity > 1) {
             character.quantity--;
           }

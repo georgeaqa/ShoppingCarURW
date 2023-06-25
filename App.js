@@ -1,5 +1,4 @@
 import MainNavigator from "./src/navigators";
-import { PaperProvider } from "react-native-paper";
 import { Provider } from "react-redux";
 import { StatusBar } from "react-native";
 import { init } from "./src/constants/database";
@@ -21,10 +20,8 @@ export default function App() {
   }
   return (
     <Provider store={store}>
-      <PaperProvider>
-        <MainNavigator />
-        <StatusBar/>
-      </PaperProvider>
+      <MainNavigator />
+      <StatusBar />
     </Provider>
   );
 }

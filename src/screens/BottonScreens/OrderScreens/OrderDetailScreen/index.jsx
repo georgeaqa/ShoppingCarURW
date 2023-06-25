@@ -4,6 +4,7 @@ import { Card } from "react-native-paper";
 import { CustomText } from "../../../../components";
 import React from "react";
 import { useSelector } from "react-redux";
+import { useTheme } from "react-native-paper";
 
 const formatDay = (date) => {
   const newDate = new Date(date);
@@ -11,9 +12,10 @@ const formatDay = (date) => {
 };
 
 const OrderDetailScreen = () => {
+  const theme =useTheme();
   const selectedOrder = useSelector((state) => state.orders.selectedOrder);
   return (
-    <View className=" flex-1 bg-white justify-between">
+    <View className=" flex-1 justify-between" style={{backgroundColor:theme.colors.background}}>
       <View className="flex-1">
         <View className="px-1 border-b-2 border-[#FFD700]">
           <CustomText

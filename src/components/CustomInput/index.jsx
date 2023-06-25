@@ -22,7 +22,7 @@ const CustomInput = ({ control, name, rules = {}, ...restProps }) => {
             outlineColor={COLORS.gold}
             activeOutlineColor={COLORS.blue}
             onChangeText={onChange}
-            outlineStyle={{ borderRadius: 15, backgroundColor: COLORS.white }}
+            outlineStyle={{ borderRadius: 15}}
             onBlur={onBlur}
             error={invalid}
             {...restProps}

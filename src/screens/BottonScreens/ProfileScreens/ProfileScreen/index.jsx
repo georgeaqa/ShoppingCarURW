@@ -1,17 +1,23 @@
 import { COLORS, DIMENSIONS, ROUTES } from "../../../../constants";
 import { CustomButton, CustomText } from "../../../../components";
-import { Image, View } from "react-native";
-import React, { useEffect } from "react";
+import { Image, Switch, View } from "react-native";
+import React, { useEffect, useState } from "react";
+import {
+  darkMode,
+  getUserData,
+} from "../../../../store/actions/profile.action";
 import { useDispatch, useSelector } from "react-redux";
 
-import { getUserData } from "../../../../store/actions/profile.action";
 import { logOut } from "../../../../store/actions/auth.action";
 import { reset_cart } from "../../../../store/actions/cart.action";
+import { useTheme } from "react-native-paper";
 
 const Profile = ({ navigation }) => {
+  const theme = useTheme();
   const dispatch = useDispatch();
   const localId = useSelector((state) => state.auth.localId);
   const userData = useSelector((state) => state.user.userData);
+  const [Mode, setMode] = useState(false);
   useEffect(() => {
     dispatch(getUserData(localId));
   }, []);
@@ -19,13 +25,20 @@ const Profile = ({ navigation }) => {
   const handleEditProfile = () => {
     navigation.navigate(ROUTES.PROFILE_EDIT);
   };
-  const handleLogout = () => {   
+  const handleLogout = () => {
     dispatch(logOut(localId));
     dispatch(reset_cart());
   };
 
+  const changeTheme = () => {
+    dispatch(darkMode(Mode));
+  };
+
   return (
-    <View className="flex-1 justify-between items-center p-2 bg-white">
+    <View
+      className="flex-1 justify-between items-center p-2"
+      style={{ backgroundColor: theme.colors.background }}
+    >
       <View className="w-full items-center">
         <View
           className="rounded-full border border-[#FFD700] shadow-2xl shadow-[#FFD700]"
@@ -40,31 +53,40 @@ const Profile = ({ navigation }) => {
             resizeMode="cover"
           />
         </View>
-
         <View className="w-full my-2">
-          <CustomText text={"Nombre: " + userData.name} />
-          <CustomText text={"Apellido: " + userData.lastName} />
-          <CustomText text={"Email: " + userData.email} />
+          <View className="h-10 justify-center">
+            <CustomText text={"Nombres: " + userData.name} />
+          </View>
+          <View className="h-10 justify-center">
+            <CustomText text={"Apellidos: " + userData.lastName} />
+          </View>
+          <View className="h-10 justify-center">
+            <CustomText text={"Email: " + userData.email} />
+          </View>
+          <View className="items-center flex-row h-10">
+            <CustomText text={"Dark Mode: "} />
+            <Switch
+              value={Mode}
+              onValueChange={() => changeTheme(setMode(!Mode))}
+            />
+          </View>
         </View>
       </View>
       <View className="w-full items-center">
         <CustomButton
           text="Editar perfil"
           onPress={handleEditProfile}
-          buttonColor={COLORS.white}
           textColor={COLORS.green}
           mode="outlined"
         />
         <CustomButton
           text="Desconectar"
           onPress={() => handleLogout()}
-          buttonColor={COLORS.white}
           textColor={COLORS.blue}
           mode="outlined"
         />
         <CustomButton
           text="Eliminar Cuenta"
-          buttonColor={COLORS.white}
           textColor={COLORS.red}
           mode="outlined"
         />

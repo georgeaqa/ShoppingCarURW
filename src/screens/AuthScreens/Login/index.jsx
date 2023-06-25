@@ -1,6 +1,5 @@
 import { COLORS, EMAIL_REGEX, ROUTES } from "../../../constants";
 import { CustomButton, CustomInput } from "../../../components";
-import CustomIcon, { Icons } from "../../../components/CustomIcon";
 import { Image, View } from "react-native";
 
 import React from "react";

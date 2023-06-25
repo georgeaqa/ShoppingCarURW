@@ -10,8 +10,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { COLORS } from "../../../constants";
 import React from "react";
+import { useTheme } from "react-native-paper";
 
 const ShoppingCar = () => {
+  const theme = useTheme();
   const dispatch = useDispatch();
   const characters = useSelector((state) => state.cart.characters);
   const total = useSelector((state) => state.cart.total);
@@ -37,7 +39,10 @@ const ShoppingCar = () => {
     dispatch(confirm_CART(localId, characters, total));
   };
   return (
-    <View className="flex-1 justify-between bg-white">
+    <View
+      className="flex-1 justify-between"
+      style={{ backgroundColor: theme.colors.background }}
+    >
       <View className="flex-1">
         <FlatList
           data={characters}

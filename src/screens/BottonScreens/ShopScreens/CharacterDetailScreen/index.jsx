@@ -6,8 +6,10 @@ import { add_character, in_cart } from "../../../../store/actions/cart.action";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Card } from "react-native-paper";
+import { useTheme } from "react-native-paper";
 
 const CharacterDetailScreen = ({ navigation }) => {
+  const theme = useTheme();
   const dispatch = useDispatch();
   const character = useSelector((state) => state.characters.selectedCharacter);
   const inCart = useSelector((state) => state.cart.inCart);
@@ -35,16 +37,16 @@ const CharacterDetailScreen = ({ navigation }) => {
   if (inCart) {
     buttonAdd = (
       <View className="items-center">
-        <CustomButton
-          text="Ya esta agregado en el carrito"
-          disabled
-        />
+        <CustomButton text="Ya esta agregado en el carrito" disabled />
       </View>
     );
   }
 
   return (
-    <View className="flex-1 px-[2%] bg-white justify-between">
+    <View
+      className="flex-1 px-[2%] justify-between"
+      style={{ backgroundColor: theme.colors.background }}
+    >
       <View className="flex-row">
         <Card
           className="my-2 rounded-2xl"

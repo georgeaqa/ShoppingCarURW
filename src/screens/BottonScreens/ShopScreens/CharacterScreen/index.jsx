@@ -8,8 +8,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { CustomCharacterItems } from "../../../../components";
 import { ROUTES } from "../../../../constants";
+import { useTheme } from "react-native-paper";
 
 const CharacterScreen = ({ navigation, route }) => {
+  const theme = useTheme();
   const filteredCharacters = useSelector(
     (state) => state.characters.filteredCharacter
   );
@@ -34,7 +36,10 @@ const CharacterScreen = ({ navigation, route }) => {
   );
 
   return (
-    <View className="flex-1 bg-white">
+    <View
+      className="flex-1"
+      style={{ backgroundColor: theme.colors.background }}
+    >
       <FlatList
         data={filteredCharacters}
         renderItem={renderCharacterItem}

@@ -9,8 +9,10 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 
 import { CustomOrderItems } from "../../../../components";
+import { useTheme } from "react-native-paper";
 
 const OrderCar = ({ navigation }) => {
+  const theme=useTheme();
   const dispatch = useDispatch();
   const orders = useSelector((state) => state.orders.list);
   const localId = useSelector((state) => state.auth.localId);
@@ -32,7 +34,7 @@ const OrderCar = ({ navigation }) => {
   );
 
   return (
-    <View className="flex-1 justify-between bg-white">
+    <View className="flex-1 justify-between" style={{backgroundColor:theme.colors.background}}>
       <FlatList
         data={orders}
         keyExtractor={(item) => item.id}
