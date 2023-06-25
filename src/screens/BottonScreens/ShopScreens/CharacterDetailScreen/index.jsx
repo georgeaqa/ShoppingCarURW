@@ -26,7 +26,7 @@ const CharacterDetailScreen = ({ navigation }) => {
     <View className="items-center">
       <CustomButton
         text="Agregar al carrito"
-        buttonColor={COLORS.green}
+        buttonColor={theme.colors.greenButton}
         textColor={COLORS.white}
         mode="elevated"
         onPress={handleAddCharacter}
@@ -63,10 +63,12 @@ const CharacterDetailScreen = ({ navigation }) => {
           <CustomText
             variant="labelLarge"
             text={"ID: " + character.idCharacter}
+            newStyle={{ color: theme.colors.text }}
           />
           <CustomText
             variant="labelLarge"
             text={"Precio: $" + character.price}
+            newStyle={{ color: theme.colors.text }}
           />
         </View>
       </View>
@@ -76,7 +78,7 @@ const CharacterDetailScreen = ({ navigation }) => {
       >
         <CustomText
           variant="bodyLarge"
-          newStyle={{ textAlign: "justify" }}
+          newStyle={{ textAlign: "justify", color: theme.colors.text }}
           text={character.descriptionCharacter}
         />
       </ScrollView>

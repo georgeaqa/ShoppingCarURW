@@ -5,7 +5,6 @@ import { Image, Pressable, ScrollView, View } from "react-native";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { COLORS } from "../../../../constants";
 import { editUserData } from "../../../../store/actions/profile.action";
 import { useForm } from "react-hook-form";
 import { useTheme } from "react-native-paper";
@@ -80,7 +79,7 @@ const EditProfileScreen = ({ navigation }) => {
 
       <CustomButton
         text="ACEPTAR CAMBIOS"
-        textColor={COLORS.green}
+        textColor={theme.colors.greenButton}
         mode="outlined"
         onPress={handleSubmit(onSaveEditPressed)}
       />

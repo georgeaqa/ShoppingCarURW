@@ -56,7 +56,7 @@ const ShoppingCar = () => {
         <CustomButton
           text={`Confirmar Compra: ${total}`}
           onPress={handleConfirmCart}
-          buttonColor={COLORS.green}
+          buttonColor={theme.colors.greenButton}
           textColor={COLORS.white}
           mode="elevated"
         />

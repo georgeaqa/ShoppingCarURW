@@ -4,8 +4,10 @@ import { Card } from "react-native-paper";
 import CustomText from "../CustomText";
 import { DIMENSIONS } from "../../constants";
 import React from "react";
+import { useTheme } from "react-native-paper";
 
 const CustomCharacterItems = ({ item, onSelected }) => {
+  const theme = useTheme();
   return (
     <View
       className="flex-1/2 p-2 w-1/2"
@@ -16,7 +18,11 @@ const CustomCharacterItems = ({ item, onSelected }) => {
           className="w-full justify-center items-center rounded-2xl h-full"
           onPress={() => onSelected(item)}
         >
-          <CustomText variant="titleMedium" text={item.nameCharacter} />
+          <CustomText
+            variant="titleMedium"
+            text={item.nameCharacter}
+            newStyle={{ color: theme.colors.text }}
+          />
 
           <Image
             className="w-full h-5/6"

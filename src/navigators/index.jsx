@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import AuthNavigator from "./AuthNavigator";
 import BottonTabNavigator from "./BottomTabNavigator";
+import { DARKTHEME } from "../constants";
+import { LIGHTTHEME } from "../constants";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { loadAPP } from "../store/actions/auth.action";
@@ -12,6 +14,7 @@ const LightTheme = {
   ...MD3LightTheme,
   colors: {
     ...MD3LightTheme.colors,
+    ...LIGHTTHEME.colors,
   },
 };
 
@@ -19,6 +22,7 @@ const DarkTheme = {
   ...MD3DarkTheme,
   colors: {
     ...MD3DarkTheme.colors,
+    ...DARKTHEME.colors,
   },
 };
 const index = () => {

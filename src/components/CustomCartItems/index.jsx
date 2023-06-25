@@ -1,12 +1,13 @@
 import CustomIcon, { Icons } from "../CustomIcon";
 import { Image, TouchableOpacity, View } from "react-native";
 
-import { COLORS } from "../../constants";
 import { Card } from "react-native-paper";
 import CustomText from "../CustomText";
 import React from "react";
+import { useTheme } from "react-native-paper";
 
 const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
+  const theme = useTheme();
   return (
     <Card className="m-2 p-1 rounded-2xl">
       <Card.Content className="flex-row justify-between">
@@ -20,31 +21,38 @@ const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
             <CustomText
               variant="labelLarge"
               text={"Nombre: " + item.nameCharacter}
+              newStyle={{ color: theme.colors.text }}
             />
-            <CustomText variant="labelLarge" text={"Precio: $" + item.price} />
+            <CustomText
+              variant="labelLarge"
+              text={"Precio: $" + item.price}
+              newStyle={{ color: theme.colors.text }}
+            />
             <View className="flex-row items-center">
               <CustomText
                 variant="labelLarge"
                 text={"Cantidad: " + item.quantity + " "}
+                newStyle={{ color: theme.colors.text }}
               />
               <TouchableOpacity onPress={() => onReduce(item.idCharacter)}>
                 <CustomIcon
                   name="md-remove-circle"
                   type={Icons.Ionicons}
-                  color={COLORS.red}
+                  color={theme.colors.redButton}
                 />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => onIncrease(item.idCharacter)}>
                 <CustomIcon
                   name="md-add-circle"
                   type={Icons.Ionicons}
-                  color={COLORS.green}
+                  color={theme.colors.greenButton}
                 />
               </TouchableOpacity>
             </View>
             <CustomText
               variant="labelLarge"
               text={"Total: $" + item.price * item.quantity}
+              newStyle={{ color: theme.colors.text }}
             />
           </View>
         </View>
@@ -56,7 +64,7 @@ const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
             name="delete-forever-outline"
             type={Icons.MaterialCommunityIcons}
             size={25}
-            color={COLORS.red}
+            color={theme.colors.redButton}
           />
         </TouchableOpacity>
       </Card.Content>

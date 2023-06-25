@@ -55,16 +55,28 @@ const Profile = ({ navigation }) => {
         </View>
         <View className="w-full my-2">
           <View className="h-10 justify-center">
-            <CustomText text={"Nombres: " + userData.name} />
+            <CustomText
+              text={"Nombres: " + userData.name}
+              newStyle={{ color: theme.colors.text }}
+            />
           </View>
           <View className="h-10 justify-center">
-            <CustomText text={"Apellidos: " + userData.lastName} />
+            <CustomText
+              text={"Apellidos: " + userData.lastName}
+              newStyle={{ color: theme.colors.text }}
+            />
           </View>
           <View className="h-10 justify-center">
-            <CustomText text={"Email: " + userData.email} />
+            <CustomText
+              text={"Email: " + userData.email}
+              newStyle={{ color: theme.colors.text }}
+            />
           </View>
           <View className="items-center flex-row h-10">
-            <CustomText text={"Dark Mode: "} />
+            <CustomText
+              text={"Dark Mode: "}
+              newStyle={{ color: theme.colors.text }}
+            />
             <Switch
               value={Mode}
               onValueChange={() => changeTheme(setMode(!Mode))}
@@ -76,19 +88,22 @@ const Profile = ({ navigation }) => {
         <CustomButton
           text="Editar perfil"
           onPress={handleEditProfile}
-          textColor={COLORS.green}
-          mode="outlined"
+          buttonColor={theme.colors.greenButton}
+          textColor={COLORS.white}
+          mode="elevated"
         />
         <CustomButton
           text="Desconectar"
           onPress={() => handleLogout()}
-          textColor={COLORS.blue}
-          mode="outlined"
+          buttonColor={theme.colors.blueButton}
+          textColor={COLORS.white}
+          mode="elevated"
         />
         <CustomButton
           text="Eliminar Cuenta"
-          textColor={COLORS.red}
-          mode="outlined"
+          buttonColor={theme.colors.redButton}
+          textColor={COLORS.white}
+          mode="elevated"
         />
       </View>
     </View>
