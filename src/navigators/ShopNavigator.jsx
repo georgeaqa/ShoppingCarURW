@@ -15,6 +15,7 @@ const ShopNavigator = () => {
     <Stack.Navigator
       initialRouteName={ROUTES.FACTION}
       screenOptions={{
+        animation:"slide_from_right",
         headerTintColor: COLORS.white,
         headerTitleAlign: "center",
         headerTitleStyle: {

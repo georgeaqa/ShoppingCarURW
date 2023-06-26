@@ -52,7 +52,7 @@ const BottomTabNavigator = () => {
   return (
     <BottomTab.Navigator
       initialRouteName={ROUTES.PROFILE_BTAB}
-      screenOptions={{
+      screenOptions={{     
         headerShown: false,
         tabBarLabelStyle: { fontFamily: "UrbanRivals", fontSize: 15 },
         tabBarActiveTintColor: COLORS.red,

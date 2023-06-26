@@ -11,6 +11,7 @@ const ProfileNavigator = () => {
     <Stack.Navigator
       initialRouteName={ROUTES.PROFILE}
       screenOptions={{
+        animation:"slide_from_right",
         headerTintColor: COLORS.white,
         headerTitleAlign: "center",
         headerTitleStyle: {
@@ -32,8 +33,8 @@ const ProfileNavigator = () => {
         name={ROUTES.PROFILE_EDIT}
         component={EditProfileScreen}
         options={{
-            title: "EDITAR PERFIL",
-          }}
+          title: "EDITAR PERFIL",
+        }}
       />
     </Stack.Navigator>
   );

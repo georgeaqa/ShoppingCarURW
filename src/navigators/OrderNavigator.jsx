@@ -14,6 +14,7 @@ const OrderNavigator = () => {
     <Stack.Navigator
       initialRouteName={ROUTES.ORDERCAR}
       screenOptions={{
+        animation:"slide_from_right",
         headerTintColor: COLORS.white,
         headerTitleAlign: "center",
         headerTitleStyle: {
