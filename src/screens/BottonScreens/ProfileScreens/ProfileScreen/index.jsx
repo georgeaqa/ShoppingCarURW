@@ -17,7 +17,7 @@ const Profile = ({ navigation }) => {
   const dispatch = useDispatch();
   const localId = useSelector((state) => state.auth.localId);
   const userData = useSelector((state) => state.user.userData);
-  const [Mode, setMode] = useState(false);
+  const [mode, setMode] = useState(false);
   useEffect(() => {
     dispatch(getUserData(localId));
   }, []);
@@ -31,7 +31,7 @@ const Profile = ({ navigation }) => {
   };
 
   const changeTheme = () => {
-    dispatch(darkMode(Mode));
+    dispatch(darkMode(mode));
   };
 
   return (
@@ -78,8 +78,8 @@ const Profile = ({ navigation }) => {
               newStyle={{ color: theme.colors.text }}
             />
             <Switch
-              value={Mode}
-              onValueChange={() => changeTheme(setMode(!Mode))}
+              value={mode}
+              onValueChange={() => changeTheme(setMode(!mode))}
             />
           </View>
         </View>

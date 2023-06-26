@@ -1,11 +1,10 @@
+import { DARKTHEME, LIGHTTHEME } from "../constants";
 import { MD3DarkTheme, MD3LightTheme, PaperProvider } from "react-native-paper";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import AuthNavigator from "./AuthNavigator";
 import BottonTabNavigator from "./BottomTabNavigator";
-import { DARKTHEME } from "../constants";
-import { LIGHTTHEME } from "../constants";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { loadAPP } from "../store/actions/auth.action";
