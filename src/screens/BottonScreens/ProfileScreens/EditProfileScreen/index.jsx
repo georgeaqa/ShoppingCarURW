@@ -5,7 +5,7 @@ import { Image, Pressable, ScrollView, View } from "react-native";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { editUserData } from "../../../../store/actions/profile.action";
+import { editUserData } from "../../../../store/actions/auth.action";
 import { useForm } from "react-hook-form";
 import { useTheme } from "react-native-paper";
 

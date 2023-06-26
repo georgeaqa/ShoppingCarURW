@@ -26,12 +26,12 @@ const DarkTheme = {
 };
 const index = () => {
   const localId = useSelector((state) => state.auth.localId);
-  const mode = useSelector((state) => state.user.mode);
+  const mode = useSelector((state) => state.auth.mode);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadAPP());
   }, []);
-  const theme = !mode ? DarkTheme : LightTheme;
+  const theme = mode==="Dark" ? DarkTheme : LightTheme;
   return (
     <PaperProvider theme={theme}>
       <SafeAreaProvider>

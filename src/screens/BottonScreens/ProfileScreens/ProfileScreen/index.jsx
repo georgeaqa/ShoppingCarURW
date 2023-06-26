@@ -3,12 +3,14 @@ import { CustomButton, CustomText } from "../../../../components";
 import { Image, Switch, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import {
+  changeDarkMode,
+  changeLightMode,
   darkMode,
   getUserData,
-} from "../../../../store/actions/profile.action";
+  logOut,
+} from "../../../../store/actions/auth.action";
 import { useDispatch, useSelector } from "react-redux";
 
-import { logOut } from "../../../../store/actions/auth.action";
 import { reset_cart } from "../../../../store/actions/cart.action";
 import { useTheme } from "react-native-paper";
 
@@ -16,8 +18,9 @@ const Profile = ({ navigation }) => {
   const theme = useTheme();
   const dispatch = useDispatch();
   const localId = useSelector((state) => state.auth.localId);
-  const userData = useSelector((state) => state.user.userData);
-  const [mode, setMode] = useState(false);
+  const userData = useSelector((state) => state.auth.userData);
+  const mode1 = useSelector((state) => state.auth.mode);
+  const [mode, setMode] = useState(mode1 === "Light" ? false : true);
   useEffect(() => {
     dispatch(getUserData(localId));
   }, []);
@@ -31,7 +34,15 @@ const Profile = ({ navigation }) => {
   };
 
   const changeTheme = () => {
-    dispatch(darkMode(mode));
+    let changeMode;
+    if (mode) {
+      changeMode = "Light";
+      dispatch(changeLightMode(localId));
+    } else {
+      changeMode = "Dark";
+      dispatch(changeDarkMode(localId));
+    }
+    dispatch(darkMode(changeMode));
   };
 
   return (
