@@ -4,7 +4,7 @@ export default {
     blueButton: "#0001ac",
     redButton: "#930100",
     greenButton: "#005303",
-    inactiveBottomTab:"#fff",
+    inactiveTintBottomTab:"#fff",
     activeBottomTab:"#fff",
   },
 };

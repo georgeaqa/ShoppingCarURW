@@ -58,7 +58,7 @@ const BottomTabNavigator = () => {
         headerShown: false,
         tabBarLabelStyle: { fontFamily: "UrbanRivals", fontSize: 15 },
         tabBarActiveTintColor: COLORS.gold,
-        tabBarInactiveTintColor: theme.colors.inactiveBottomTab,
+        tabBarInactiveTintColor: theme.colors.inactiveTintBottomTab,
         tabBarHideOnKeyboard: true,
         tabBarActiveBackgroundColor: theme.colors.activeBottomTab,
         tabBarStyle: { backgroundColor: COLORS.gold },
