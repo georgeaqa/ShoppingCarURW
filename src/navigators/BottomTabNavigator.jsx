@@ -8,10 +8,12 @@ import ShopNavigator from "./ShopNavigator";
 import { ShoppingCar } from "../screens";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useSelector } from "react-redux";
+import { useTheme } from "react-native-paper";
 
 const BottomTab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
+  const theme =useTheme();
   const characters = useSelector((state) => state.cart.characters);
   const TabArr = [
     {
@@ -55,10 +57,10 @@ const BottomTabNavigator = () => {
       screenOptions={{     
         headerShown: false,
         tabBarLabelStyle: { fontFamily: "UrbanRivals", fontSize: 15 },
-        tabBarActiveTintColor: COLORS.red,
-        tabBarInactiveTintColor: COLORS.grey,
+        tabBarActiveTintColor: COLORS.gold,
+        tabBarInactiveTintColor: theme.colors.inactiveBottomTab,
         tabBarHideOnKeyboard: true,
-        tabBarActiveBackgroundColor: COLORS.white,
+        tabBarActiveBackgroundColor: theme.colors.activeBottomTab,
         tabBarStyle: { backgroundColor: COLORS.gold },
       }}
     >

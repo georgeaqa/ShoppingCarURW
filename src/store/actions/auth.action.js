@@ -110,7 +110,6 @@ export const signIn = (email, password) => {
         console.log(responseAddUserDB);
       }
       const updatestatus = await updateStatusUserSignIn(data.localId);
-      console.log(updatestatus);
       const getTheme = await getThemeMode(data.localId)
       dispatch({
         type: SIGNIN,
@@ -159,7 +158,6 @@ export const logOut = (localId) => {
   return async (dispatch) => {
     try {
       const updatestatus = await updateStatusUserLogOut(localId);
-      console.log(updatestatus);
       dispatch({
         type: LOG_OUT,
       });
@@ -236,7 +234,6 @@ export const changeDarkMode = (localId) => {
   return async (dispatch) => {
     try {
       const updatestatus = await updateChangeModeDark(localId);
-      console.log(updatestatus);
       dispatch({
         type: CHANGE_MODE_DARK,
       });
@@ -250,7 +247,6 @@ export const changeLightMode = (localId) => {
   return async (dispatch) => {
     try {
       const updatestatus = await updateChangeModeLight(localId);
-      console.log(updatestatus);
       dispatch({
         type: CHANGE_MODE_LIGHT,
       });
