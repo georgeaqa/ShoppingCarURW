@@ -1,5 +1,5 @@
+import { Alert, FlatList, View } from "react-native";
 import { CustomButton, CustomCartItems } from "../../../components";
-import { FlatList, View } from "react-native";
 import {
   confirm_CART,
   decrease_character,
@@ -8,7 +8,6 @@ import {
 } from "../../../store/actions/cart.action";
 import { useDispatch, useSelector } from "react-redux";
 
-import { COLORS } from "../../../constants";
 import React from "react";
 import { useTheme } from "react-native-paper";
 
@@ -36,7 +35,11 @@ const ShoppingCar = () => {
     />
   );
   const handleConfirmCart = () => {
-    dispatch(confirm_CART(localId, characters, total));
+    if (characters.length === 0) {
+      return Alert.alert("Debe seleccionar al menos un producto");
+    } else {
+      dispatch(confirm_CART(localId, characters, total));
+    }
   };
   return (
     <View
