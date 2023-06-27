@@ -12,7 +12,7 @@ import { useTheme } from "react-native-paper";
 const EditProfileScreen = ({ navigation }) => {
   const theme = useTheme();
   const dispatch = useDispatch();
-  const userData = useSelector((state) => state.user.userData);
+  const userData = useSelector((state) => state.auth.userData);
   const { control, handleSubmit } = useForm({
     defaultValues: {
       name: userData.name,
