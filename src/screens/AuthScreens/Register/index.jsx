@@ -14,7 +14,7 @@ const Register = ({ navigation }) => {
   const { control, handleSubmit, watch } = useForm();
   const pwd = watch("password");
   const [imageUri, setImageUri] = useState(
-    "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+    "https://s.acdn.ur-img.com/img/noname.jpg"
   );
 
   const pickImage = async () => {

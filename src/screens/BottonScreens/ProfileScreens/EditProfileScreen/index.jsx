@@ -80,7 +80,7 @@ const EditProfileScreen = ({ navigation }) => {
       <CustomButton
         text="ACEPTAR CAMBIOS"
         textColor={theme.colors.greenButton}
-        mode="outlined"
+        mode="elevated"
         onPress={handleSubmit(onSaveEditPressed)}
       />
     </View>

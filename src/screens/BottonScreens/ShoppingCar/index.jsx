@@ -56,8 +56,7 @@ const ShoppingCar = () => {
         <CustomButton
           text={`Confirmar Compra: ${total}`}
           onPress={handleConfirmCart}
-          buttonColor={theme.colors.greenButton}
-          textColor={COLORS.white}
+          textColor={theme.colors.greenButton}
           mode="elevated"
         />
       </View>

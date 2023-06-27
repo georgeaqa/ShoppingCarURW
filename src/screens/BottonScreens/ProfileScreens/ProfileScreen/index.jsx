@@ -99,21 +99,18 @@ const Profile = ({ navigation }) => {
         <CustomButton
           text="Editar perfil"
           onPress={handleEditProfile}
-          buttonColor={theme.colors.greenButton}
-          textColor={COLORS.white}
+          textColor={theme.colors.greenButton}
           mode="elevated"
         />
         <CustomButton
           text="Desconectar"
           onPress={() => handleLogout()}
-          buttonColor={theme.colors.blueButton}
-          textColor={COLORS.white}
+          textColor={theme.colors.blueButton}
           mode="elevated"
         />
         <CustomButton
           text="Eliminar Cuenta"
-          buttonColor={theme.colors.redButton}
-          textColor={COLORS.white}
+          textColor={theme.colors.redButton}
           mode="elevated"
         />
       </View>
