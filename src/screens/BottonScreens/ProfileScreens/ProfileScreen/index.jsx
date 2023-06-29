@@ -32,7 +32,6 @@ const Profile = ({ navigation }) => {
   const handleLogout = () => {
     dispatch(logOut(localId));
     dispatch(reset_cart());
-    dispatch(reset_orders());
   };
 
   const changeTheme = () => {

@@ -25,10 +25,6 @@ const ordersReducer = (state = initial_state, action) => {
         ...state,
         selectedOrder: state.list.find((order) => order.id === action.id),
       };
-      case RESET_ORDERS:
-        return {
-          list: [],
-        };
     default:
       return state;
   }
