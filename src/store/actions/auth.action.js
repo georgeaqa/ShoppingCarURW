@@ -44,7 +44,14 @@ export const signUp = (name, lastName, email, password, imageUri) => {
         const errorResponse = await response.json();
         const errorId = errorResponse.error.message;
         if (errorId === "EMAIL_EXISTS") {
-          Alert.alert("El correo electrónico ya está en uso por otra cuenta");
+          Alert.alert(
+            "Error",
+            "El correo electrónico ya está en uso por otra cuenta",
+            [],
+            {
+              cancelable: true,
+            }
+          );
         }
       }
       const data = await response.json();
@@ -61,6 +68,14 @@ export const signUp = (name, lastName, email, password, imageUri) => {
           imageUri,
         }),
       });
+      Alert.alert(
+        "Exito!",
+        "Cuenta creada correctamente.",
+        [],
+        {
+          cancelable: true,
+        }
+      );
       dispatch({
         type: SIGNUP,
       });
@@ -87,18 +102,30 @@ export const signIn = (email, password) => {
       if (!response.ok) {
         const errorResponse = await response.json();
         const errorId = errorResponse.error.message;
+        console.log(errorId);
         switch (errorId) {
           case "EMAIL_NOT_FOUND":
-            Alert.alert("Email no existe");
+            Alert.alert("Error", "Email no existe", [], { cancelable: true });
             break;
           case "INVALID_PASSWORD":
-            Alert.alert("Contraseña incorrecta");
+            Alert.alert("Error", "Contraseña incorrecta", [], {
+              cancelable: true,
+            });
             break;
           case "USER_DISABLED":
-            Alert.alert("Usuario desactivado");
+            Alert.alert("Error", "Usuario desactivado", [], {
+              cancelable: true,
+            });
             break;
           default:
-            Alert.alert("Excedio el limite de intento, intente más tarde");
+            Alert.alert(
+              "Error",
+              "Excedio el limite de intento, intente más tarde",
+              [],
+              {
+                cancelable: true,
+              }
+            );
             break;
         }
       }
@@ -110,12 +137,13 @@ export const signIn = (email, password) => {
         console.log(responseAddUserDB);
       }
       const updatestatus = await updateStatusUserSignIn(data.localId);
-      const getTheme = await getThemeMode(data.localId)
+      console.log(updatestatus);
+      const getTheme = await getThemeMode(data.localId);
       dispatch({
         type: SIGNIN,
         idToken: data.idToken,
         localId: data.localId,
-        mode : getTheme.changeMode,
+        mode: getTheme.changeMode,
       });
     } catch (error) {
       console.log(error);
@@ -139,7 +167,10 @@ export const sendResetPassword = (email) => {
       if (!response.ok) {
         const errorResponse = await response.json();
         const errorId = errorResponse.error.message;
-        if (errorId === "EMAIL_NOT_FOUND") Alert.alert("No existe email.");
+        if (errorId === "EMAIL_NOT_FOUND")
+          Alert.alert("Error", "No existe email.", [], {
+            cancelable: true,
+          });
       }
       const data = await response.json();
       if (data.email) {
@@ -158,9 +189,10 @@ export const logOut = (localId) => {
   return async (dispatch) => {
     try {
       const updatestatus = await updateStatusUserLogOut(localId);
-      dispatch({
-        type: LOG_OUT,
-      });
+      console.log(updatestatus),
+        dispatch({
+          type: LOG_OUT,
+        });
     } catch (error) {
       console.log(error);
     }
@@ -173,8 +205,8 @@ export const loadAPP = () => {
       const response = await userConnected();
       dispatch({
         type: LOADAPP,
-        localId:response.localId,
-        mode : response.changeMode,
+        localId: response.localId,
+        mode: response.changeMode,
       });
     } catch (error) {}
   };
@@ -234,6 +266,7 @@ export const changeDarkMode = (localId) => {
   return async (dispatch) => {
     try {
       const updatestatus = await updateChangeModeDark(localId);
+      console.log(updatestatus);
       dispatch({
         type: CHANGE_MODE_DARK,
       });
@@ -247,6 +280,7 @@ export const changeLightMode = (localId) => {
   return async (dispatch) => {
     try {
       const updatestatus = await updateChangeModeLight(localId);
+      console.log(updatestatus);
       dispatch({
         type: CHANGE_MODE_LIGHT,
       });

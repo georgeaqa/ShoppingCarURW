@@ -12,6 +12,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 
 import { reset_cart } from "../../../../store/actions/cart.action";
+import {reset_orders} from "../../../../store/actions/order.action";
 import { useTheme } from "react-native-paper";
 
 const Profile = ({ navigation }) => {
@@ -31,6 +32,7 @@ const Profile = ({ navigation }) => {
   const handleLogout = () => {
     dispatch(logOut(localId));
     dispatch(reset_cart());
+    dispatch(reset_orders());
   };
 
   const changeTheme = () => {

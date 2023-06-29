@@ -1,6 +1,7 @@
 import {
   FILTERED_ORDER_DETAIL,
   GET_ORDERS,
+  RESET_ORDERS,
   SELECTED_ORDER,
 } from "../actions/order.action";
 
@@ -24,6 +25,10 @@ const ordersReducer = (state = initial_state, action) => {
         ...state,
         selectedOrder: state.list.find((order) => order.id === action.id),
       };
+      case RESET_ORDERS:
+        return {
+          list: [],
+        };
     default:
       return state;
   }

@@ -36,9 +36,23 @@ const ShoppingCar = () => {
   );
   const handleConfirmCart = () => {
     if (characters.length === 0) {
-      return Alert.alert("Debe seleccionar al menos un producto");
+      return Alert.alert("Error", "Debe seleccionar al menos un producto", [], {
+        cancelable: true,
+      });
     } else {
-      dispatch(confirm_CART(localId, characters, total));
+      Alert.alert("Mensaje", "¿Confirma la compra?", [
+        {
+          text: "Si",
+          onPress: () => {
+            dispatch(confirm_CART(localId, characters, total));
+          },
+          style: "default",
+        },
+        {
+          text: "No",
+          style: "cancel",
+        },
+      ]);
     }
   };
   return (

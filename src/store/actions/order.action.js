@@ -3,7 +3,7 @@ import { URL_API } from "../../constants/database";
 export const GET_ORDERS = "GET_ORDERS";
 export const SELECTED_ORDER = "SELECTED_ORDER";
 export const FILTERED_ORDER_DETAIL = "FILTERED_ORDER_DETAIL";
-
+export const RESET_ORDERS = "RESET_ORDERS";
 export const getOrders = (localId) => {
   return async (dispatch) => {
     try {
@@ -27,4 +27,7 @@ export const getOrders = (localId) => {
 export const selectedOrder = (id) => ({
   type: "SELECTED_ORDER",
   id,
+});
+export const reset_orders= () => ({
+  type: RESET_ORDERS,
 });

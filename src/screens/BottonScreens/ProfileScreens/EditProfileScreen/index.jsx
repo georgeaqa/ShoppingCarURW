@@ -1,7 +1,7 @@
 import * as ImagePicker from "expo-image-picker";
 
+import { Alert, Image, Pressable, ScrollView, View } from "react-native";
 import { CustomButton, CustomInput } from "../../../../components";
-import { Image, Pressable, ScrollView, View } from "react-native";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -32,17 +32,29 @@ const EditProfileScreen = ({ navigation }) => {
     }
   };
   const onSaveEditPressed = (data) => {
-    dispatch(
-      editUserData(
-        userData.id,
-        userData.localId,
-        data.name,
-        data.lastName,
-        userData.email,
-        imageUri
-      )
-    );
-    navigation.goBack();
+    Alert.alert("Mensaje", "¿Confirma aceptar los cambios?", [
+      {
+        text: "Si",
+        onPress: () => {
+          dispatch(
+            editUserData(
+              userData.id,
+              userData.localId,
+              data.name,
+              data.lastName,
+              userData.email,
+              imageUri
+            )
+          );
+          navigation.goBack();
+        },
+        style: "default",
+      },
+      {
+        text: "No",
+        style: "cancel",
+      },
+    ]);
   };
   return (
     <View
