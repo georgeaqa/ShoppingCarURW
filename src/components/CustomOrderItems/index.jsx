@@ -13,7 +13,7 @@ const formatDay = (date) => {
 const CustomOrderItems = ({ item, onSelected }) => {
   const theme = useTheme();
   return (
-    <Card className="m-2 p-2 rounded-2xl">
+    <Card className="m-1 p-1 rounded-3xl">
       <TouchableOpacity onPress={() => onSelected(item)}>
         <View>
           <CustomText

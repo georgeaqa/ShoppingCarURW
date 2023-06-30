@@ -43,7 +43,7 @@ const CharacterDetailScreen = ({ navigation }) => {
 
   return (
     <View
-      className="flex-1 px-[2%] justify-between"
+      className="flex-1 px-1 justify-between"
       style={{ backgroundColor: theme.colors.background }}
     >
       <View className="flex-row">

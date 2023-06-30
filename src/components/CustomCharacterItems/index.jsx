@@ -10,12 +10,14 @@ const CustomCharacterItems = ({ item, onSelected }) => {
   const theme = useTheme();
   return (
     <View
-      className="flex-1/2 p-2 w-1/2"
+      className="flex-1/2 p-1 w-1/2"
       style={{ height: DIMENSIONS.height / 3.5 }}
     >
-      <Card>
+      <Card
+        className="rounded-3xl"
+      >
         <TouchableOpacity
-          className="w-full justify-center items-center rounded-2xl h-full"
+          className="w-full justify-center items-center h-full"
           onPress={() => onSelected(item)}
         >
           <CustomText

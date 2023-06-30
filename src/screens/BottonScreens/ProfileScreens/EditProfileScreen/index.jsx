@@ -58,7 +58,7 @@ const EditProfileScreen = ({ navigation }) => {
   };
   return (
     <View
-      className="flex-1 justify-between items-center p-[2%]"
+      className="flex-1 justify-between items-center p-1"
       style={{ backgroundColor: theme.colors.background }}
     >
       <ScrollView className="w-full">

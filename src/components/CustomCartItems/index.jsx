@@ -9,7 +9,7 @@ import { useTheme } from "react-native-paper";
 const CustomCartItems = ({ item, onDelete, onIncrease, onReduce }) => {
   const theme = useTheme();
   return (
-    <Card className="m-2 p-1 rounded-2xl">
+    <Card className="m-1 rounded-3xl">
       <Card.Content className="flex-row justify-between">
         <View className="flex-row">
           <Image

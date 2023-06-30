@@ -69,7 +69,7 @@ const ShoppingCar = () => {
           showsHorizontalScrollIndicator={false}
         />
       </View>
-      <View className="items-center p-[1%]">
+      <View className="items-center">
         <CustomButton
           text={`Confirmar Compra: ${total}`}
           onPress={handleConfirmCart}

@@ -1,24 +1,27 @@
-import { Image, Pressable, View } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 
 import { DIMENSIONS } from "../../constants";
 import React from "react";
+import { useTheme } from "react-native-paper";
 
 const CustomeFactionsItems = ({ item, onSelected }) => {
+  const theme = useTheme();
   return (
-    <Pressable className="flex-1 m-[1%]" onPress={() => onSelected(item)}>
-      <View style={{ backgroundColor: item.colorfaction }}>
-        <View
-          className="w-full border-2 rounded border-[#FFD700]"
-          style={{ height: DIMENSIONS.height / 6 }}
-        >
-          <Image
-            className="w-full h-full"
-            source={item.imageSource}
-            resizeMode="contain"
-          />
-        </View>
-      </View>
-    </Pressable>
+    <TouchableOpacity
+      className="flex-1 m-1 border rounded-3xl"
+      onPress={() => onSelected(item)}
+      style={{
+        height: DIMENSIONS.height / 6,
+        backgroundColor: item.colorfaction,
+        borderColor: theme.colors.border,
+      }}
+    >
+      <Image
+        className="w-full h-full"
+        source={item.imageSource}
+        resizeMode="contain"
+      />
+    </TouchableOpacity>
   );
 };
 

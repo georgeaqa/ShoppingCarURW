@@ -48,7 +48,7 @@ const Profile = ({ navigation }) => {
 
   return (
     <View
-      className="flex-1 justify-between items-center p-2"
+      className="flex-1 justify-between items-center p-1"
       style={{ backgroundColor: theme.colors.background }}
     >
       <View className="w-full items-center">

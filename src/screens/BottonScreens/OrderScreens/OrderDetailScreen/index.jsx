@@ -20,7 +20,7 @@ const OrderDetailScreen = () => {
       style={{ backgroundColor: theme.colors.background }}
     >
       <View className="flex-1">
-        <View className="px-1 border-b-2 border-[#FFD700]">
+        <View className="mx-1 border-b-2 border-[#FFD700]">
           <CustomText
             text={"Fecha de compra: " + formatDay(selectedOrder.date)}
             newStyle={{ color: theme.colors.text }}
@@ -36,7 +36,7 @@ const OrderDetailScreen = () => {
           showsHorizontalScrollIndicator={false}
         >
           {selectedOrder.items.map((item) => (
-            <Card className="m-2 rounded-2xl" key={item.idCharacter}>
+            <Card className="m-1 rounded-3xl" key={item.idCharacter}>
               <Card.Content className="flex-row">
                 <Image
                   source={item.imageSource}
