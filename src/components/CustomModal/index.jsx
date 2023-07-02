@@ -8,18 +8,15 @@ const CustomModal = ({ visible, onDismiss, character }) => {
   return (
     <Portal>
       <Modal
-        className="mx-[10%]"
+        className="mx-[10%] my-[50%]"
         visible={visible}
         onDismiss={onDismiss}
       >
-        <Card className="h-[80%] border justify-center" style={{borderColor:theme.colors.border}}>
-            <Image
+        <Image
           className="h-full"
           source={character.imageSource}
-          resizeMode="contain"
+          resizeMode="stretch"
         />
-        </Card>
-        
       </Modal>
     </Portal>
   );
