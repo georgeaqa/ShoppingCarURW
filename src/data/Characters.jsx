@@ -22,17 +22,6 @@ const CHARACTERS = [
     price: 100,
   },
   {
-    idCharacter: 100,
-    nameCharacter: "VANSAAR",
-    imageSource: {
-      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_VANSAAR_N5_HD_673.png",
-    },
-    idFactions: 1,
-    descriptionCharacter:
-      "Desde los primeros días de su incorporación al ejército del Polit, Van Saar comprendió que dedicaría toda su vida al servicio de esta prestigiosa institución y que lo sacrificaría todo, esposa, hijos, amistades e incluso su salud. Desde las trincheras de primera línea hasta los salones de estado mayor, ha vivido todas las experiencias, y actualmente, nadie en Clint City domina el delicado arte del combate mejor que él.",
-    price: 100,
-  },
-  {
     idCharacter: 3,
     nameCharacter: "GENESIS",
     imageSource: {
@@ -551,20 +540,20 @@ const CHARACTERS = [
   },
   {
     idCharacter: 50,
-    nameCharacter: "SENTENZA",
+    nameCharacter: "MARSHAL",
     imageSource: {
-      uri: "https://s.acdn.ur-img.com/urimages/perso/GHOSTOWN/GHOSTOWN_SENTENZACR_N5_HD_673.png",
+      uri: "https://s.acdn.ur-img.com/urimages/perso/GHOSTOWN/GHOSTOWN_MARSHALMT_N2_HD_673.png",
     },
     idFactions: 7,
     descriptionCharacter:
-      "Si tienes suficientes Tokenz de oro para darle, Sentenza no dejará su trabajo a medias. Mercenario despiadado, torturados de talento e interrogador con una persuasiva brutalidad, se convirtió en la mano derecha del juez, quien ahora prefiere los métodos de este sociópata a la razón de Marshal. Si Tuco no se hubiera cruzado en su camino aquel día haciéndose pasar por un soldado confederado, seguramente no lo hubieran dejado por muerto a un lado del camino… Y si Spyke hubiera evitado sus puños, hoy estaría con toda probabilidad en Clint City… Con la nueva moneda en circulación en la ciudad, y tras haber sido solicitado por las altas esferas, ¡la animal de 'Angel Eyes' sabe que jugoso contratos la están esperando!",
+      "DEP nuestro valiente Marshal, que ha sabido instaurar la paz y restablecer el orden en la ciudad. Invencible en un duelo, ha sido cobardemente asesinado en una emboscada al ser acribillado por los peores maleantes de la región, no sin antes haber enviado a unos cuantos al cementerio.",
     price: 80,
   },
   {
     idCharacter: 51,
     nameCharacter: "DEATH ADDER",
     imageSource: {
-      uri: "https://s.acdn.ur-img.com/urimages/perso/DOMINION/DOMINION_DEATHADDERMT_N5_HD_673.png",
+      uri: "https://s.acdn.ur-img.com/urimages/perso/DOMINION/DOMINION_DEATHADDERMT_N4_HD_673.png",
     },
     idFactions: 7,
     descriptionCharacter:
@@ -628,24 +617,24 @@ const CHARACTERS = [
   },
   {
     idCharacter: 57,
-    nameCharacter: "TYRES",
+    nameCharacter: "KASSAR",
     imageSource: {
-      uri: "https://s.acdn.ur-img.com/urimages/perso/OBLIVION/OBLIVION_TYRESMT_N5_HD_673.png",
+      uri: "https://s.acdn.ur-img.com/urimages/perso/OBLIVION/OBLIVION_KASSAR_N2_HD_673.png",
     },
     idFactions: 7,
     descriptionCharacter:
-      "Un repartidor de Urban Eats que se ha convertido en el símbolo de una resistencia creciente, Tyres es el enemigo número uno del Oculus, el cual siente pavor por sus poderes metamórficos superdesarrollados. Sin embargo, el camino no ha sido fácil para el nuevo jefe de los Oblivion, que solo fue capaz de dominar sus poderes tras un largo viaje iniciático junto a su amigo Dianzi. Tras escapar por los pelos de la trampa que le tendió Kate, Tyres ha solicitado el encuentro de todos sus hermanos y hermanas. ¡El clan Oblivion ha renacido al fin! Incluso encontró un inofensivo Oculus llamado Pulp Ld, ¡que le acompaña en sus aventuras desde entonces! Juntos, los Oblivion buscan ahora volver a su dimensión original, para reconstruir allí el Archium. Pero, ¿serán capaces de abandonar Clint City a su suerte tan fácilmente?",
+      "¿Quién es Kassar, el poderoso guerrero del pueblo olvidado? Una teoría afirma que era un simple trabajador de las obras de reconstrucción post-Mechakolos, y que utilizó sus poderes de transformación para parecerse al jefe Oblivion. Otro rumor es que fue un vagabundo que se entrenó con varios clanes, como los Fang Pi Clang y los Paradox. Otros creen que en realidad es el hermano de #Tyres, ¡y que está decidido a revelar la historia del genocidio de su pueblo! ¿Tienen todos razón o están equivocados? Solo una cosa es cierta: se metamorfosea con regularidad para aumentar su musculatura, y cuando lo hace, ¡pega fuerte!",
     price: 90,
   },
   {
     idCharacter: 58,
-    nameCharacter: "ALTER LD",
+    nameCharacter: "ALI",
     imageSource: {
-      uri: "https://s.acdn.ur-img.com/urimages/perso/OBLIVION/OBLIVION_ALTERLD_N3_HD_673.png",
+      uri: "https://s.acdn.ur-img.com/urimages/perso/OBLIVION/OBLIVION_ALI_N2_HD_673.png",
     },
     idFactions: 7,
     descriptionCharacter:
-      "Alter Ld es un pequeño animal metamórfico, el único superviviente de su especie que custodiaba las dunas del Archium en el pasado. Bestia indomable de carácter voluble e imprevisible, solo se acerca a otros animales y a los humanos que están a punto de morir. Se comenta que lo vieron en los barrios de los Uppers y cerca de la academia Skeelz... ¿Serán ciertos estos rumores?",
+      "Ali es un cazador de recompensas. Y ha matado a algunos tipos peligrosos, sin dudar ni por un momento. En Clint City, tiene una pequeña tienda de pesca. El tipo es un entusiasta de esta actividad. Pero no vayas a pedirle consejo sobre nada a la parte de atrás de su tienda, ya que el hombre tiene mal carácter... De estilo minimalista, su objetivo está claro: esperar a que su hermano Tyres se acerque para explicarle que probablemente sea él la clave de los acontecimientos que ocurran...",
     price: 70,
   },
   {
@@ -674,7 +663,7 @@ const CHARACTERS = [
     idCharacter: 61,
     nameCharacter: "GURU",
     imageSource: {
-      uri: "https://s.acdn.ur-img.com/urimages/perso/SAKROHM/SAKROHM_GURUMT_N5_HD_673.png",
+      uri: "https://s.acdn.ur-img.com/urimages/perso/SAKROHM/SAKROHM_GURUMT_N1_HD_673.png",
     },
     idFactions: 8,
     descriptionCharacter:
@@ -751,11 +740,143 @@ const CHARACTERS = [
     idCharacter: 68,
     nameCharacter: "DREGN 2097",
     imageSource: {
-      uri: "https://s.acdn.ur-img.com/urimages/perso/VORTEX/VORTEX_DREGN2097_N5_HD_673.png",
+      uri: "https://s.acdn.ur-img.com/urimages/perso/VORTEX/VORTEX_DREGN2097_N4_HD_673.png",
     },
     idFactions: 8,
     descriptionCharacter:
       "En un futuro no muy lejano, hacia el año 2097, Dregn es el emperador que reina sobre Clinterra. Gracias a un excepcional avance tecnológico y científico, este nuevo tipo de sintético es el resultado de una fusión entre su Alfa y su Omega. Para su desgracia, una profecía revela que una alianza de los descendientes de los clanes acabará con él. A pesar de que no cree en las artes adivinatorias, prefiere viajar al pasado para hacer entrar en razón a los clanes existentes y poder reinar en paz, a ser posible en compañía de su reina...",
+    price: 90,
+  },
+  {
+    idCharacter: 69,
+    nameCharacter: "ALEKPEROV",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/OCULUS/OCULUS_ALEKPEROV_N1_HD_673.png",
+    },
+    idFactions: 2,
+    descriptionCharacter:
+      "Si hay un hombre que hace y deshace los conflictos en Clint City, ese es Vaguit Alekperov, gerente de OILZ Co. Al cabo de los años, este magnate del petróleo se ha hecho con una gran parte del desierto del Saud y con múltiples explotaciones offshore (cerca de las islas Melkozu y Waterfall) que antes pertenecían a Oxen y Al Safra. Para que su empresa tenga un mayor peso en la economía, actualmente está adquiriendo explotaciones de tierras raras terrestres, extraterrestres e incluso extradimensionales. Nada detiene a este hombre de negocios, del que se dice que ha sobrevivido a numerosos intentos de asesinato y a un accidente de avión. Toda una proeza sobrehumana...",
+    price: 80,
+  },
+  {
+    idCharacter: 70,
+    nameCharacter: "BUKERZERG",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/OCULUS/OCULUS_BUKERZERG_N1_HD_673.png",
+    },
+    idFactions: 2,
+    descriptionCharacter:
+      "Las redes sociales de Noah Bukerzerg han conquistado rápidamente el mundo digital y transformado para siempre las relaciones sociales en Clint City. Todos sus habitantes aparecen en las redes sociales del grupo PROFILE, en donde es posible encontrar las mejores actuaciones de Stella, los tutoriales de belleza de Jessie, las últimas batallas de Lorenzald o el supuesto vídeo sexual de Katja. Cada uno exhibe su vida, critica la de los demás o trolea a diestro y siniestro. Noah lo sabe todo de vuestras vidas y deseos gracias a los exabytes de vídeos y mensajes publicados cada día. Pero a quién se le ocurriría pensar que este rey bondadoso del universo digital, este hombre moderno hecho a sí mismo, manipula la información para trucar las elecciones, intensificar los comunitarismos o incitar a las personas a consumir la última generación de Pillz de Morphun. De verdad que se dice cualquier cosa...",
+    price: 70,
+  },
+  {
+    idCharacter: 71,
+    nameCharacter: "KUSM",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/OCULUS/OCULUS_KUSM_N1_HD_673.png",
+    },
+    idFactions: 2,
+    descriptionCharacter:
+      "Dotada de inigualables capacidades intelectuales, Claudie Kusm se ha convertido en una referencia mundial en el campo de la investigación sobre desplazamiento espacial y temporal. Ella ha logrado reunir todos los conocimientos actuales existentes sobre el tema, materializados en la propulsión hipersónica de los Hive utilizada por Raam en el dispositivo de viaje en el tiempo de Pr Hartnell. Ya sea para viajar a una galaxia muy lejana o para visitar a los ancestros, las tecnologías y vehículos de INFINITY son hoy en día la referencia universal en este campo. Sin embargo, Melody le atribuye intenciones poco honestas a esta gran investigadora, que habría convertido a Clint City en el epicentro de los principales conflictos del universo al haber reducido las limitaciones espacio-temporales…",
+    price: 70,
+  },
+  {
+    idCharacter: 72,
+    nameCharacter: "RODSEY",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/OCULUS/OCULUS_RODSEY_N1_HD_673.png",
+    },
+    idFactions: 2,
+    descriptionCharacter:
+      "En lugar de optar por los programas audiovisuales inteligentes que convierten a aquellos ciudadanos en individuos difíciles de gobernar, Cyrielle Rodsey se ha decantado por la caja tonta que los hace obedientes. 'Sexy guns', 'Vivir con los Roots' o 'Interceptor, mi vida de poli', todos estos programas absurdos con una exquisita crueldad física, psicológica y sexual están disponibles actualmente en la plataforma TALKS. La llamada Productora, reina de la pequeña pantalla convertida y reina de todas las pantallas, anima a la juventud a no preocuparse de sus neuronas ni de la gestión del mundo y, en su lugar, a buscar una notoriedad efímera en alguno de estos programas. Para convencer a Sra. Rodsey y gozar de esta visibilidad tan deseada, hay que aprender a timar, engañar y pelear…",
+    price: 90,
+  },
+  {
+    idCharacter: 73,
+    nameCharacter: "ZEBOS",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/OCULUS/OCULUS_ZEBOS_N1_HD_673.png",
+    },
+    idFactions: 2,
+    descriptionCharacter:
+      "'El último modelo de nave espacial SEXY de Infinity, un arma afilada de la colección de Leone o un perfume de Nana Litchie? Todo lo que necesitas lo encontrarás en LIMITLESS. Entregas en toda la galaxia en menos de 10 minutos'. Tras haberse hecho de oro con el comercio electrónico, y ahora que todos los habitantes de la ciudad son adictos a sus servicios de entrega, Jack Zebos se dedica desde hace poco al mercado agroalimentario y está adquiriendo una a una las principales empresas del sector, empezando por MegaNutz. Muy pronto, todo lo que compremos o consumamos servirá a los intereses de este increíble empresario.",
+    price: 70,
+  },
+  {
+    idCharacter: 74,
+    nameCharacter: "SLATTER",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/OCULUS/OCULUS_SLATTER_N5_HD_673.png",
+    },
+    idFactions: 2,
+    descriptionCharacter:
+      "Plantarles tarjetas amarillas, tarjetas rojas y balones en toda la jeta a los jugadores más recalcitrantes no era suficiente para Michel Slatter (Striker), así que decidió organizar un último partido antes de hacerse comentarista deportivo. Debería haber desconfiado de que, como todo lo que pasa en la ciudad, este partido estaría amañado y financiado por una entidad secreta. '¡No nos andamos con coñas en el fútbol!', pensaba él al presentarse en la Oculus Plaza, ciego de ira. Desde que se hicieron con su envoltorio corporal, Striker ha cambiado radicalmente de opinión. Ahora se ha convertido en el jefe de la liga de fútbol de Clint City, lo que significa que es más influyente y corrupto que El D10S, ¡además de estar totalmente alineado con el POLIT!",
+    price: 90,
+  },
+  {
+    idCharacter: 75,
+    nameCharacter: "VANSAAR",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_VANSAAR_N5_HD_673.png",
+    },
+    idFactions: 1,
+    descriptionCharacter:
+      "Desde los primeros días de su incorporación al ejército del Polit, Van Saar comprendió que dedicaría toda su vida al servicio de esta prestigiosa institución y que lo sacrificaría todo, esposa, hijos, amistades e incluso su salud. Desde las trincheras de primera línea hasta los salones de estado mayor, ha vivido todas las experiencias, y actualmente, nadie en Clint City domina el delicado arte del combate mejor que él.",
+    price: 100,
+  },
+  {
+    idCharacter: 76,
+    nameCharacter: "ADMINISTRATOR",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_ADMINISTRATOR_N2_NIGHT_HD_673.png",
+    },
+    idFactions: 1,
+    descriptionCharacter:
+      "Maestro de las ecuaciones por las que se rige Clint City, el Administrador es un programa neutro presente desde la primera versión de Clint Fighting. Es una idea de los desarrolladores de Acute Games, una entidad oscura de una dimensión paralela. Al mismo tiempo, apareció una anomalía importante, acrecentada por las recientes perturbaciones dimensionales: el corazón de todo el sistema está enfermo, tanto de un lado como del otro. Dado que está equipado con tecnología Vortex y Hive, la idea es enviar al Administrador en forma de 'Oculus Inactivo' para agitar y desencadenar una tormenta dentro de todo el sistema, ¡protegiéndonos en caso de que se produzca una nueva infección!",
+    price: 100,
+  },
+  {
+    idCharacter: 77,
+    nameCharacter: "ROBERT COBB",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_ROBERTCOBB_N4_HD_673.png",
+    },
+    idFactions: 1,
+    descriptionCharacter:
+      "El sueño de Robert Cobb era crear un mundo paralelo, una utopía libre de corrupción. A medida que sus creaciones tomaron forma, se dio cuenta de que no seguían sus instrucciones al pie de la letra... ¡Se movían a su libre albedrío! Robert Cobb creó la vida virtual. Estaba feliz y al mismo tiempo atemorizado: ¿y si un día sus propias creaciones se volvieran contra él? En secreto, empieza a desarrollar 4 programas destructores, capaces de llevar a efecto la completa aniquilación y un nuevo arranque del mundo virtual. Con la esperanza de que este día fatídico no llegue nunca, los encierra en el laberinto situados en los lindes del mundo: el Maze...",
+    price: 100,
+  },
+  {
+    idCharacter: 78,
+    nameCharacter: "SOLOMON",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_SOLOMON_N5_HD_673.png",
+    },
+    idFactions: 1,
+    descriptionCharacter:
+      "Hacer una crónica de la vida de Solomon no es tarea fácil. Se sabe poco sobre su revuelto pasado en Los Santos y sobre su escapada a Clint City. Él está implicado en el inicio de los primeros torneos improvisados en un hangar abandonado, pero eso no explica su ascensión fulgurante en el mundo de las competiciones. En menos de diez años, el feroz guerrero se hizo un rico tiburón de los negocios controlando y dirigiendo todo lo que tiene que ver con combates en la ciudad. Ya se trate de un torneo de principiantes o de un evento prestigioso como el campeonato mundial de boxeo, Solomon es quien se lleva los beneficios y quien cambia las reglas, siempre que tenga ganas.",
+    price: 90,
+  },
+  {
+    idCharacter: 79,
+    nameCharacter: "BRIDGET",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_BRIDGET_N5_HD_673.png",
+    },
+    idFactions: 1,
+    descriptionCharacter:
+      "Curar a los demás es un oficio complicado. Pero curarlos en medio del campo de batalla, esquivando las balas y oyendo las explosiones de proyectiles es más que heroico, y es precisamente la realidad cotidiana de Bridget. Si necesitas curas urgentes en pleno combate, sólo ella te podrá ayudar.",
+    price: 100,
+  },
+  {
+    idCharacter: 80,
+    nameCharacter: "ASHIGARU",
+    imageSource: {
+      uri: "https://s.acdn.ur-img.com/urimages/perso/LEADER/LEADER_ASHIGARU_N5_HD_673.png",
+    },
+    idFactions: 1,
+    descriptionCharacter:
+      "La paciencia es la principal virtud de Ashigaru. Es capaz de esperar durante horas a que su adversario haga un movimiento erróneo y para aprovechar la ocasión y vencerle en un abrir y cerrar de ojos. Viejo amigo de Lost Hog Cr, abandono el Fang Pi Clang, decepcionado por sus miembros, quienes no se entrenaban lo suficientemente en serio según su opinión.",
     price: 90,
   },
 ];

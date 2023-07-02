@@ -1,18 +1,21 @@
 import { COLORS, DIMENSIONS } from "../../../../constants";
-import { CustomButton, CustomText } from "../../../../components";
+import { CustomButton, CustomModal, CustomText } from "../../../../components";
 import { Image, ScrollView, View } from "react-native";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { add_character, in_cart } from "../../../../store/actions/cart.action";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Card } from "react-native-paper";
+import { TouchableOpacity } from "react-native";
 import { useTheme } from "react-native-paper";
 
 const CharacterDetailScreen = ({ navigation }) => {
+  const [isModalvisible, setIsModalVisible] = useState(false);
   const theme = useTheme();
   const dispatch = useDispatch();
   const character = useSelector((state) => state.characters.selectedCharacter);
   const inCart = useSelector((state) => state.cart.inCart);
+
   const handleAddCharacter = () => {
     dispatch(add_character(character));
     dispatch(in_cart(character.idCharacter));
@@ -21,7 +24,9 @@ const CharacterDetailScreen = ({ navigation }) => {
   useEffect(() => {
     dispatch(in_cart(character.idCharacter));
   }, []);
-
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
   let buttonAdd = (
     <View className="items-center">
       <CustomButton
@@ -40,7 +45,9 @@ const CharacterDetailScreen = ({ navigation }) => {
       </View>
     );
   }
-
+  const onDismiss = () => {
+    setIsModalVisible(false);
+  };
   return (
     <View
       className="flex-1 px-1 justify-between"
@@ -51,10 +58,17 @@ const CharacterDetailScreen = ({ navigation }) => {
           className="my-2 rounded-2xl"
           style={{ width: DIMENSIONS.width / 3, height: DIMENSIONS.height / 5 }}
         >
-          <Image
-            className="w-full h-full"
-            source={character.imageSource}
-            resizeMode="contain"
+          <TouchableOpacity onPress={() => showModal()}>
+            <Image
+              className="w-full h-full"
+              source={character.imageSource}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+          <CustomModal
+            visible={isModalvisible}
+            onDismiss={onDismiss}
+            character={character}
           />
         </Card>
 
