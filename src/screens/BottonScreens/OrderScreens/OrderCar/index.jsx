@@ -12,17 +12,13 @@ import { CustomOrderItems } from "../../../../components";
 import { useTheme } from "react-native-paper";
 
 const OrderCar = ({ navigation }) => {
-  const theme=useTheme();
+  const theme = useTheme();
   const dispatch = useDispatch();
   const orders = useSelector((state) => state.orders.list);
   const localId = useSelector((state) => state.auth.localId);
   useEffect(() => {
     dispatch(getOrders(localId));
-  }, []);
-
-  const refreshOrders = () => {
-    dispatch(getOrders(localId));
-  };
+  });
 
   const handleSelectedOrder = (item) => {
     dispatch(selectedOrder(item.id)),
@@ -34,7 +30,10 @@ const OrderCar = ({ navigation }) => {
   );
 
   return (
-    <View className="flex-1 justify-between" style={{backgroundColor:theme.colors.background}}>
+    <View
+      className="flex-1 justify-between"
+      style={{ backgroundColor: theme.colors.background }}
+    >
       <FlatList
         data={orders}
         keyExtractor={(item) => item.id}
@@ -42,10 +41,6 @@ const OrderCar = ({ navigation }) => {
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
       />
-
-      <Pressable className="items-center border-t-2 border-[#FFD700]" onPress={() => refreshOrders()}>
-        <CustomIcon name="refresh" type={Icons.FontAwesome} size={30} color={COLORS.green} />
-      </Pressable>
     </View>
   );
 };
